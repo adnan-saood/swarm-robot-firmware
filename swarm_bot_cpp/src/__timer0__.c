@@ -7,6 +7,8 @@
 
 #include <__timer0__.h>
 
+volatile static uint64_t _timer0_ovf_cnt = 0;
+
 void _timer0_init(void)
 {
 	TCCR0A |= (1 << COM0A1) | (1 << COM0A0) | (1 << COM0B1) | (1 << COM0B0);
@@ -60,4 +62,28 @@ void _timer0_stop_and_save(void)
 uint8_t _is_tmr0_enabled()
 {
 	return (TCCR0B | 0b111);
+}
+
+unsigned long _micros0()
+{
+	 
+	if ((TIFR0 & (1 << TOV0)) && (TCNT0 < 255))
+	{
+		_timer0_ovf_cnt++;
+	}
+	return ((_timer0_ovf_cnt << 8) + TCNT0);
+}
+unsigned long _millis0()
+{
+	
+	if ((TIFR0 & (1 << TOV0)) && (TCNT0 < 255))
+	{
+		_timer0_ovf_cnt++;
+	}
+	return ((_timer0_ovf_cnt << 8) + TCNT0)/1000;
+}
+
+ISR(TIMER0_OVF_vect)
+{
+	_timer0_ovf_cnt++;
 }

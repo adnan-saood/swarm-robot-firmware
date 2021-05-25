@@ -27,7 +27,9 @@ src/main.d src/main.o: ../src/main.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../src/__usart__.h ../src/__timer1__.h
+ ../src/__usart__.h ../src/__timer1__.h ../src/__odometry__.h \
+ ../src/__swarm_wold__.h ../src/__INT_0_1__.h ../src/__pin_map.h \
+ ../src/__timer1__.h ../src/__timer0__.h ../src/__usart__.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
 
@@ -96,3 +98,17 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/__usart__.h:
 
 ../src/__timer1__.h:
+
+../src/__odometry__.h:
+
+../src/__swarm_wold__.h:
+
+../src/__INT_0_1__.h:
+
+../src/__pin_map.h:
+
+../src/__timer1__.h:
+
+../src/__timer0__.h:
+
+../src/__usart__.h:

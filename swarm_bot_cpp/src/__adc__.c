@@ -16,5 +16,4 @@ int _adc_read(char channel)
 	ADCSRA |= (1 << ADSC);
 	while(ADCSRA & (1 << ADSC));
 	return ADCW;
-	
 }

@@ -29,6 +29,7 @@ void _timer0_stop_and_clear(void);
 void _timer0_stop_and_save(void);
 void _timer0_enable_ovf(void);
 
-
+unsigned long _micros0(void);
+unsigned long _millis0(void);
 
 #endif /* __TIMER0___H_ */

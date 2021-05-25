@@ -7,6 +7,8 @@
 
 #include "__timer1__.h"
 
+volatile uint16_t _tcnt1_mem = 0;
+volatile uint64_t _tmr_overflow_count = 0;
 
 void _timer1_init(void)
 {
@@ -14,7 +16,7 @@ void _timer1_init(void)
 	TCCR1A |= (1 << WGM11 ) | (0 << WGM10 ) ; // top is ICr , FAST PWM
 	ICR1 = 0xFFFF;
 	TCCR1B |= (1 << WGM13) | (1 << WGM12);
-	TCCR1B |= (1 << CS12 ) | (0 << CS11 ) | (1 << CS10); // timer active at 16M/65526 frequency of Overflow
+	TCCR1B |= (0 << CS12 ) | (0 << CS11 ) | (1 << CS10); // timer active at 16M/65526 frequency of Overflow
 	TIMSK1 |= (1 << TOIE1);
 }
 
@@ -65,14 +67,14 @@ uint64_t _micros(void)
 {
 	uint16_t tmr = TCNT1L;
 	tmr |= (TCNT1H << 8);
-	return _TICK_US*(tmr + 65536 * _tmr_overflow_count);
+	return _TICK_US*(tmr + ( _tmr_overflow_count << 16));
 }
 
 uint64_t _millis(void)
 {
 	uint16_t tmr = TCNT1L;
 	tmr |= (TCNT1H << 8);
-	return _TICK_MS*(tmr + 65536 * _tmr_overflow_count);
+	return _TICK_MS*(tmr + ( _tmr_overflow_count << 16));
 }
 
 ISR(TIMER1_OVF_vect)

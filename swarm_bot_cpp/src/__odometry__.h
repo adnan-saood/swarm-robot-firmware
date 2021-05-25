@@ -11,7 +11,7 @@
 
 #include <__swarm_wold__.h>
 
-#define __ENC_TICK_THETA 0.1904
+#define __ENC_TICK_THETA 190399
 #define __PM_lower_bound 200
 #define __PM_upper_bound 800
 
@@ -19,26 +19,7 @@
 #define __PM_SLOPE 13.5 // rad per volt / time of one overflow
 
 
-// amount if time in a tick
-static uint64_t _tick_timeA = 0;
-static uint64_t _tick_timeB = 0;
 
-//previous tick time in micros
-static uint64_t _prev_tick_timeA = 0;
-static uint64_t _prev_tick_timeB = 0;
-
-
-static uint64_t _enca_count = 0;
-static uint64_t _encb_count = 0;
-
-static uint16_t _pmA_prev = -1;
-static uint16_t _pmA_current = 0;
-
-static uint16_t _pmB_prev = -1;
-static uint16_t _pmB_current = 0;
-
-static float _omega_pmA = 0.0f;
-static float _omega_pmB = 0.0f;
 
 
 ///////////////////////////////////////////

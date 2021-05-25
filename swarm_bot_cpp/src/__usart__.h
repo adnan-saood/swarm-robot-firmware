@@ -2,7 +2,7 @@
 #define __USART___H_
 
 
-#define BAUD 57600
+#define BAUD 4800
 #define RX_BUFSIZE 120
 
 #define BRC ((F_CPU/(16UL*BAUD)) - 1)

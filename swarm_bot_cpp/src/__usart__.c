@@ -26,7 +26,7 @@ void usart_init(void)
 
 	UCSR0B = (1 << TXEN0) | (1 << RXEN0); // enable rx and tx
 	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00); // clock
-	UCSR0A |= (1 << U2X0); // double speed
+	//UCSR0A |= (1 << U2X0); // double speed
 	
 	stdin = stdout = &uart_str; // link stdin and stdout to uart
 	

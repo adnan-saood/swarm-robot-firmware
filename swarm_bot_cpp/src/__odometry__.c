@@ -7,17 +7,40 @@
 
 #include <__odometry__.h>
 
-//
+// amount if time in a tick
+volatile static uint64_t _tick_timeA = 0;
+volatile static uint64_t _tick_timeB = 0;
+
+//previous tick time in micros
+volatile static uint64_t _prev_tick_timeA = 0;
+volatile static uint64_t _prev_tick_timeB = 0;
+
+
+volatile static uint64_t _enca_count = 0;
+volatile static uint64_t _encb_count = 0;
+
+volatile static uint16_t _pmA_prev = -1;
+volatile static uint16_t _pmA_current = 0;
+
+volatile static uint16_t _pmB_prev = -1;
+volatile static uint16_t _pmB_current = 0;
+
+volatile static float _omega_pmA = 0.0f;
+volatile static float _omega_pmB = 0.0f;
+
 ISR(INT0_vect)
 {
-	if(_enca_count=0)
+	if(_enca_count == 0)
 	{
-		_prev_tick_timeA = _micros();
+		_prev_tick_timeA = _micros0();
 	}
 	else
 	{
-		_tick_timeA = _micros() - _prev_tick_timeA;
+		uint64_t t = _micros0();
+		_tick_timeA = t - _prev_tick_timeA;
+		_prev_tick_timeA = t;
 	}
+	
 	if(__read_secodary_enc(ENCA2))
 	{
 		_enca_count++;
@@ -26,12 +49,13 @@ ISR(INT0_vect)
 	{
 		_enca_count--;
 	}
+	
 }
 
 ISR(INT1_vect)
 {
 	
-	if(_enca_count=0)
+	if(_encb_count==0)
 	{
 		_prev_tick_timeB = _micros();
 	}
@@ -53,6 +77,7 @@ ISR(INT1_vect)
 float _thetaA(void)
 {
 	return __ENC_TICK_THETA * _enca_count;
+	
 }
 float _thetaB(void)
 {
@@ -61,7 +86,8 @@ float _thetaB(void)
 
 float _omega_from_encA(void)
 {
-	return (__ENC_TICK_THETA / _tick_timeA);
+	return (__ENC_TICK_THETA / (float)_tick_timeA);
+	//return _tick_timeA;
 }
 float _omega_from_encB(void)
 {

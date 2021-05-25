@@ -30,7 +30,8 @@ src/ASF/common/boards/user_board/init.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../src/__usart__.h ../src/__timer1__.h ../src/__INT_0_1__.h
+ ../src/__usart__.h ../src/__timer1__.h ../src/__INT_0_1__.h \
+ ../src/__timer0__.h
 
 ../src/asf.h:
 
@@ -101,3 +102,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/__timer1__.h:
 
 ../src/__INT_0_1__.h:
+
+../src/__timer0__.h:

@@ -17,6 +17,7 @@
 #include <util/delay.h>
 #include <__timer1__.h>
 #include <__INT_0_1__.h>
+#include <__timer0__.h>
 
 
 void board_init(void)
@@ -29,6 +30,8 @@ void board_init(void)
 	usart_init();
 	_adc_init();
 	_timer1_init();
+	_timer0_init();
+	_timer0_enable_ovf();
 	_interrupt0_enable(_INT_RISING_EDGE);
 	
 }

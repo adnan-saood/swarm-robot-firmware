@@ -44,7 +44,7 @@
 #ifndef ASF_H
 #define ASF_H
 
-#define F_CPU 16000000
+#define F_CPU 1000000
 /*
  * This file includes all API header files for the selected drivers from ASF.
  * Note: There might be duplicate includes required by more than one driver.

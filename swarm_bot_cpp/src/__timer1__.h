@@ -18,16 +18,16 @@
 #include <conf_board.h>
 #include <util/delay.h>
 
-#define _TICK_US 4096
-#define _TICK_MS 4.096
+#define _TICK_US 1
+#define _TICK_MS 0.001
 
-static uint16_t _tcnt1_mem = 0;
-static uint64_t _tmr_overflow_count = 0;
+
 void _timer1_init(void);
 void _timer1_init_prescaler(uint8_t prescaler);
 void _timer1_stop_and_clear(void);
 void _timer1_stop_and_save(void);
 
 uint64_t _micros(void);
+uint64_t _millis(void);
 
 #endif /* __TIMER1___H_ */
