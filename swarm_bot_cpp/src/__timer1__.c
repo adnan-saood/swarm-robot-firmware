@@ -10,6 +10,8 @@
 volatile uint16_t _tcnt1_mem = 0;
 volatile uint64_t _tmr_overflow_count = 0;
 
+volatile uint8_t _controler_flag_A = 0;
+volatile uint8_t _controler_flag_B = 0;
 
 void _timer1_init(void)
 {
@@ -81,5 +83,6 @@ uint64_t _millis(void)
 ISR(TIMER1_OVF_vect)
 {
 	_tmr_overflow_count++;
-	float ea = _setpoint_a;
+	_controler_flag_A = 1;
+	_controler_flag_B = 1;
 }

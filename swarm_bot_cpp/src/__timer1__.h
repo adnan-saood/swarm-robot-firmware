@@ -15,6 +15,9 @@
 #define _TICK_US 1
 #define _TICK_MS 0.001
 
+extern volatile uint8_t _controler_flag_A;
+extern volatile uint8_t _controler_flag_B;
+
 
 void _timer1_init(void);
 void _timer1_init_prescaler(int prescaler);

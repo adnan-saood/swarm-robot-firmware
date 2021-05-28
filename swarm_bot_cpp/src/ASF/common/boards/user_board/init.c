@@ -33,6 +33,6 @@ void board_init(void)
 	_timer0_init();
 	_timer0_enable_ovf();
 	_interrupt0_enable(_INT_RISING_EDGE);
-	
+	_interrupt1_enable(_INT_RISING_EDGE);
 }
 

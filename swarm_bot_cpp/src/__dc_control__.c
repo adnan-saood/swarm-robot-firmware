@@ -9,7 +9,42 @@
 
 #include <__dc_control__.h>
 
-float _setpoint_a = 0;
+static struct PID_DATA pidData;
+
+
+int16_t _ref(uint8_t motor)
+{
+	if(motor == MA)
+	{
+		return 20;
+	}
+	else if (motor == MB)
+	{
+		return 30;
+	}
+}
+
+void _command(uint8_t motor, int16_t inputValue)
+{
+	_set_speed(motor,inputValue);
+}
+
+float _sens(uint8_t motor)
+{
+	if(motor == MA)
+	{
+		return (_omega_from_encA()*9.55);
+	}
+	else if (motor == MB)
+	{
+		
+		return (_omega_from_encB()*9.55);
+	}
+	else
+	{
+		return -1;
+	}
+}
 
 int _set_speed(uint8_t motor, int value)
 {
@@ -61,13 +96,37 @@ void _break_motor(uint8_t motor)
 	}
 }
 
-void _set_setpoint(float value, uint8_t motor)
+void _init_dc_control(void)
 {
-	if (motor == MA)
+	pid_Init(K_P * SCALING_FACTOR, K_I * SCALING_FACTOR , K_D * SCALING_FACTOR , &pidData);
+	sei();
+}
+
+int16_t _update_controller(uint8_t motor)
+{
+	int16_t ref, sen,u;
+	ref = _ref(motor);
+	sen =   (int16_t) _sens(motor);
+	u = pid_Controller(ref,sen, &pidData);
+	_command(motor, u);
+	if (DEBUG_CONTROLLER)
 	{
-		_setpoint_a = value;
-	} 
-	else if (motor == MB)
-	{
+		printf("%d - %d - %d\n",ref, sen, u);
 	}
+	return u;
+}
+
+int16_t _dc_controller_loop()
+{
+	if(_controler_flag_A)
+	{
+		 _update_controller(MA);
+		 _controler_flag_A = 0;
+	}
+	if(_controler_flag_B)
+	{
+		_update_controller(MB);
+		_controler_flag_B = 0;
+	}
+	return 0;
 }

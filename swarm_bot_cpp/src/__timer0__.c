@@ -9,7 +9,7 @@
 
 volatile static uint64_t _timer0_ovf_cnt = 0;
 
-volatile uint8_t flag = 0;
+
 
 void _timer0_init(void)
 {
@@ -88,12 +88,4 @@ unsigned long _millis0()
 ISR(TIMER0_OVF_vect)
 {
 	_timer0_ovf_cnt++;
-	
-	static uint16_t i = 0;
-	if(i < 157)
-	i++;
-	else{
-		flag = TRUE;
-		i = 0;
-	}
 }
