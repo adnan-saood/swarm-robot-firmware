@@ -15,7 +15,7 @@ void _set_pwm_0A(int input)
 		{input = 0;}
 	
 	
-	OCR0A = input;
+	OCR0A = (uint8_t)input;
 }
 void _set_pwm_0B(int input)
 {
@@ -25,7 +25,7 @@ void _set_pwm_0B(int input)
 	else if (input < 0)
 		{input = 0;}
 		
-	OCR0B = input;
+	OCR0B = (uint8_t)input;
 }
 void _set_pwm_1A(int input)
 {
@@ -35,7 +35,7 @@ void _set_pwm_1A(int input)
 		{input = 0;}
 	
 	
-	OCR1AH = (input);
+	OCR1AH = (uint8_t)(input);
 	OCR1AL = 0;
 }
 void _set_pwm_1B(int input)
@@ -46,6 +46,6 @@ void _set_pwm_1B(int input)
 		{input = 0;}
 	
 	
-	OCR1BH = (input);
+	OCR1BH = (uint8_t)(input);
 	OCR1BL = 0;
 }

@@ -18,6 +18,7 @@ volatile static uint64_t _prev_tick_timeB = 0;
 
 volatile static uint64_t _enca_count = 0;
 volatile static uint64_t _encb_count = 0;
+volatile static int8_t _dir_a = 0;
 
 volatile static uint16_t _pmA_prev = -1;
 volatile static uint16_t _pmA_current = 0;
@@ -44,10 +45,13 @@ ISR(INT0_vect)
 	if(__read_secodary_enc(ENCA2))
 	{
 		_enca_count++;
+		_dir_a=FORWARD;
 	}
 	else
 	{
 		_enca_count--;
+		_dir_a=BACKWARD;
+		
 	}
 	
 }
@@ -77,7 +81,6 @@ ISR(INT1_vect)
 float _thetaA(void)
 {
 	return __ENC_TICK_THETA * _enca_count;
-	
 }
 float _thetaB(void)
 {
@@ -86,12 +89,12 @@ float _thetaB(void)
 
 float _omega_from_encA(void)
 {
-	return (__ENC_TICK_THETA / (float)_tick_timeA);
+	return _dir_a*(__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeA);
 	//return _tick_timeA;
 }
 float _omega_from_encB(void)
 {
-	return (__ENC_TICK_THETA / _tick_timeB);
+	return (__ENC_TICK_THETA_FOR_OMEGA / _tick_timeB);
 }
 
 float _omega_from_PMA(void)

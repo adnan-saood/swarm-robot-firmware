@@ -244,10 +244,22 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="src\_pid_.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\_pid_.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\__adc__.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\__adc__.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\__dc_control__.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\__dc_control__.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\__INT_0_1__.c">

@@ -29,7 +29,8 @@ src/__pwm__.d src/__pwm__.o: ../src/__pwm__.c ../src/__pwm__.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  ../src/__swarm_wold__.h ../src/__adc__.h ../src/__INT_0_1__.h \
  ../src/__pin_map.h ../src/__timer1__.h ../src/__timer0__.h \
- ../src/__usart__.h
+ ../src/__usart__.h ../src/__dc_control__.h ../src/__odometry__.h \
+ ../src/_pid_.h
 
 ../src/__pwm__.h:
 
@@ -108,3 +109,9 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/__timer0__.h:
 
 ../src/__usart__.h:
+
+../src/__dc_control__.h:
+
+../src/__odometry__.h:
+
+../src/_pid_.h:

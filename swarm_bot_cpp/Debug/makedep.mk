@@ -2,7 +2,11 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+src\_pid_.c
+
 src\__adc__.c
+
+src\__dc_control__.c
 
 src\__INT_0_1__.c
 

@@ -9,9 +9,11 @@
 
 volatile static uint64_t _timer0_ovf_cnt = 0;
 
+volatile uint8_t flag = 0;
+
 void _timer0_init(void)
 {
-	TCCR0A |= (1 << COM0A1) | (1 << COM0A0) | (1 << COM0B1) | (1 << COM0B0);
+	TCCR0A |= (1 << COM0A1) | (0 << COM0A0) | (1 << COM0B1) | (0 << COM0B0);
 	TCCR0A |= (1 << WGM01) | (1 << WGM00);
 	
 	TCCR0B |=(0 << CS02) | (0 << CS01) | (1 << CS00);
@@ -86,4 +88,12 @@ unsigned long _millis0()
 ISR(TIMER0_OVF_vect)
 {
 	_timer0_ovf_cnt++;
+	
+	static uint16_t i = 0;
+	if(i < 157)
+	i++;
+	else{
+		flag = TRUE;
+		i = 0;
+	}
 }

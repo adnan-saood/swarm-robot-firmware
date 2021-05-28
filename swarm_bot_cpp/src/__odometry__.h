@@ -11,15 +11,16 @@
 
 #include <__swarm_wold__.h>
 
-#define __ENC_TICK_THETA 190399
+#define __ENC_TICK_THETA_FOR_OMEGA 190399
+#define __ENC_TICK_THETA 0.1904
 #define __PM_lower_bound 200
 #define __PM_upper_bound 800
 
 #define __PM_SAMPLE_COUNT 5
 #define __PM_SLOPE 13.5 // rad per volt / time of one overflow
 
-
-
+#define FORWARD  1
+#define BACKWARD  -1
 
 
 ///////////////////////////////////////////

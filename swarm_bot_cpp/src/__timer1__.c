@@ -10,6 +10,7 @@
 volatile uint16_t _tcnt1_mem = 0;
 volatile uint64_t _tmr_overflow_count = 0;
 
+
 void _timer1_init(void)
 {
 	TCCR1A |= (1 << COM1A1) | (0 << COM1A0) | (1 << COM1B1) | (0 << COM1B0);
@@ -20,7 +21,7 @@ void _timer1_init(void)
 	TIMSK1 |= (1 << TOIE1);
 }
 
-void _timer1_init_prescaler(uint8_t prescaler)
+void _timer1_init_prescaler(int prescaler)
 {
 	TCCR1A |= (1 << COM1A1) | (0 << COM1A0) | (1 << COM1B1) | (0 << COM1B0);
 	TCCR1A |= (1 << WGM11) | (0 << WGM10) ; // top is ICr , FAST PWM
@@ -80,4 +81,5 @@ uint64_t _millis(void)
 ISR(TIMER1_OVF_vect)
 {
 	_tmr_overflow_count++;
+	float ea = _setpoint_a;
 }

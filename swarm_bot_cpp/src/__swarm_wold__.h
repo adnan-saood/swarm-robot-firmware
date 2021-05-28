@@ -9,12 +9,26 @@
 #ifndef __SWARM_WOLD___H_
 #define __SWARM_WOLD___H_
 
+#include <stdio.h>
+#include <asf.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <board.h>
+#include <conf_board.h>
+#include <util/delay.h>
+
+#include "stdint.h"
+
 #include <__adc__.h>
 #include <__INT_0_1__.h>
 #include <__pin_map.h>
 #include <__timer0__.h>
 #include <__timer1__.h>
 #include <__usart__.h>
+#include <__dc_control__.h>
+#include <__odometry__.h>
+#include <__pwm__.h>
+#include <_pid_.h>
 
 
 
