@@ -22,16 +22,13 @@
 
 #include <__swarm_wold__.h>
 
-static uint16_t _tcnt0_mem = 0;
+
 static uint64_t _tmr0_overflow_count = 0;
 
-uint8_t _is_tmr0_enabled();
 
 void _timer0_init(void);
-void _timer0_init_prescaler(uint8_t prescaler);
-void _timer0_stop_and_clear(void);
-void _timer0_stop_and_save(void);
-void _timer0_enable_ovf(void);
+void _timer0_init_prescaler(uint16_t prescaler);
+
 
 unsigned long _micros0(void);
 unsigned long _millis0(void);

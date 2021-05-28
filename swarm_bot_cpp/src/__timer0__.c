@@ -17,12 +17,10 @@ void _timer0_init(void)
 	TCCR0A |= (1 << WGM01) | (1 << WGM00);
 	
 	TCCR0B |=(0 << CS02) | (0 << CS01) | (1 << CS00);
-}
-void _timer0_enable_ovf(void)
-{
 	TIMSK0 |= (1 << TOIE0);
 }
-void _timer0_init_prescaler(uint8_t prescaler)
+
+void _timer0_init_prescaler(uint16_t prescaler)
 {
 	TCCR0A |= (1 << COM0A1) | (1 << COM0A0) | (1 << COM0B1) | (1 << COM0B0);
 	TCCR0A |= (1 << WGM01) | (1 << WGM00);
@@ -49,21 +47,7 @@ void _timer0_init_prescaler(uint8_t prescaler)
 	}
 	
 	TCCR0B |= __CS__;
-}
-void _timer0_stop_and_clear(void)
-{
-	TCCR0B &= 0b11111000;
-	TCNT0 = 0;
-}
-void _timer0_stop_and_save(void)
-{
-	_tcnt0_mem = TCNT0;
-	TCCR0B &= 0b11111000;
-}
-
-uint8_t _is_tmr0_enabled()
-{
-	return (TCCR0B | 0b111);
+	TIMSK0 |= (1 << TOIE0);
 }
 
 unsigned long _micros0()
