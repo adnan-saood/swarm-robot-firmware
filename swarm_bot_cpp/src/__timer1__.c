@@ -7,7 +7,6 @@
 
 #include "__timer1__.h"
 
-volatile uint16_t _tcnt1_mem = 0;
 volatile uint64_t _tmr_overflow_count = 0;
 
 volatile uint8_t _controler_flag_A = 0;

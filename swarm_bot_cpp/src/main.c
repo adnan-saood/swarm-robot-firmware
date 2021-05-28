@@ -20,7 +20,6 @@ int main (void)
 	board_init();
 	DDRB = 0xFF;
 	DDRD = 0b01100011;
-	_init_dc_control();
 	sei();
 	while (1)
 	{

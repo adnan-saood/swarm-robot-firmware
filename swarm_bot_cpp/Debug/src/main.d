@@ -24,13 +24,14 @@ src/main.d src/main.o: ../src/main.c \
  ../src/ASF/mega/utils/progmem.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\pgmspace.h \
  ../src/ASF/mega/utils/status_codes.h ../src/__adc__.h \
+ ../src/__swarm_wold__.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../src/__usart__.h ../src/__timer1__.h ../src/__swarm_wold__.h \
  ../src/__INT_0_1__.h ../src/__pin_map.h ../src/__timer1__.h \
- ../src/__timer0__.h ../src/__usart__.h ../src/__dc_control__.h \
- ../src/__odometry__.h ../src/__pwm__.h ../src/_pid_.h
+ ../src/__timer0__.h ../src/__timer2__.h ../src/__usart__.h \
+ ../src/__dc_control__.h ../src/__odometry__.h ../src/__pwm__.h \
+ ../src/_pid_.h ../src/__usart__.h ../src/__timer1__.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
 
@@ -90,17 +91,13 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../src/__adc__.h:
 
+../src/__swarm_wold__.h:
+
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
-
-../src/__usart__.h:
-
-../src/__timer1__.h:
-
-../src/__swarm_wold__.h:
 
 ../src/__INT_0_1__.h:
 
@@ -109,6 +106,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/__timer1__.h:
 
 ../src/__timer0__.h:
+
+../src/__timer2__.h:
 
 ../src/__usart__.h:
 
@@ -119,3 +118,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/__pwm__.h:
 
 ../src/_pid_.h:
+
+../src/__usart__.h:
+
+../src/__timer1__.h:

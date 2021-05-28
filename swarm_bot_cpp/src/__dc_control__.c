@@ -22,6 +22,7 @@ int16_t _ref(uint8_t motor)
 	{
 		return 30;
 	}
+	return 0;
 }
 
 void _command(uint8_t motor, int16_t inputValue)
@@ -116,7 +117,7 @@ int16_t _update_controller(uint8_t motor)
 	return u;
 }
 
-int16_t _dc_controller_loop()
+int16_t _dc_controller_loop(void)
 {
 	if(_controler_flag_A)
 	{

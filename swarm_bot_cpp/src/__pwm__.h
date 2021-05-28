@@ -9,13 +9,6 @@
 #ifndef __PWM___H_
 #define __PWM___H_
 
-#include <stdio.h>
-#include <asf.h>
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include <board.h>
-#include <conf_board.h>
-#include <util/delay.h>
 #include <__swarm_wold__.h>
 
 void _set_pwm_0A(int input);

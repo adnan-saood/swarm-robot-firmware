@@ -24,6 +24,7 @@
 #include <__pin_map.h>
 #include <__timer0__.h>
 #include <__timer1__.h>
+#include <__timer2__.h>
 #include <__usart__.h>
 #include <__dc_control__.h>
 #include <__odometry__.h>

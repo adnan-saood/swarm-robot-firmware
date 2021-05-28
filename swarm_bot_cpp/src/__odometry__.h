@@ -41,6 +41,10 @@ float _omega_from_encB(void);
 float _omega_from_PMA(void);
 float _omega_from_PMB(void);
 
+float _omega_comp_A(void);
+float _omega_comp_B(void);
+
+
 void _insertion_sort(uint16_t arr[], int n);
 
 

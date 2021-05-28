@@ -27,6 +27,6 @@ int _set_speed(uint8_t motor, int value);
 void _break_motor(uint8_t motor);
 void _init_dc_control(void);
 int16_t _update_controller(uint8_t motor);
-int16_t _dc_controller_loop();
+int16_t _dc_controller_loop(void);
 
 #endif /* __DC_CONTROL___H_ */

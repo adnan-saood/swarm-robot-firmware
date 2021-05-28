@@ -12,12 +12,8 @@
 #include<stdio.h>
 #include <board.h>
 #include <conf_board.h>
-#include <__adc__.h>
-#include "__usart__.h"
-#include <util/delay.h>
-#include <__timer1__.h>
-#include <__INT_0_1__.h>
-#include <__timer0__.h>
+
+#include <__swarm_wold__.h>
 
 
 void board_init(void)
@@ -31,6 +27,8 @@ void board_init(void)
 	_adc_init();
 	_timer1_init();
 	_timer0_init();
+	_timer2_init();
+	_init_dc_control();
 	_interrupt0_enable(_INT_RISING_EDGE);
 	_interrupt1_enable(_INT_RISING_EDGE);
 }

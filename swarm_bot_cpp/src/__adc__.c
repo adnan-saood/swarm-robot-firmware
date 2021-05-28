@@ -10,7 +10,7 @@ void _adc_init(void)
 	//ADMUX |= (1 << ADLAR); 8 bit
 }
 
-int _adc_read(char channel)
+int _adc_read(uint8_t channel)
 {
 	ADMUX |= channel & 0x0f;
 	ADCSRA |= (1 << ADSC);
