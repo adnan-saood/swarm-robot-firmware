@@ -12,6 +12,7 @@
 
 #include <__swarm_wold__.h>
 
+#pragma message "Make sure of Tick time"
 #define _TICK_US 1
 #define _TICK_MS 0.001
 
@@ -20,11 +21,9 @@ extern volatile uint8_t _controler_flag_B;
 
 
 void _timer1_init(void);
-void _timer1_init_prescaler(int prescaler);
-void _timer1_stop_and_clear(void);
-void _timer1_stop_and_save(void);
+//void _timer1_init_prescaler(int prescaler);
 
-uint64_t _micros(void);
-uint64_t _millis(void);
+uint64_t _micros1(void);
+uint64_t _millis1(void);
 
 #endif /* __TIMER1___H_ */

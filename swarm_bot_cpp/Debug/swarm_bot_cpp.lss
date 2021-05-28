@@ -13,23 +13,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001d2c  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000290  00000000  00000000  00001d6c  2**0
+  5 .debug_aranges 00000278  00000000  00000000  00001d6c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000238c  00000000  00000000  00001ffc  2**0
+  6 .debug_info   00002327  00000000  00000000  00001fe4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00001405  00000000  00000000  00004388  2**0
+  7 .debug_abbrev 000013cd  00000000  00000000  0000430b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00003a10  00000000  00000000  0000578d  2**0
+  8 .debug_line   00003973  00000000  00000000  000056d8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  0000082c  00000000  00000000  000091a0  2**2
+  9 .debug_frame  000007fc  00000000  00000000  0000904c  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000110ca  00000000  00000000  000099cc  2**0
+ 10 .debug_str    00011088  00000000  00000000  00009848  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00001820  00000000  00000000  0001aa96  2**0
+ 11 .debug_loc    00001720  00000000  00000000  0001a8d0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000001e0  00000000  00000000  0001c2b6  2**0
+ 12 .debug_ranges 000001c8  00000000  00000000  0001bff0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_macro  00004fbf  00000000  00000000  0001c496  2**0
+ 13 .debug_macro  00004fbf  00000000  00000000  0001c1b8  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -1838,7 +1838,7 @@ ISR(TIMER0_OVF_vect)
      da0:	18 95       	reti
 
 00000da2 <_timer1_init>:
-uint64_t _millis(void)
+uint64_t _millis1(void)
 {
 	uint16_t tmr = TCNT1L;
 	tmr |= (TCNT1H << 8);

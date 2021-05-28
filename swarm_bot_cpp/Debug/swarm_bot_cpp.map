@@ -591,14 +591,10 @@ Discarded input sections
  .text          0x00000000        0x0 src/__timer1__.o
  .data          0x00000000        0x0 src/__timer1__.o
  .bss           0x00000000        0x0 src/__timer1__.o
- .text._timer1_init_prescaler
-                0x00000000       0x76 src/__timer1__.o
- .text._timer1_stop_and_clear
-                0x00000000       0x14 src/__timer1__.o
- .text._timer1_stop_and_save
-                0x00000000       0x30 src/__timer1__.o
- .text._micros  0x00000000       0x94 src/__timer1__.o
- .text._millis  0x00000000       0xa8 src/__timer1__.o
+ .text._micros1
+                0x00000000       0x94 src/__timer1__.o
+ .text._millis1
+                0x00000000       0xa8 src/__timer1__.o
  .bss._tcnt1_mem
                 0x00000000        0x2 src/__timer1__.o
  .debug_macro   0x00000000      0xa4e src/__timer1__.o
@@ -1955,7 +1951,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x290
+.debug_aranges  0x00000000      0x278
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x30 src/_pid_.o
@@ -1972,18 +1968,18 @@ END GROUP
  .debug_aranges
                 0x00000190       0x40 src/__timer0__.o
  .debug_aranges
-                0x000001d0       0x50 src/__timer1__.o
+                0x000001d0       0x38 src/__timer1__.o
  .debug_aranges
-                0x00000220       0x30 src/__usart__.o
+                0x00000208       0x30 src/__usart__.o
  .debug_aranges
-                0x00000250       0x20 src/ASF/common/boards/user_board/init.o
+                0x00000238       0x20 src/ASF/common/boards/user_board/init.o
  .debug_aranges
-                0x00000270       0x20 src/main.o
+                0x00000258       0x20 src/main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x238c
+.debug_info     0x00000000     0x2327
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_info    0x000005f4      0x22f src/_pid_.o
@@ -1993,12 +1989,12 @@ END GROUP
  .debug_info    0x0000102b      0x681 src/__odometry__.o
  .debug_info    0x000016ac      0x20f src/__pwm__.o
  .debug_info    0x000018bb      0x221 src/__timer0__.o
- .debug_info    0x00001adc      0x2b6 src/__timer1__.o
- .debug_info    0x00001d92      0x21a src/__usart__.o
- .debug_info    0x00001fac      0x216 src/ASF/common/boards/user_board/init.o
- .debug_info    0x000021c2      0x1ca src/main.o
+ .debug_info    0x00001adc      0x251 src/__timer1__.o
+ .debug_info    0x00001d2d      0x21a src/__usart__.o
+ .debug_info    0x00001f47      0x216 src/ASF/common/boards/user_board/init.o
+ .debug_info    0x0000215d      0x1ca src/main.o
 
-.debug_abbrev   0x00000000     0x1405
+.debug_abbrev   0x00000000     0x13cd
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_abbrev  0x000005a2       0xfe src/_pid_.o
@@ -2008,12 +2004,12 @@ END GROUP
  .debug_abbrev  0x000009f4      0x247 src/__odometry__.o
  .debug_abbrev  0x00000c3b       0xfb src/__pwm__.o
  .debug_abbrev  0x00000d36      0x184 src/__timer0__.o
- .debug_abbrev  0x00000eba      0x199 src/__timer1__.o
- .debug_abbrev  0x00001053      0x165 src/__usart__.o
- .debug_abbrev  0x000011b8      0x12d src/ASF/common/boards/user_board/init.o
- .debug_abbrev  0x000012e5      0x120 src/main.o
+ .debug_abbrev  0x00000eba      0x161 src/__timer1__.o
+ .debug_abbrev  0x0000101b      0x165 src/__usart__.o
+ .debug_abbrev  0x00001180      0x12d src/ASF/common/boards/user_board/init.o
+ .debug_abbrev  0x000012ad      0x120 src/main.o
 
-.debug_line     0x00000000     0x3a10
+.debug_line     0x00000000     0x3973
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_line    0x00000134      0x1e8 src/_pid_.o
@@ -2023,12 +2019,12 @@ END GROUP
  .debug_line    0x000012a4      0x79b src/__odometry__.o
  .debug_line    0x00001a3f      0x52f src/__pwm__.o
  .debug_line    0x00001f6e      0x5cd src/__timer0__.o
- .debug_line    0x0000253b      0x619 src/__timer1__.o
- .debug_line    0x00002b54      0x4ba src/__usart__.o
- .debug_line    0x0000300e      0x4fc src/ASF/common/boards/user_board/init.o
- .debug_line    0x0000350a      0x506 src/main.o
+ .debug_line    0x0000253b      0x57c src/__timer1__.o
+ .debug_line    0x00002ab7      0x4ba src/__usart__.o
+ .debug_line    0x00002f71      0x4fc src/ASF/common/boards/user_board/init.o
+ .debug_line    0x0000346d      0x506 src/main.o
 
-.debug_frame    0x00000000      0x82c
+.debug_frame    0x00000000      0x7fc
  *(.debug_frame)
  .debug_frame   0x00000000       0x70 src/_pid_.o
  .debug_frame   0x00000070       0x34 src/__adc__.o
@@ -2037,12 +2033,12 @@ END GROUP
  .debug_frame   0x000001b8      0x388 src/__odometry__.o
  .debug_frame   0x00000540       0x54 src/__pwm__.o
  .debug_frame   0x00000594       0xd0 src/__timer0__.o
- .debug_frame   0x00000664      0x134 src/__timer1__.o
- .debug_frame   0x00000798       0x4c src/__usart__.o
- .debug_frame   0x000007e4       0x24 src/ASF/common/boards/user_board/init.o
- .debug_frame   0x00000808       0x24 src/main.o
+ .debug_frame   0x00000664      0x104 src/__timer1__.o
+ .debug_frame   0x00000768       0x4c src/__usart__.o
+ .debug_frame   0x000007b4       0x24 src/ASF/common/boards/user_board/init.o
+ .debug_frame   0x000007d8       0x24 src/main.o
 
-.debug_str      0x00000000    0x110ca
+.debug_str      0x00000000    0x11088
  *(.debug_str)
  .debug_str     0x00000000      0x208 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/Atmel/ATmega_DFP/1.6.364/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_str     0x00000208     0x3317 src/_pid_.o
@@ -2059,16 +2055,16 @@ END GROUP
                               0x10b7a (size before relaxing)
  .debug_str     0x00010f34       0x64 src/__timer0__.o
                               0x10bb3 (size before relaxing)
- .debug_str     0x00010f98       0xa0 src/__timer1__.o
-                              0x10c11 (size before relaxing)
- .debug_str     0x00011038       0x49 src/__usart__.o
-                              0x10732 (size before relaxing)
- .debug_str     0x00011081       0x36 src/ASF/common/boards/user_board/init.o
+ .debug_str     0x00010f98       0x5e src/__timer1__.o
                               0x10bbe (size before relaxing)
- .debug_str     0x000110b7       0x13 src/main.o
+ .debug_str     0x00010ff6       0x49 src/__usart__.o
+                              0x10732 (size before relaxing)
+ .debug_str     0x0001103f       0x36 src/ASF/common/boards/user_board/init.o
+                              0x10bbe (size before relaxing)
+ .debug_str     0x00011075       0x13 src/main.o
                               0x10b76 (size before relaxing)
 
-.debug_loc      0x00000000     0x1820
+.debug_loc      0x00000000     0x1720
  *(.debug_loc)
  .debug_loc     0x00000000      0x33d src/_pid_.o
  .debug_loc     0x0000033d       0x21 src/__adc__.o
@@ -2077,8 +2073,8 @@ END GROUP
  .debug_loc     0x00000809      0x8f9 src/__odometry__.o
  .debug_loc     0x00001102       0xd0 src/__pwm__.o
  .debug_loc     0x000011d2      0x250 src/__timer0__.o
- .debug_loc     0x00001422      0x366 src/__timer1__.o
- .debug_loc     0x00001788       0x98 src/__usart__.o
+ .debug_loc     0x00001422      0x266 src/__timer1__.o
+ .debug_loc     0x00001688       0x98 src/__usart__.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2098,7 +2094,7 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x1e0
+.debug_ranges   0x00000000      0x1c8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x20 src/_pid_.o
  .debug_ranges  0x00000020       0x18 src/__adc__.o
@@ -2107,10 +2103,10 @@ END GROUP
  .debug_ranges  0x00000098       0x70 src/__odometry__.o
  .debug_ranges  0x00000108       0x28 src/__pwm__.o
  .debug_ranges  0x00000130       0x30 src/__timer0__.o
- .debug_ranges  0x00000160       0x40 src/__timer1__.o
- .debug_ranges  0x000001a0       0x20 src/__usart__.o
- .debug_ranges  0x000001c0       0x10 src/ASF/common/boards/user_board/init.o
- .debug_ranges  0x000001d0       0x10 src/main.o
+ .debug_ranges  0x00000160       0x28 src/__timer1__.o
+ .debug_ranges  0x00000188       0x20 src/__usart__.o
+ .debug_ranges  0x000001a8       0x10 src/ASF/common/boards/user_board/init.o
+ .debug_ranges  0x000001b8       0x10 src/main.o
 
 .debug_macro    0x00000000     0x4fbf
  *(.debug_macro)
