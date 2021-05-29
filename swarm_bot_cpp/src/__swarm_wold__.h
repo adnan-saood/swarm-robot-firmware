@@ -9,6 +9,8 @@
 #ifndef __SWARM_WOLD___H_
 #define __SWARM_WOLD___H_
 
+#define F_CPU 16000000
+
 #include <stdio.h>
 #include <asf.h>
 #include <avr/io.h>

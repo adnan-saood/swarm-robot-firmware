@@ -13,8 +13,13 @@
 #include <__swarm_wold__.h>
 
 #pragma message "Make sure of Tick time"
-#define _TICK_US 1
-#define _TICK_MS 0.001
+
+
+#define _TICK_US_1 0.0625
+#define _TICK_MS_1 0.0000625
+
+#define _TICK_US_0 16
+#define _TICK_MS_0 0.016
 
 extern volatile uint8_t _controler_flag_A;
 extern volatile uint8_t _controler_flag_B;

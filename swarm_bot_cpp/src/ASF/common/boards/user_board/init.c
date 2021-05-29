@@ -28,8 +28,7 @@ void board_init(void)
 	_timer1_init();
 	_timer0_init();
 	_timer2_init();
-	_init_dc_control();
-	_interrupt0_enable(_INT_RISING_EDGE);
-	_interrupt1_enable(_INT_RISING_EDGE);
+	//_interrupt0_enable(_INT_RISING_EDGE);
+	//_interrupt1_enable(_INT_RISING_EDGE);
 }
 

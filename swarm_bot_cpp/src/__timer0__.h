@@ -12,9 +12,6 @@
 #include <__swarm_wold__.h>
 
 
-static uint64_t _tmr0_overflow_count = 0;
-
-
 void _timer0_init(void);
 void _timer0_init_prescaler(uint16_t prescaler);
 

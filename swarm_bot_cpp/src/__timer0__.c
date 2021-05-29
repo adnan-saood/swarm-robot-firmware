@@ -7,7 +7,7 @@
 
 #include <__timer0__.h>
 
-volatile static uint64_t _timer0_ovf_cnt = 0;
+uint64_t _timer0_ovf_cnt = 0;
 
 
 
@@ -16,8 +16,9 @@ void _timer0_init(void)
 	TCCR0A |= (1 << COM0A1) | (0 << COM0A0) | (1 << COM0B1) | (0 << COM0B0);
 	TCCR0A |= (1 << WGM01) | (1 << WGM00);
 	
-	TCCR0B |=(0 << CS02) | (0 << CS01) | (1 << CS00);
+	TCCR0B |=(1 << CS02) | (0 << CS01) | (0 << CS00);
 	TIMSK0 |= (1 << TOIE0);
+	sei();
 }
 
 void _timer0_init_prescaler(uint16_t prescaler)
@@ -57,7 +58,7 @@ unsigned long _micros0()
 	{
 		_timer0_ovf_cnt++;
 	}
-	return ((_timer0_ovf_cnt << 8) + TCNT0);
+	return _TICK_US_0*((_timer0_ovf_cnt << 8) + TCNT0);
 }
 unsigned long _millis0()
 {
@@ -66,7 +67,7 @@ unsigned long _millis0()
 	{
 		_timer0_ovf_cnt++;
 	}
-	return ((_timer0_ovf_cnt << 8) + TCNT0)/1000;
+	return _TICK_MS_0*(((_timer0_ovf_cnt << 8) + TCNT0));
 }
 
 ISR(TIMER0_OVF_vect)

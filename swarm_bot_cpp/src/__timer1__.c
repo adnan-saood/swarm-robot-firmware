@@ -20,6 +20,7 @@ void _timer1_init(void)
 	TCCR1B |= (1 << WGM13) | (1 << WGM12);
 	TCCR1B |= (0 << CS12 ) | (0 << CS11 ) | (1 << CS10); // timer active at 16M/65526 frequency of Overflow
 	TIMSK1 |= (1 << TOIE1);
+	sei();
 }
 // Commented out for space saving
 /*
@@ -58,19 +59,20 @@ uint64_t _micros1(void)
 {
 	uint16_t tmr = TCNT1L;
 	tmr |= (TCNT1H << 8);
-	return _TICK_US*(tmr + ( _tmr_overflow_count << 16));
+	return _TICK_US_1*(tmr + ( _tmr_overflow_count << 16));
 }
 
 uint64_t _millis1(void)
 {
 	uint16_t tmr = TCNT1L;
 	tmr |= (TCNT1H << 8);
-	return _TICK_MS*(tmr + ( _tmr_overflow_count << 16));
+	return _TICK_MS_1*(tmr + ( _tmr_overflow_count << 16));
 }
 
 ISR(TIMER1_OVF_vect)
 {
 	_tmr_overflow_count++;
+	
 	_controler_flag_A = 1;
 	_controler_flag_B = 1;
 }

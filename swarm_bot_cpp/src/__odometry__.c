@@ -127,7 +127,7 @@ ISR(TIMER2_OVF_vect)
 	if ( (snap < __PM_lower_bound) || (snap > __PM_upper_bound) )
 	{
 		_pmA_current = -1;
-		_omega_pmA = _omega_from_encA();
+		// _omega_pmA = _omega_from_encA();
 	}
 	else
 	{
@@ -154,7 +154,7 @@ ISR(TIMER2_OVF_vect)
 }
 
 
-ISR(TIMER0_COMPA_vect)
+ISR(TIMER2_COMPA_vect)
 {
 	uint16_t snap = __read_PM(PMB);
 	if ( (snap < __PM_lower_bound) || (snap > __PM_upper_bound) )

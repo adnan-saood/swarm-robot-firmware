@@ -12,7 +12,7 @@
 #define MA 1
 #define MB 2
 
-#define DEBUG_CONTROLLER 1
+#define DEBUG_CONTROLLER 0
 
 #define K_P     4.0
 #define K_I     0.3
