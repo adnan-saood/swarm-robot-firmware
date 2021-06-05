@@ -75,4 +75,8 @@ ISR(TIMER1_OVF_vect)
 	
 	_controler_flag_A = 1;
 	_controler_flag_B = 1;
+	if (_tmr_overflow_count%2440 == 0 )
+	{
+		printf("<btr>%d</btr>\n", __read_btr__);
+	}
 }

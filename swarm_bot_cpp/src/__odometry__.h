@@ -44,6 +44,8 @@ float _omega_from_PMB(void);
 float _omega_comp_A(void);
 float _omega_comp_B(void);
 
+int32_t _ticksA();
+int32_t _ticksB();
 
 void _insertion_sort(uint16_t arr[], int n);
 

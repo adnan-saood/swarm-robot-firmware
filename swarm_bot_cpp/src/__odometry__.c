@@ -16,8 +16,8 @@ volatile static uint64_t _prev_tick_timeA = 0;
 volatile static uint64_t _prev_tick_timeB = 0;
 
 
-volatile static uint64_t _enca_count = 0;
-volatile static uint64_t _encb_count = 0;
+volatile static int32_t _enca_count = 0;
+volatile static int32_t _encb_count = 0;
 volatile static int8_t _dir_a = 1;
 volatile static int8_t _dir_b = 1;
 
@@ -60,8 +60,7 @@ ISR(INT0_vect)
 
 ISR(INT1_vect)
 {
-	
-	if(_encb_count==0)
+	if(_encb_count == 0)
 	{
 		_prev_tick_timeB = _micros0();
 	}
@@ -91,6 +90,15 @@ float _thetaA(void)
 float _thetaB(void)
 {
 	return __ENC_TICK_THETA * _encb_count;
+}
+
+int32_t _ticksA()
+{
+	return _enca_count;
+}
+int32_t _ticksB()
+{
+	return _encb_count;
 }
 
 float _omega_from_encA(void)

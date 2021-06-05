@@ -8,7 +8,11 @@ src\__adc__.c
 
 src\__dc_control__.c
 
+src\__format__.c
+
 src\__INT_0_1__.c
+
+src\__kinematics__.c
 
 src\__odometry__.c
 

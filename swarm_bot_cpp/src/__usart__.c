@@ -2,8 +2,8 @@
 
 static int _uart_put_char(char input, FILE *stream)
 {
-	if (input == '\n')
-	_uart_put_char('\r', stream);
+	//if (input == '\n')
+	//_uart_put_char('\r', stream);
 	
 	while(!((UCSR0A >> UDRE0) & 1)); // wait until buffer is ready for data
 	UDR0 = input;

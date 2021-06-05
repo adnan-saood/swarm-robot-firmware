@@ -16,6 +16,6 @@ void _interrupt0_enable(uint8_t trigger)
 void _interrupt1_enable(uint8_t trigger)
 {
 	EIMSK |= (1 << INT1);
-	EICRA |= (trigger << ISC10);
+	EICRA |= (1 << ISC10) | (1 << ISC11);
 	sei();
 }

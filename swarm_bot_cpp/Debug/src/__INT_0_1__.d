@@ -31,7 +31,7 @@ src/__INT_0_1__.d src/__INT_0_1__.o: ../src/__INT_0_1__.c \
  ../src/__adc__.h ../src/__pin_map.h ../src/__timer1__.h \
  ../src/__timer0__.h ../src/__timer2__.h ../src/__usart__.h \
  ../src/__dc_control__.h ../src/__odometry__.h ../src/__pwm__.h \
- ../src/_pid_.h
+ ../src/_pid_.h ../src/__format__.h
 
 ../src/__INT_0_1__.h:
 
@@ -118,3 +118,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/__pwm__.h:
 
 ../src/_pid_.h:
+
+../src/__format__.h:
