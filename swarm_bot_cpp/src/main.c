@@ -24,8 +24,8 @@ int main (void)
 	sei();
 	while (1)
 	{
-		_set_speed(MA, -40);
-		_set_speed(MB, 40);
+		_set_speed(MA, 200);
+		_set_speed(MB, 200);
 		_update_omega(&w);
 		_i_p = _omega_to_intertial(&w);
 		printf("(%f , ", _i_p.v);

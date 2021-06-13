@@ -1,13 +1,11 @@
-/*
- * __pwm__.c
- *
- * Created: 5/19/2021 9:30:27 AM
- *  Author: adnan
- */ 
 #include <__pwm__.h>
 
 
-void _set_pwm_0A(int input)
+
+/**
+       * sets the PWM output of OCR0A (Motor A rear) 
+       */
+void _set_pwm_0A(int input/**< [in] @param input a number (0 --> 255) */)
 {
 	if (input > 255)
 		{input = 255;}
@@ -17,7 +15,11 @@ void _set_pwm_0A(int input)
 	
 	OCR0A = (uint8_t)input;
 }
-void _set_pwm_0B(int input)
+
+/**
+       * sets the PWM output of OCR0B (Motor B rear) 
+       */
+void _set_pwm_0B(int input/**< [in] @param input a number (0 --> 255)*/)
 {
 
 	if (input > 255)
@@ -27,7 +29,11 @@ void _set_pwm_0B(int input)
 		
 	OCR0B = (uint8_t)input;
 }
-void _set_pwm_1A(int input)
+
+/**
+       * sets the PWM output of OCR1A (Motor A front) 
+       */
+void _set_pwm_1A(int input/**< [in] @param input a number (0 --> 255) */)
 {
 	if (input > 255)
 		{input = 255;}
@@ -38,7 +44,11 @@ void _set_pwm_1A(int input)
 	OCR1AH = (uint8_t)(input);
 	OCR1AL = 0;
 }
-void _set_pwm_1B(int input)
+
+/**
+       * sets the PWM output of OCR1B (Motor B front) 
+       */
+void _set_pwm_1B(int input /**< [in] @param input a number (0 --> 255)*/)
 {
 	if (input > 255)
 		{input = 255;}

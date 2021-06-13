@@ -1,13 +1,23 @@
-/*
- * __swarm_wold__.h
- *
- * Created: 5/19/2021 9:31:42 AM
- *  Author: adnan
- */ 
-
-
 #ifndef __SWARM_WOLD___H_
 #define __SWARM_WOLD___H_
+
+/*! \file *********************************************************************
+ *
+ * \brief Header file for dummy purposes
+ *
+ * - File:               __swarm_world__.h
+ * - Compiler:           GCC-AVR
+ * - Supported devices:  Tested on 328p
+ * - AppNote:            Discrete PID controller
+ *
+ * \author               Swarm robot graduation project workgroub \n
+ *						 Mechatronics Program for the Distinguished \n
+ *
+ * $Name$
+ * $Revision: 1 $
+ * $RCSfile$
+ * $Date:5/19/2021 9:31:42 AM$
+ *****************************************************************************/
 
 #define F_CPU 16000000
 

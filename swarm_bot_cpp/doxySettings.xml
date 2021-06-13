@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DoxySettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SettingsFile>D:\Graduation Project\OS\ver2\swarm_bot_cpp\swarm_bot_cpp\doxySettings.xml</SettingsFile>
+  <ProjectName>swarm_bot_cpp</ProjectName>
+  <DoxyExePath>C:\Program Files\doxygen\bin\doxygen.exe</DoxyExePath>
+  <UseDefaultSettings>true</UseDefaultSettings>
+  <GenerateAsPartOfBuild>false</GenerateAsPartOfBuild>
+  <ConfigFilePath>D:\Graduation Project\OS\ver2\swarm_bot_cpp\swarm_bot_cpp\doxyfile</ConfigFilePath>
+  <OutputDirPath>D:\Graduation Project\OS\ver2\swarm_bot_cpp\swarm_bot_cpp\doxygen</OutputDirPath>
+  <ShowErrorsAndWarnings>false</ShowErrorsAndWarnings>
+</DoxySettings>
