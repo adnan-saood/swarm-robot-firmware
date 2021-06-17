@@ -45,8 +45,6 @@ float _sens(uint8_t motor)
 	{
 		return -1;
 	}
-}
-
 int _set_speed(uint8_t motor, int value)
 {
 	if(value == 0)
@@ -58,42 +56,43 @@ int _set_speed(uint8_t motor, int value)
 	{
 		if (motor == MA)
 		{
-			_set_pwm_0A(-1*value);
-			_set_pwm_1A(0);
-		} 
+			_set_pwm_0A(255);
+			_set_pwm_1A(255);
+		}
 		else if (motor == MB)
 		{
-			_set_pwm_0B(0);
-			_set_pwm_1B(-1*value);
+			_set_pwm_0B(255);
+			_set_pwm_1B(255);
 		}
 	}
 	else if(value > 0)
 	{
 		if (motor == MA)
 		{
-			_set_pwm_0A(0);
-			_set_pwm_1A(value);
+			_set_pwm_0A(255);
+			_set_pwm_1A(255-value);
 		}
 		else if (motor == MB)
 		{
-			_set_pwm_0B(value);
-			_set_pwm_1B(0);
+			_set_pwm_0B(255-value);
+			_set_pwm_1B(255);
 		}
 	}
 	return value;
 }
 
+
 void _break_motor(uint8_t motor)
 {
 	if (motor == MA)
 	{
-		_set_pwm_0A(0);
-		_set_pwm_1A(0);
+		_set_pwm_0A(255);
+		_set_pwm_1A(255);
 	}
 	else if (motor == MB)
 	{
-		_set_pwm_0B(0);
-		_set_pwm_1B(0);
+		_set_pwm_0B(255);
+		_set_pwm_1B(255);
 	}
 }
 
