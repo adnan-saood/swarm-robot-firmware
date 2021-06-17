@@ -1,0 +1,100 @@
+\hypertarget{__pid___8c}{}\doxysection{src/\+\_\+pid\+\_\+.c File Reference}
+\label{__pid___8c}\index{src/\_pid\_.c@{src/\_pid\_.c}}
+
+
+General PID implementation for AVR.  
+
+
+{\ttfamily \#include $<$\+\_\+pid\+\_\+.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{__pid___8c_a29fe06205528f56bcfdd242e3d1f9c19}{pid\+\_\+\+Init}} (int16\+\_\+t p\+\_\+factor, int16\+\_\+t i\+\_\+factor, int16\+\_\+t d\+\_\+factor, struct \mbox{\hyperlink{struct_p_i_d___d_a_t_a}{PID\+\_\+\+DATA}} $\ast$pid)
+\begin{DoxyCompactList}\small\item\em Initialisation of PID controller parameters. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{__pid___8c_ac0129c983e062dd6ee925ea932bae93f}{pid\+\_\+\+Controller}} (int16\+\_\+t set\+Point, int16\+\_\+t process\+Value, struct \mbox{\hyperlink{struct_p_i_d___d_a_t_a}{PID\+\_\+\+DATA}} $\ast$pid\+\_\+st)
+\begin{DoxyCompactList}\small\item\em PID control algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{__pid___8c_a7b7ef4e688a58b21b6d36f620d8a645e}{pid\+\_\+\+Reset\+\_\+\+Integrator}} (\mbox{\hyperlink{__pid___8h_a4cce40a2f18039f5f1e1744cd44452cf}{pid\+Data\+\_\+t}} $\ast$pid\+\_\+st)
+\begin{DoxyCompactList}\small\item\em Resets the integrator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+General PID implementation for AVR. 
+
+Discrete PID controller implementation. Set up by giving P/\+I/D terms to Init\+\_\+\+PID(), and uses a struct \mbox{\hyperlink{struct_p_i_d___d_a_t_a}{PID\+\_\+\+DATA}} to store internal values.
+
+
+\begin{DoxyItemize}
+\item File\+: pid.\+c
+\item Compiler\+: IAR EWAAVR 4.\+11A
+\item Supported devices\+: All AVR devices can be used.
+\item App\+Note\+: AVR221 -\/ Discrete PID controller
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Atmel Corporation\+: \href{http://www.atmel.com}{\texttt{ http\+://www.\+atmel.\+com}} ~\newline
+ Support email\+: \href{mailto:avr@atmel.com}{\texttt{ avr@atmel.\+com}}
+\end{DoxyAuthor}
+\$\+Name\$ \begin{DoxyParagraph}{Revision}
+456 
+\end{DoxyParagraph}
+\$\+RCSfile\$ \begin{DoxyParagraph}{Date}
+2006-\/02-\/16 12\+:46\+:13 +0100 (to, 16 feb 2006) 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{__pid___8c_ac0129c983e062dd6ee925ea932bae93f}\label{__pid___8c_ac0129c983e062dd6ee925ea932bae93f}} 
+\index{\_pid\_.c@{\_pid\_.c}!pid\_Controller@{pid\_Controller}}
+\index{pid\_Controller@{pid\_Controller}!\_pid\_.c@{\_pid\_.c}}
+\doxysubsubsection{\texorpdfstring{pid\_Controller()}{pid\_Controller()}}
+{\footnotesize\ttfamily int16\+\_\+t pid\+\_\+\+Controller (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{set\+Point,  }\item[{int16\+\_\+t}]{process\+Value,  }\item[{struct \mbox{\hyperlink{struct_p_i_d___d_a_t_a}{PID\+\_\+\+DATA}} $\ast$}]{pid\+\_\+st }\end{DoxyParamCaption})}
+
+
+
+PID control algorithm. 
+
+Calculates output from setpoint, process value and PID status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\+Point} & Desired value. \\
+\hline
+{\em process\+Value} & Measured value. \\
+\hline
+{\em pid\+\_\+st} & PID status struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{__pid___8c_a29fe06205528f56bcfdd242e3d1f9c19}\label{__pid___8c_a29fe06205528f56bcfdd242e3d1f9c19}} 
+\index{\_pid\_.c@{\_pid\_.c}!pid\_Init@{pid\_Init}}
+\index{pid\_Init@{pid\_Init}!\_pid\_.c@{\_pid\_.c}}
+\doxysubsubsection{\texorpdfstring{pid\_Init()}{pid\_Init()}}
+{\footnotesize\ttfamily void pid\+\_\+\+Init (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{p\+\_\+factor,  }\item[{int16\+\_\+t}]{i\+\_\+factor,  }\item[{int16\+\_\+t}]{d\+\_\+factor,  }\item[{struct \mbox{\hyperlink{struct_p_i_d___d_a_t_a}{PID\+\_\+\+DATA}} $\ast$}]{pid }\end{DoxyParamCaption})}
+
+
+
+Initialisation of PID controller parameters. 
+
+Initialise the variables used by the PID algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+factor} & Proportional term. \\
+\hline
+{\em i\+\_\+factor} & Integral term. \\
+\hline
+{\em d\+\_\+factor} & Derivate term. \\
+\hline
+{\em pid} & Struct with PID status. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{__pid___8c_a7b7ef4e688a58b21b6d36f620d8a645e}\label{__pid___8c_a7b7ef4e688a58b21b6d36f620d8a645e}} 
+\index{\_pid\_.c@{\_pid\_.c}!pid\_Reset\_Integrator@{pid\_Reset\_Integrator}}
+\index{pid\_Reset\_Integrator@{pid\_Reset\_Integrator}!\_pid\_.c@{\_pid\_.c}}
+\doxysubsubsection{\texorpdfstring{pid\_Reset\_Integrator()}{pid\_Reset\_Integrator()}}
+{\footnotesize\ttfamily void pid\+\_\+\+Reset\+\_\+\+Integrator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{__pid___8h_a4cce40a2f18039f5f1e1744cd44452cf}{pid\+Data\+\_\+t}} $\ast$}]{pid\+\_\+st }\end{DoxyParamCaption})}
+
+
+
+Resets the integrator. 
+
+Calling this function will reset the integrator in the PID regulator. 

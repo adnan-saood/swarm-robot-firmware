@@ -1,0 +1,77 @@
+\hypertarget{____timer1_____8h}{}\doxysection{src/\+\_\+\+\_\+timer1\+\_\+\+\_\+.h File Reference}
+\label{____timer1_____8h}\index{src/\_\_timer1\_\_.h@{src/\_\_timer1\_\_.h}}
+
+
+Header file for {\bfseries{timer1}}.c.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+swarm\+\_\+wold\+\_\+\+\_\+.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{____timer1_____8h_abad2f4842fb6040ab73f1173d9ec4b05}\label{____timer1_____8h_abad2f4842fb6040ab73f1173d9ec4b05}} 
+\#define {\bfseries \+\_\+\+TICK\+\_\+\+US\+\_\+1}~0.\+0625
+\item 
+\mbox{\Hypertarget{____timer1_____8h_aa2a707784aa3e991a1ed26abdecbb13f}\label{____timer1_____8h_aa2a707784aa3e991a1ed26abdecbb13f}} 
+\#define {\bfseries \+\_\+\+TICK\+\_\+\+MS\+\_\+1}~0.\+0000625
+\item 
+\mbox{\Hypertarget{____timer1_____8h_a0a43e4772c4229e03f87d7d10e0bf20b}\label{____timer1_____8h_a0a43e4772c4229e03f87d7d10e0bf20b}} 
+\#define {\bfseries \+\_\+\+TICK\+\_\+\+US\+\_\+0}~16
+\item 
+\mbox{\Hypertarget{____timer1_____8h_a7494b069f9b04f1a64b9dd6899c4ccee}\label{____timer1_____8h_a7494b069f9b04f1a64b9dd6899c4ccee}} 
+\#define {\bfseries \+\_\+\+TICK\+\_\+\+MS\+\_\+0}~0.\+016
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{____timer1_____8h_ab50c41f94cdcb3558e9ebcc885552ab6}{\+\_\+timer1\+\_\+init}} (void)
+\item 
+\mbox{\Hypertarget{____timer1_____8h_ab922137d832776ca1708b4b9e69ab729}\label{____timer1_____8h_ab922137d832776ca1708b4b9e69ab729}} 
+uint64\+\_\+t {\bfseries \+\_\+micros1} (void)
+\item 
+\mbox{\Hypertarget{____timer1_____8h_ab74aabf770ca948a1194a4d7d78f865f}\label{____timer1_____8h_ab74aabf770ca948a1194a4d7d78f865f}} 
+uint64\+\_\+t {\bfseries \+\_\+millis1} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{____timer1_____8h_a2a726a0188d7e88b571b2ac4f49b97ae}\label{____timer1_____8h_a2a726a0188d7e88b571b2ac4f49b97ae}} 
+volatile uint8\+\_\+t {\bfseries \+\_\+controler\+\_\+flag\+\_\+A}
+\item 
+\mbox{\Hypertarget{____timer1_____8h_a05b3aad4af8b140640d27f048ff0d13e}\label{____timer1_____8h_a05b3aad4af8b140640d27f048ff0d13e}} 
+volatile uint8\+\_\+t {\bfseries \+\_\+controler\+\_\+flag\+\_\+B}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for {\bfseries{timer1}}.c. 
+
+
+\begin{DoxyItemize}
+\item File\+: {\bfseries{timer1}}.h
+\item Compiler\+: GCC-\/\+AVR
+\item Supported devices\+: Tested on 328p
+\item App\+Note\+: Discrete PID controller
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Swarm robot graduation project workgroub ~\newline
+ Mechatronics Program for the Distinguished ~\newline
+ \$\+Name\$ 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Revision}
+1 
+\end{DoxyParagraph}
+\$\+RCSfile\$ \begin{DoxyParagraph}{Date}
+/9/2021 10\+:17\+:41 AM
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{____timer1_____8h_ab50c41f94cdcb3558e9ebcc885552ab6}\label{____timer1_____8h_ab50c41f94cdcb3558e9ebcc885552ab6}} 
+\index{\_\_timer1\_\_.h@{\_\_timer1\_\_.h}!\_timer1\_init@{\_timer1\_init}}
+\index{\_timer1\_init@{\_timer1\_init}!\_\_timer1\_\_.h@{\_\_timer1\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_timer1\_init()}{\_timer1\_init()}}
+{\footnotesize\ttfamily void \+\_\+timer1\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize Timer/\+Counter 1 with 1 prescaler (244 MHz overflow frequency at 16 MHz) 

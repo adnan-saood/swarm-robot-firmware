@@ -1,0 +1,154 @@
+\hypertarget{____kinematics_____8h}{}\doxysection{src/\+\_\+\+\_\+kinematics\+\_\+\+\_\+.h File Reference}
+\label{____kinematics_____8h}\index{src/\_\_kinematics\_\_.h@{src/\_\_kinematics\_\_.h}}
+
+
+Header file for {\bfseries{kimenatics}}.c.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+swarm\+\_\+wold\+\_\+\+\_\+.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpoint}{point}}
+\item 
+struct \mbox{\hyperlink{structpos}{pos}}
+\item 
+struct \mbox{\hyperlink{structpos__dot}{pos\+\_\+dot}}
+\item 
+struct \mbox{\hyperlink{struct__i__pos}{\+\_\+i\+\_\+pos}}
+\item 
+struct \mbox{\hyperlink{structmat2}{mat2}}
+\item 
+struct \mbox{\hyperlink{struct__omega}{\+\_\+omega}}
+\item 
+struct \mbox{\hyperlink{struct__theta}{\+\_\+theta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{____kinematics_____8h_aa73214aa5f2f94f63d90bb4e3d99fe53}\label{____kinematics_____8h_aa73214aa5f2f94f63d90bb4e3d99fe53}} 
+\#define {\bfseries L}~0.\+06
+\item 
+\mbox{\Hypertarget{____kinematics_____8h_a62969232668331297e2dca1ae2ddd10d}\label{____kinematics_____8h_a62969232668331297e2dca1ae2ddd10d}} 
+\#define {\bfseries r}~0.\+02
+\item 
+\mbox{\Hypertarget{____kinematics_____8h_a8d420b03364c7f8eede8d630e6434ed0}\label{____kinematics_____8h_a8d420b03364c7f8eede8d630e6434ed0}} 
+\#define {\bfseries R\+\_\+over\+\_\+L}~0.\+333
+\item 
+\mbox{\Hypertarget{____kinematics_____8h_a7e409c75c9f834df9625122767db43b5}\label{____kinematics_____8h_a7e409c75c9f834df9625122767db43b5}} 
+\#define {\bfseries R\+\_\+over\+\_\+2}~0.\+01
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__i__pos}{\+\_\+i\+\_\+pos}} \mbox{\hyperlink{____kinematics_____8h_ad2117782b81fe2a68f0446525211f495}{\+\_\+omega\+\_\+to\+\_\+intertial}} (struct \mbox{\hyperlink{struct__omega}{\+\_\+omega}} $\ast$input)
+\item 
+struct \mbox{\hyperlink{structpos__dot}{pos\+\_\+dot}} \mbox{\hyperlink{____kinematics_____8h_a09fff410de2202f4a1ba2486ec33d3ee}{\+\_\+inertial\+\_\+to\+\_\+pos\+\_\+dot}} (struct \mbox{\hyperlink{struct__i__pos}{\+\_\+i\+\_\+pos}} $\ast$inertial, struct \mbox{\hyperlink{structpos}{pos}} $\ast$\+\_\+pos)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{____kinematics_____8h_aabd50e434a1ddadd3f0eee621eed0e39}{\+\_\+dead\+\_\+reckon}} (struct \mbox{\hyperlink{structpos}{pos}} $\ast$\+\_\+pos, struct \mbox{\hyperlink{structpos__dot}{pos\+\_\+dot}} $\ast$\+\_\+pos\+\_\+dot)
+\item 
+struct \mbox{\hyperlink{structpos}{pos}} \mbox{\hyperlink{____kinematics_____8h_a40f771343d935ba224f6315a623b936d}{\+\_\+theta\+LR\+\_\+to\+\_\+pos}} (struct \mbox{\hyperlink{struct__theta}{\+\_\+theta}} $\ast$th)
+\item 
+void \mbox{\hyperlink{____kinematics_____8h_a5bf4da3ad19446f4bec20940eb1a4c72}{\+\_\+update\+\_\+theta\+LR}} (struct \mbox{\hyperlink{struct__theta}{\+\_\+theta}} $\ast$input)
+\item 
+void \mbox{\hyperlink{____kinematics_____8h_ade7fe78946d1798ba861cfb6cc2fac20}{\+\_\+update\+\_\+omega}} (struct \mbox{\hyperlink{struct__omega}{\+\_\+omega}} $\ast$input)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for {\bfseries{kimenatics}}.c. 
+
+
+\begin{DoxyItemize}
+\item File\+: {\bfseries{kimenatics}}.h
+\item Compiler\+: GCC-\/\+AVR
+\item Supported devices\+: Tested on 328p
+\item App\+Note\+: Kinematics calculations for the mobile robot
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Swarm robot graduation project workgroub ~\newline
+ Mechatronics Program for the Distinguished ~\newline
+ \$\+Name\$ 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Revision}
+1 
+\end{DoxyParagraph}
+\$\+RCSfile\$ \begin{DoxyParagraph}{Date}
+5/29/2021 8\+:04\+:54 PM
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{____kinematics_____8h_aabd50e434a1ddadd3f0eee621eed0e39}\label{____kinematics_____8h_aabd50e434a1ddadd3f0eee621eed0e39}} 
+\index{\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}!\_dead\_reckon@{\_dead\_reckon}}
+\index{\_dead\_reckon@{\_dead\_reckon}!\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_dead\_reckon()}{\_dead\_reckon()}}
+{\footnotesize\ttfamily uint16\+\_\+t \+\_\+dead\+\_\+reckon (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structpos}{pos}} $\ast$}]{\+\_\+pos,  }\item[{struct \mbox{\hyperlink{structpos__dot}{pos\+\_\+dot}} $\ast$}]{\+\_\+pos\+\_\+dot }\end{DoxyParamCaption})}
+
+a dead-\/reckoner for spatial pos estimation, returns debug info 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+pos} & pos \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+pos\+\_\+dot} & derivative of pos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____kinematics_____8h_a09fff410de2202f4a1ba2486ec33d3ee}\label{____kinematics_____8h_a09fff410de2202f4a1ba2486ec33d3ee}} 
+\index{\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}!\_inertial\_to\_pos\_dot@{\_inertial\_to\_pos\_dot}}
+\index{\_inertial\_to\_pos\_dot@{\_inertial\_to\_pos\_dot}!\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_inertial\_to\_pos\_dot()}{\_inertial\_to\_pos\_dot()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structpos__dot}{pos\+\_\+dot}} \+\_\+inertial\+\_\+to\+\_\+pos\+\_\+dot (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct__i__pos}{\+\_\+i\+\_\+pos}} $\ast$}]{inertial,  }\item[{struct \mbox{\hyperlink{structpos}{pos}} $\ast$}]{\+\_\+pos }\end{DoxyParamCaption})}
+
+A function to convert inertial velocities to \mbox{\hyperlink{structpos__dot}{pos\+\_\+dot}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em inertial} & struct of inertial pos \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+pos} & struct of current pos for \textbackslash{}theta \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____kinematics_____8h_ad2117782b81fe2a68f0446525211f495}\label{____kinematics_____8h_ad2117782b81fe2a68f0446525211f495}} 
+\index{\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}!\_omega\_to\_intertial@{\_omega\_to\_intertial}}
+\index{\_omega\_to\_intertial@{\_omega\_to\_intertial}!\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_omega\_to\_intertial()}{\_omega\_to\_intertial()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct__i__pos}{\+\_\+i\+\_\+pos}} \+\_\+omega\+\_\+to\+\_\+intertial (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct__omega}{\+\_\+omega}} $\ast$}]{input }\end{DoxyParamCaption})}
+
+A function to convert wheels rotation velocity to inertial velocities 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & struct of wheels velocity\\
+\hline
+ & {\em \mbox{\hyperlink{struct__omega}{\+\_\+omega}}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____kinematics_____8h_a40f771343d935ba224f6315a623b936d}\label{____kinematics_____8h_a40f771343d935ba224f6315a623b936d}} 
+\index{\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}!\_thetaLR\_to\_pos@{\_thetaLR\_to\_pos}}
+\index{\_thetaLR\_to\_pos@{\_thetaLR\_to\_pos}!\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_thetaLR\_to\_pos()}{\_thetaLR\_to\_pos()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structpos}{pos}} \+\_\+theta\+LR\+\_\+to\+\_\+pos (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct__theta}{\+\_\+theta}} $\ast$}]{th }\end{DoxyParamCaption})}
+
+A function to convert wheels\textquotesingle{} absolute rotation angles to pos (not proper) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em th} & wheels\textquotesingle{} absolute rotation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____kinematics_____8h_ade7fe78946d1798ba861cfb6cc2fac20}\label{____kinematics_____8h_ade7fe78946d1798ba861cfb6cc2fac20}} 
+\index{\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}!\_update\_omega@{\_update\_omega}}
+\index{\_update\_omega@{\_update\_omega}!\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_update\_omega()}{\_update\_omega()}}
+{\footnotesize\ttfamily void \+\_\+update\+\_\+omega (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct__omega}{\+\_\+omega}} $\ast$}]{input }\end{DoxyParamCaption})}
+
+A function to update the wheels\textquotesingle{} rotation velocity or each wheel from hardware modules 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & wheel\textquotesingle{}s rotational velocity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____kinematics_____8h_a5bf4da3ad19446f4bec20940eb1a4c72}\label{____kinematics_____8h_a5bf4da3ad19446f4bec20940eb1a4c72}} 
+\index{\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}!\_update\_thetaLR@{\_update\_thetaLR}}
+\index{\_update\_thetaLR@{\_update\_thetaLR}!\_\_kinematics\_\_.h@{\_\_kinematics\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_update\_thetaLR()}{\_update\_thetaLR()}}
+{\footnotesize\ttfamily void \+\_\+update\+\_\+theta\+LR (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct__theta}{\+\_\+theta}} $\ast$}]{input }\end{DoxyParamCaption})}
+
+A function to update the absolute rotation angle of each wheel from hardware modules 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em input} & wheels\textquotesingle{} absolute rotation \\
+\hline
+\end{DoxyParams}

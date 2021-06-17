@@ -1,0 +1,75 @@
+\hypertarget{____timer0_____8h}{}\doxysection{src/\+\_\+\+\_\+timer0\+\_\+\+\_\+.h File Reference}
+\label{____timer0_____8h}\index{src/\_\_timer0\_\_.h@{src/\_\_timer0\_\_.h}}
+
+
+Header file for {\bfseries{timer0}}.c.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+swarm\+\_\+wold\+\_\+\+\_\+.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{____timer0_____8h_a05471fe7588ff4146c1b52bbbb17fc8c}{\+\_\+timer0\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{____timer0_____8h_aa7fc430f620eec716aba159eea1775a0}{\+\_\+timer0\+\_\+init\+\_\+prescaler}} (uint16\+\_\+t prescaler)
+\item 
+unsigned long \mbox{\hyperlink{____timer0_____8h_ab04a82167b3da6516043e55d76f80221}{\+\_\+micros0}} (void)
+\item 
+unsigned long \mbox{\hyperlink{____timer0_____8h_a0f7fa8f6f6f9fb601492d2ca5e2b9a87}{\+\_\+millis0}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for {\bfseries{timer0}}.c. 
+
+
+\begin{DoxyItemize}
+\item File\+: {\bfseries{timer0}}.h
+\item Compiler\+: GCC-\/\+AVR
+\item Supported devices\+: Tested on 328p
+\item App\+Note\+: Discrete PID controller
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Swarm robot graduation project workgroub ~\newline
+ Mechatronics Program for the Distinguished ~\newline
+ \$\+Name\$ 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Revision}
+1 
+\end{DoxyParagraph}
+\$\+RCSfile\$ \begin{DoxyParagraph}{Date}
+/19/2021 9\+:03\+:51 AM
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{____timer0_____8h_ab04a82167b3da6516043e55d76f80221}\label{____timer0_____8h_ab04a82167b3da6516043e55d76f80221}} 
+\index{\_\_timer0\_\_.h@{\_\_timer0\_\_.h}!\_micros0@{\_micros0}}
+\index{\_micros0@{\_micros0}!\_\_timer0\_\_.h@{\_\_timer0\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_micros0()}{\_micros0()}}
+{\footnotesize\ttfamily unsigned long \+\_\+micros0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the microseconds passed since timer initialize \mbox{\Hypertarget{____timer0_____8h_a0f7fa8f6f6f9fb601492d2ca5e2b9a87}\label{____timer0_____8h_a0f7fa8f6f6f9fb601492d2ca5e2b9a87}} 
+\index{\_\_timer0\_\_.h@{\_\_timer0\_\_.h}!\_millis0@{\_millis0}}
+\index{\_millis0@{\_millis0}!\_\_timer0\_\_.h@{\_\_timer0\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_millis0()}{\_millis0()}}
+{\footnotesize\ttfamily unsigned long \+\_\+millis0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the milliseconds passed since timer initialize \mbox{\Hypertarget{____timer0_____8h_a05471fe7588ff4146c1b52bbbb17fc8c}\label{____timer0_____8h_a05471fe7588ff4146c1b52bbbb17fc8c}} 
+\index{\_\_timer0\_\_.h@{\_\_timer0\_\_.h}!\_timer0\_init@{\_timer0\_init}}
+\index{\_timer0\_init@{\_timer0\_init}!\_\_timer0\_\_.h@{\_\_timer0\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_timer0\_init()}{\_timer0\_init()}}
+{\footnotesize\ttfamily void \+\_\+timer0\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize Timer/\+Counter 0 with clock prescaler of 1024 (244 Hz overflow at 16 MHz) \mbox{\Hypertarget{____timer0_____8h_aa7fc430f620eec716aba159eea1775a0}\label{____timer0_____8h_aa7fc430f620eec716aba159eea1775a0}} 
+\index{\_\_timer0\_\_.h@{\_\_timer0\_\_.h}!\_timer0\_init\_prescaler@{\_timer0\_init\_prescaler}}
+\index{\_timer0\_init\_prescaler@{\_timer0\_init\_prescaler}!\_\_timer0\_\_.h@{\_\_timer0\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_timer0\_init\_prescaler()}{\_timer0\_init\_prescaler()}}
+{\footnotesize\ttfamily void \+\_\+timer0\+\_\+init\+\_\+prescaler (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{prescaler }\end{DoxyParamCaption})}
+
+Initialize Timer/\+Counter 0 with costume prescaler (see the datasheet) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em prescaler} & prescaler 1,2,4,8,255,1024 \\
+\hline
+\end{DoxyParams}

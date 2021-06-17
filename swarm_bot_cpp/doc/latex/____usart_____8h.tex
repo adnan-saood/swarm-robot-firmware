@@ -1,0 +1,67 @@
+\hypertarget{____usart_____8h}{}\doxysection{src/\+\_\+\+\_\+usart\+\_\+\+\_\+.h File Reference}
+\label{____usart_____8h}\index{src/\_\_usart\_\_.h@{src/\_\_usart\_\_.h}}
+
+
+Header file for pid.\+c.  
+
+
+{\ttfamily \#include $<$asf.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$board.\+h$>$}\newline
+{\ttfamily \#include $<$conf\+\_\+board.\+h$>$}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{____usart_____8h_a62634036639f88eece6fbf226b45f84b}\label{____usart_____8h_a62634036639f88eece6fbf226b45f84b}} 
+\#define {\bfseries BAUD}~57600
+\item 
+\mbox{\Hypertarget{____usart_____8h_aa5be9eab1b4ef100a79c12228668f5a9}\label{____usart_____8h_aa5be9eab1b4ef100a79c12228668f5a9}} 
+\#define {\bfseries RX\+\_\+\+BUFSIZE}~120
+\item 
+\mbox{\Hypertarget{____usart_____8h_a91cf1c8bed2b5667f322c71ac83e8294}\label{____usart_____8h_a91cf1c8bed2b5667f322c71ac83e8294}} 
+\#define {\bfseries BRC}~((F\+\_\+\+CPU/(16UL$\ast$BAUD)) -\/ 1)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{____usart_____8h_a6aa3b4e2a5362cd032ed6b218afe58f6}{usart\+\_\+init}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for pid.\+c. 
+
+
+\begin{DoxyItemize}
+\item File\+: {\bfseries{usart}}.h
+\item Compiler\+: GCC-\/\+AVR
+\item Supported devices\+: Tested on 328p
+\item App\+Note\+: USART module driver
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Swarm robot graduation project workgroub ~\newline
+ Mechatronics Program for the Distinguished ~\newline
+ \$\+Name\$ 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Revision}
+456 
+\end{DoxyParagraph}
+\$\+RCSfile\$ \begin{DoxyParagraph}{Date}
+021-\/5 
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{____usart_____8h_a6aa3b4e2a5362cd032ed6b218afe58f6}\label{____usart_____8h_a6aa3b4e2a5362cd032ed6b218afe58f6}} 
+\index{\_\_usart\_\_.h@{\_\_usart\_\_.h}!usart\_init@{usart\_init}}
+\index{usart\_init@{usart\_init}!\_\_usart\_\_.h@{\_\_usart\_\_.h}}
+\doxysubsubsection{\texorpdfstring{usart\_init()}{usart\_init()}}
+{\footnotesize\ttfamily void usart\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize the USART module with
+\begin{DoxyParams}{Parameters}
+{\em BAUD} & \\
+\hline
+\end{DoxyParams}

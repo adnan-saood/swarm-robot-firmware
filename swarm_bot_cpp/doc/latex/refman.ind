@@ -1,0 +1,224 @@
+\begin{theindex}
+
+  \item {\_\_INT\_0\_1\_\_.h}
+    \subitem {\_interrupt0\_enable}, \hyperpage{20}
+  \item {\_\_adc\_\_.h}
+    \subitem {\_adc\_init}, \hyperpage{14}
+    \subitem {\_adc\_read}, \hyperpage{14}
+  \item {\_\_dc\_control\_\_.h}
+    \subitem {\_break\_motor}, \hyperpage{15}
+    \subitem {\_command}, \hyperpage{16}
+    \subitem {\_dc\_controller\_loop}, \hyperpage{16}
+    \subitem {\_init\_dc\_control}, \hyperpage{16}
+    \subitem {\_ref}, \hyperpage{16}
+    \subitem {\_sens}, \hyperpage{17}
+    \subitem {\_set\_speed}, \hyperpage{17}
+    \subitem {\_update\_controller}, \hyperpage{17}
+  \item {\_\_format\_\_.h}
+    \subitem {\_float\_to\_printable}, \hyperpage{19}
+  \item {\_\_kinematics\_\_.h}
+    \subitem {\_dead\_reckon}, \hyperpage{21}
+    \subitem {\_inertial\_to\_pos\_dot}, \hyperpage{22}
+    \subitem {\_omega\_to\_intertial}, \hyperpage{22}
+    \subitem {\_thetaLR\_to\_pos}, \hyperpage{22}
+    \subitem {\_update\_omega}, \hyperpage{23}
+    \subitem {\_update\_thetaLR}, \hyperpage{23}
+  \item {\_\_odometry\_\_.h}
+    \subitem {\_insertion\_sort}, \hyperpage{24}
+    \subitem {\_omega\_comp\_A}, \hyperpage{25}
+    \subitem {\_omega\_comp\_B}, \hyperpage{25}
+    \subitem {\_omega\_from\_PMA}, \hyperpage{25}
+    \subitem {\_omega\_from\_PMB}, \hyperpage{25}
+    \subitem {\_omega\_from\_encA}, \hyperpage{25}
+    \subitem {\_omega\_from\_encB}, \hyperpage{25}
+    \subitem {\_thetaA}, \hyperpage{26}
+    \subitem {\_thetaB}, \hyperpage{26}
+    \subitem {\_ticksA}, \hyperpage{26}
+    \subitem {\_ticksB}, \hyperpage{26}
+  \item {\_\_pwm\_\_.h}
+    \subitem {\_set\_pwm\_0A}, \hyperpage{27}
+    \subitem {\_set\_pwm\_0B}, \hyperpage{27}
+    \subitem {\_set\_pwm\_1A}, \hyperpage{28}
+    \subitem {\_set\_pwm\_1B}, \hyperpage{28}
+  \item {\_\_timer0\_\_.h}
+    \subitem {\_micros0}, \hyperpage{30}
+    \subitem {\_millis0}, \hyperpage{30}
+    \subitem {\_timer0\_init}, \hyperpage{31}
+    \subitem {\_timer0\_init\_prescaler}, \hyperpage{31}
+  \item {\_\_timer1\_\_.h}
+    \subitem {\_timer1\_init}, \hyperpage{32}
+  \item {\_\_timer2\_\_.h}
+    \subitem {\_timer2\_init}, \hyperpage{33}
+  \item {\_\_usart\_\_.h}
+    \subitem {usart\_init}, \hyperpage{34}
+  \item {\_adc\_init}
+    \subitem {\_\_adc\_\_.h}, \hyperpage{14}
+  \item {\_adc\_read}
+    \subitem {\_\_adc\_\_.h}, \hyperpage{14}
+  \item {\_break\_motor}
+    \subitem {\_\_dc\_control\_\_.h}, \hyperpage{15}
+  \item {\_command}
+    \subitem {\_\_dc\_control\_\_.h}, \hyperpage{16}
+  \item {\_dc\_controller\_loop}
+    \subitem {\_\_dc\_control\_\_.h}, \hyperpage{16}
+  \item {\_dead\_reckon}
+    \subitem {\_\_kinematics\_\_.h}, \hyperpage{21}
+  \item {\_float\_to\_printable}
+    \subitem {\_\_format\_\_.h}, \hyperpage{19}
+  \item {\_i\_pos}, \hyperpage{7}
+  \item {\_inertial\_to\_pos\_dot}
+    \subitem {\_\_kinematics\_\_.h}, \hyperpage{22}
+  \item {\_init\_dc\_control}
+    \subitem {\_\_dc\_control\_\_.h}, \hyperpage{16}
+  \item {\_insertion\_sort}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{24}
+  \item {\_interrupt0\_enable}
+    \subitem {\_\_INT\_0\_1\_\_.h}, \hyperpage{20}
+  \item {\_micros0}
+    \subitem {\_\_timer0\_\_.h}, \hyperpage{30}
+  \item {\_millis0}
+    \subitem {\_\_timer0\_\_.h}, \hyperpage{30}
+  \item {\_omega}, \hyperpage{7}
+  \item {\_omega\_comp\_A}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{25}
+  \item {\_omega\_comp\_B}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{25}
+  \item {\_omega\_from\_PMA}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{25}
+  \item {\_omega\_from\_PMB}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{25}
+  \item {\_omega\_from\_encA}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{25}
+  \item {\_omega\_from\_encB}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{25}
+  \item {\_omega\_to\_intertial}
+    \subitem {\_\_kinematics\_\_.h}, \hyperpage{22}
+  \item {\_pid\_.c}
+    \subitem {pid\_Controller}, \hyperpage{36}
+    \subitem {pid\_Init}, \hyperpage{36}
+    \subitem {pid\_Reset\_Integrator}, \hyperpage{36}
+  \item {\_pid\_.h}
+    \subitem {MAX\_INT}, \hyperpage{38}
+    \subitem {pid\_Controller}, \hyperpage{39}
+    \subitem {pid\_Init}, \hyperpage{39}
+    \subitem {pid\_Reset\_Integrator}, \hyperpage{39}
+    \subitem {pidData\_t}, \hyperpage{38}
+  \item {\_ref}
+    \subitem {\_\_dc\_control\_\_.h}, \hyperpage{16}
+  \item {\_sens}
+    \subitem {\_\_dc\_control\_\_.h}, \hyperpage{17}
+  \item {\_set\_pwm\_0A}
+    \subitem {\_\_pwm\_\_.h}, \hyperpage{27}
+  \item {\_set\_pwm\_0B}
+    \subitem {\_\_pwm\_\_.h}, \hyperpage{27}
+  \item {\_set\_pwm\_1A}
+    \subitem {\_\_pwm\_\_.h}, \hyperpage{28}
+  \item {\_set\_pwm\_1B}
+    \subitem {\_\_pwm\_\_.h}, \hyperpage{28}
+  \item {\_set\_speed}
+    \subitem {\_\_dc\_control\_\_.h}, \hyperpage{17}
+  \item {\_theta}, \hyperpage{8}
+  \item {\_thetaA}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{26}
+  \item {\_thetaB}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{26}
+  \item {\_thetaLR\_to\_pos}
+    \subitem {\_\_kinematics\_\_.h}, \hyperpage{22}
+  \item {\_ticksA}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{26}
+  \item {\_ticksB}
+    \subitem {\_\_odometry\_\_.h}, \hyperpage{26}
+  \item {\_timer0\_init}
+    \subitem {\_\_timer0\_\_.h}, \hyperpage{31}
+  \item {\_timer0\_init\_prescaler}
+    \subitem {\_\_timer0\_\_.h}, \hyperpage{31}
+  \item {\_timer1\_init}
+    \subitem {\_\_timer1\_\_.h}, \hyperpage{32}
+  \item {\_timer2\_init}
+    \subitem {\_\_timer2\_\_.h}, \hyperpage{33}
+  \item {\_update\_controller}
+    \subitem {\_\_dc\_control\_\_.h}, \hyperpage{17}
+  \item {\_update\_omega}
+    \subitem {\_\_kinematics\_\_.h}, \hyperpage{23}
+  \item {\_update\_thetaLR}
+    \subitem {\_\_kinematics\_\_.h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {mat2}, \hyperpage{8}
+  \item {MAX\_INT}
+    \subitem {\_pid\_.h}, \hyperpage{38}
+
+  \indexspace
+
+  \item {pid\_Controller}
+    \subitem {\_pid\_.c}, \hyperpage{36}
+    \subitem {\_pid\_.h}, \hyperpage{39}
+  \item {PID\_DATA}, \hyperpage{9}
+  \item {pid\_Init}
+    \subitem {\_pid\_.c}, \hyperpage{36}
+    \subitem {\_pid\_.h}, \hyperpage{39}
+  \item {pid\_Reset\_Integrator}
+    \subitem {\_pid\_.c}, \hyperpage{36}
+    \subitem {\_pid\_.h}, \hyperpage{39}
+  \item {pidData\_t}
+    \subitem {\_pid\_.h}, \hyperpage{38}
+  \item {point}, \hyperpage{9}
+    \subitem {x}, \hyperpage{10}
+    \subitem {y}, \hyperpage{10}
+  \item {pos}, \hyperpage{10}
+    \subitem {th}, \hyperpage{11}
+    \subitem {x}, \hyperpage{11}
+    \subitem {y}, \hyperpage{11}
+  \item {pos\_dot}, \hyperpage{11}
+    \subitem {th\_dot}, \hyperpage{12}
+    \subitem {x\_dot}, \hyperpage{12}
+    \subitem {y\_dot}, \hyperpage{12}
+
+  \indexspace
+
+  \item {src/\_\_adc\_\_.h}, \hyperpage{13}
+  \item {src/\_\_dc\_control\_\_.h}, \hyperpage{14}
+  \item {src/\_\_format\_\_.h}, \hyperpage{18}
+  \item {src/\_\_INT\_0\_1\_\_.h}, \hyperpage{19}
+  \item {src/\_\_kinematics\_\_.h}, \hyperpage{20}
+  \item {src/\_\_odometry\_\_.h}, \hyperpage{23}
+  \item {src/\_\_pwm\_\_.h}, \hyperpage{26}
+  \item {src/\_\_swarm\_wold\_\_.h}, \hyperpage{28}
+  \item {src/\_\_timer0\_\_.h}, \hyperpage{29}
+  \item {src/\_\_timer1\_\_.h}, \hyperpage{31}
+  \item {src/\_\_timer2\_\_.h}, \hyperpage{32}
+  \item {src/\_\_usart\_\_.h}, \hyperpage{33}
+  \item {src/\_pid\_.c}, \hyperpage{35}
+  \item {src/\_pid\_.h}, \hyperpage{37}
+  \item {src/asf.h}, \hyperpage{40}
+
+  \indexspace
+
+  \item {th}
+    \subitem {pos}, \hyperpage{11}
+  \item {th\_dot}
+    \subitem {pos\_dot}, \hyperpage{12}
+
+  \indexspace
+
+  \item {usart\_init}
+    \subitem {\_\_usart\_\_.h}, \hyperpage{34}
+
+  \indexspace
+
+  \item {x}
+    \subitem {point}, \hyperpage{10}
+    \subitem {pos}, \hyperpage{11}
+  \item {x\_dot}
+    \subitem {pos\_dot}, \hyperpage{12}
+
+  \indexspace
+
+  \item {y}
+    \subitem {point}, \hyperpage{10}
+    \subitem {pos}, \hyperpage{11}
+  \item {y\_dot}
+    \subitem {pos\_dot}, \hyperpage{12}
+
+\end{theindex}

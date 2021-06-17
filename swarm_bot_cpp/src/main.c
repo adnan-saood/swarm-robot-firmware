@@ -24,13 +24,13 @@ int main (void)
 	sei();
 	while (1)
 	{
-		_set_speed(MA, 200);
+		/*_set_speed(MA, 200);
 		_set_speed(MB, 200);
 		_update_omega(&w);
 		_i_p = _omega_to_intertial(&w);
 		printf("(%f , ", _i_p.v);
 		printf(" %f)\n", _i_p.w);
-		_delay_ms(100);
+		_delay_ms(100);*/
 		//_set_speed(MA, 80);
 		//while(1)
 		//{
@@ -42,6 +42,14 @@ int main (void)
 		//		break;
 		//	}
 		//}
+		_set_speed(MA,-75);
+		while(_ticksA() < 33);
+		_set_speed(MA,0);
+		_delay_ms(1000);
+		_set_speed(MA,75);
+		while(_ticksA() > 0);
+		_set_speed(MA,0);
+		_delay_ms(1000);
 	}
 	return 0;
 }

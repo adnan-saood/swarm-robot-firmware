@@ -34,7 +34,7 @@ void _interrupt0_enable(uint8_t trigger /**< [in] trigger mode, see file __INT_0
 /**
        * Enable interrupt of pin INT1 (see _pin_map.h)
        */
-void _interrupt1_enable(uint8_t trigger/**< [in] trigger mode, see file __INT_0_1__.h */;
+void _interrupt1_enable(uint8_t trigger/**< [in] trigger mode, see file __INT_0_1__.h */);
 
 
 

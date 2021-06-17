@@ -1,0 +1,163 @@
+\hypertarget{____odometry_____8h}{}\doxysection{src/\+\_\+\+\_\+odometry\+\_\+\+\_\+.h File Reference}
+\label{____odometry_____8h}\index{src/\_\_odometry\_\_.h@{src/\_\_odometry\_\_.h}}
+
+
+Header file for {\bfseries{odometry}}.c.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+swarm\+\_\+wold\+\_\+\+\_\+.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{____odometry_____8h_a285e3bd31f6ba0bef24be8b0dc8c192c}\label{____odometry_____8h_a285e3bd31f6ba0bef24be8b0dc8c192c}} 
+\#define {\bfseries \+\_\+\+\_\+\+ENC\+\_\+\+TICK\+\_\+\+THETA\+\_\+\+FOR\+\_\+\+OMEGA}~190399
+\item 
+\mbox{\Hypertarget{____odometry_____8h_a214f3a6d875fe2b37df7e64377e883d8}\label{____odometry_____8h_a214f3a6d875fe2b37df7e64377e883d8}} 
+\#define {\bfseries \+\_\+\+\_\+\+ENC\+\_\+\+TICK\+\_\+\+THETA}~0.\+1904
+\item 
+\mbox{\Hypertarget{____odometry_____8h_ab999acc77aa01b84cb9589eafb1f8e1a}\label{____odometry_____8h_ab999acc77aa01b84cb9589eafb1f8e1a}} 
+\#define {\bfseries \+\_\+\+\_\+\+PM\+\_\+lower\+\_\+bound}~200
+\item 
+\mbox{\Hypertarget{____odometry_____8h_a9ab37b5a95936f75825638a64fad3cdd}\label{____odometry_____8h_a9ab37b5a95936f75825638a64fad3cdd}} 
+\#define {\bfseries \+\_\+\+\_\+\+PM\+\_\+upper\+\_\+bound}~800
+\item 
+\mbox{\Hypertarget{____odometry_____8h_aace7b790a52635612f406b6ce9a71248}\label{____odometry_____8h_aace7b790a52635612f406b6ce9a71248}} 
+\#define {\bfseries \+\_\+\+\_\+\+PM\+\_\+\+SAMPLE\+\_\+\+COUNT}~5
+\item 
+\mbox{\Hypertarget{____odometry_____8h_acf1f4b25429cd6aedb3deb7605d0678c}\label{____odometry_____8h_acf1f4b25429cd6aedb3deb7605d0678c}} 
+\#define {\bfseries \+\_\+\+\_\+\+PM\+\_\+\+SLOPE}~1
+\item 
+\mbox{\Hypertarget{____odometry_____8h_a6ddfdda7a062d10cff4a72b76b44aeb8}\label{____odometry_____8h_a6ddfdda7a062d10cff4a72b76b44aeb8}} 
+\#define {\bfseries FORWARD}~1
+\item 
+\mbox{\Hypertarget{____odometry_____8h_adf445abfe1b77fa63f89e315ccc2f7f2}\label{____odometry_____8h_adf445abfe1b77fa63f89e315ccc2f7f2}} 
+\#define {\bfseries BACKWARD}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{____odometry_____8h_a2dad3022f78907b59e9097e0e82516ec}{\+\_\+thetaA}} (void)
+\item 
+float \mbox{\hyperlink{____odometry_____8h_ae7ead9debc05450a1e92bcc2566c42ff}{\+\_\+thetaB}} (void)
+\item 
+float \mbox{\hyperlink{____odometry_____8h_a615292e49f53f104a9b722ac0f79cdfb}{\+\_\+omega\+\_\+from\+\_\+encA}} (void)
+\item 
+float \mbox{\hyperlink{____odometry_____8h_a1550598342e593bd957cbeb0e8a91c8c}{\+\_\+omega\+\_\+from\+\_\+encB}} (void)
+\item 
+float \mbox{\hyperlink{____odometry_____8h_a56f867d48f1b2f7d31db5e5ce6fda880}{\+\_\+omega\+\_\+from\+\_\+\+PMA}} (void)
+\item 
+float \mbox{\hyperlink{____odometry_____8h_ae967e5e1fffed330432985bfcbcd4a67}{\+\_\+omega\+\_\+from\+\_\+\+PMB}} (void)
+\item 
+float \mbox{\hyperlink{____odometry_____8h_ac3c01373b69ca7a9909651033024e0e2}{\+\_\+omega\+\_\+comp\+\_\+A}} (void)
+\item 
+float \mbox{\hyperlink{____odometry_____8h_aa81ea9eae84ac0991d3bd43b6bce424a}{\+\_\+omega\+\_\+comp\+\_\+B}} (void)
+\item 
+int32\+\_\+t \mbox{\hyperlink{____odometry_____8h_a41a0ae28dd67f9dc457c8a8944f97ec4}{\+\_\+ticksA}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{____odometry_____8h_a2e0c140e05a10523f0887b927efc3eac}{\+\_\+ticksB}} ()
+\item 
+void \mbox{\hyperlink{____odometry_____8h_afc5cb0b9f8cc2aa3efe0606aa98e7345}{\+\_\+insertion\+\_\+sort}} (uint16\+\_\+t arr\mbox{[}$\,$\mbox{]}, int n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for {\bfseries{odometry}}.c. 
+
+
+\begin{DoxyItemize}
+\item File\+: \+\_\+\+\_\+odometry\+\_\+\+\_\+h
+\item Compiler\+: GCC-\/\+AVR
+\item Supported devices\+: Tested on 328p
+\item App\+Note\+: Odometry calculations for the mobile robot
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Swarm robot graduation project workgroub ~\newline
+ Mechatronics Program for the Distinguished ~\newline
+ \$\+Name\$ 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Revision}
+1 
+\end{DoxyParagraph}
+\$\+RCSfile\$ \begin{DoxyParagraph}{Date}
+/19/2021 9\+:43\+:59 AM
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{____odometry_____8h_afc5cb0b9f8cc2aa3efe0606aa98e7345}\label{____odometry_____8h_afc5cb0b9f8cc2aa3efe0606aa98e7345}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_insertion\_sort@{\_insertion\_sort}}
+\index{\_insertion\_sort@{\_insertion\_sort}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_insertion\_sort()}{\_insertion\_sort()}}
+{\footnotesize\ttfamily void \+\_\+insertion\+\_\+sort (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+Insertion sort algorithm (fastest for small array sizes) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em arr} & pointer to start of sorting \\
+\hline
+\mbox{\texttt{ in}}  & {\em n} & offset from\\
+\hline
+ & {\em arr\mbox{[}$\,$\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____odometry_____8h_ac3c01373b69ca7a9909651033024e0e2}\label{____odometry_____8h_ac3c01373b69ca7a9909651033024e0e2}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_omega\_comp\_A@{\_omega\_comp\_A}}
+\index{\_omega\_comp\_A@{\_omega\_comp\_A}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_omega\_comp\_A()}{\_omega\_comp\_A()}}
+{\footnotesize\ttfamily float \+\_\+omega\+\_\+comp\+\_\+A (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Complementary filter for wheel A angular velocity (encoder ticks and internal potentiometer) \mbox{\Hypertarget{____odometry_____8h_aa81ea9eae84ac0991d3bd43b6bce424a}\label{____odometry_____8h_aa81ea9eae84ac0991d3bd43b6bce424a}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_omega\_comp\_B@{\_omega\_comp\_B}}
+\index{\_omega\_comp\_B@{\_omega\_comp\_B}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_omega\_comp\_B()}{\_omega\_comp\_B()}}
+{\footnotesize\ttfamily float \+\_\+omega\+\_\+comp\+\_\+B (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Complementary filter for wheel B angular velocity (encoder ticks and internal potentiometer) \mbox{\Hypertarget{____odometry_____8h_a615292e49f53f104a9b722ac0f79cdfb}\label{____odometry_____8h_a615292e49f53f104a9b722ac0f79cdfb}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_omega\_from\_encA@{\_omega\_from\_encA}}
+\index{\_omega\_from\_encA@{\_omega\_from\_encA}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_omega\_from\_encA()}{\_omega\_from\_encA()}}
+{\footnotesize\ttfamily float \+\_\+omega\+\_\+from\+\_\+encA (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the A wheel\textquotesingle{}s angular velocity from encoder readings by measuring he time between consecutive encoder ticks \mbox{\Hypertarget{____odometry_____8h_a1550598342e593bd957cbeb0e8a91c8c}\label{____odometry_____8h_a1550598342e593bd957cbeb0e8a91c8c}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_omega\_from\_encB@{\_omega\_from\_encB}}
+\index{\_omega\_from\_encB@{\_omega\_from\_encB}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_omega\_from\_encB()}{\_omega\_from\_encB()}}
+{\footnotesize\ttfamily float \+\_\+omega\+\_\+from\+\_\+encB (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the B wheel\textquotesingle{}s angular velocity from encoder readings by measuring he time between consecutive encoder ticks \mbox{\Hypertarget{____odometry_____8h_a56f867d48f1b2f7d31db5e5ce6fda880}\label{____odometry_____8h_a56f867d48f1b2f7d31db5e5ce6fda880}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_omega\_from\_PMA@{\_omega\_from\_PMA}}
+\index{\_omega\_from\_PMA@{\_omega\_from\_PMA}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_omega\_from\_PMA()}{\_omega\_from\_PMA()}}
+{\footnotesize\ttfamily float \+\_\+omega\+\_\+from\+\_\+\+PMA (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the A wheel\textquotesingle{}s angular velocity using the potentiometer readings \mbox{\Hypertarget{____odometry_____8h_ae967e5e1fffed330432985bfcbcd4a67}\label{____odometry_____8h_ae967e5e1fffed330432985bfcbcd4a67}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_omega\_from\_PMB@{\_omega\_from\_PMB}}
+\index{\_omega\_from\_PMB@{\_omega\_from\_PMB}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_omega\_from\_PMB()}{\_omega\_from\_PMB()}}
+{\footnotesize\ttfamily float \+\_\+omega\+\_\+from\+\_\+\+PMB (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the B wheel\textquotesingle{}s angular velocity using the potentiometer readings \mbox{\Hypertarget{____odometry_____8h_a2dad3022f78907b59e9097e0e82516ec}\label{____odometry_____8h_a2dad3022f78907b59e9097e0e82516ec}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_thetaA@{\_thetaA}}
+\index{\_thetaA@{\_thetaA}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_thetaA()}{\_thetaA()}}
+{\footnotesize\ttfamily float \+\_\+thetaA (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the absolute rotation angle of motor A \mbox{\Hypertarget{____odometry_____8h_ae7ead9debc05450a1e92bcc2566c42ff}\label{____odometry_____8h_ae7ead9debc05450a1e92bcc2566c42ff}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_thetaB@{\_thetaB}}
+\index{\_thetaB@{\_thetaB}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_thetaB()}{\_thetaB()}}
+{\footnotesize\ttfamily float \+\_\+thetaB (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns the absolute rotation angle of motor B \mbox{\Hypertarget{____odometry_____8h_a41a0ae28dd67f9dc457c8a8944f97ec4}\label{____odometry_____8h_a41a0ae28dd67f9dc457c8a8944f97ec4}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_ticksA@{\_ticksA}}
+\index{\_ticksA@{\_ticksA}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_ticksA()}{\_ticksA()}}
+{\footnotesize\ttfamily int32\+\_\+t \+\_\+ticksA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns the number of ticks happened since boot to wheel A \mbox{\Hypertarget{____odometry_____8h_a2e0c140e05a10523f0887b927efc3eac}\label{____odometry_____8h_a2e0c140e05a10523f0887b927efc3eac}} 
+\index{\_\_odometry\_\_.h@{\_\_odometry\_\_.h}!\_ticksB@{\_ticksB}}
+\index{\_ticksB@{\_ticksB}!\_\_odometry\_\_.h@{\_\_odometry\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_ticksB()}{\_ticksB()}}
+{\footnotesize\ttfamily int32\+\_\+t \+\_\+ticksB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns the number of ticks happened since boot to wheel B 

@@ -1,0 +1,66 @@
+\hypertarget{_____i_n_t__0__1_____8h}{}\doxysection{src/\+\_\+\+\_\+\+INT\+\_\+0\+\_\+1\+\_\+\+\_\+.h File Reference}
+\label{_____i_n_t__0__1_____8h}\index{src/\_\_INT\_0\_1\_\_.h@{src/\_\_INT\_0\_1\_\_.h}}
+
+
+Header file for {\bfseries{INT\+\_\+0\+\_\+1}}.c.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+swarm\+\_\+wold\+\_\+\+\_\+.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_____i_n_t__0__1_____8h_a30af303556f12bc94a68341b67cd5f5e}\label{_____i_n_t__0__1_____8h_a30af303556f12bc94a68341b67cd5f5e}} 
+\#define {\bfseries \+\_\+\+INT\+\_\+\+LOW\+\_\+\+LEVEL}~0
+\item 
+\mbox{\Hypertarget{_____i_n_t__0__1_____8h_ac34855995b6cdc8447da79f352dd723f}\label{_____i_n_t__0__1_____8h_ac34855995b6cdc8447da79f352dd723f}} 
+\#define {\bfseries \+\_\+\+INT\+\_\+\+CHANGE\+\_\+\+LEVEL}~1
+\item 
+\mbox{\Hypertarget{_____i_n_t__0__1_____8h_aca56eb3583bce4e2b6edbc6ceb454331}\label{_____i_n_t__0__1_____8h_aca56eb3583bce4e2b6edbc6ceb454331}} 
+\#define {\bfseries \+\_\+\+INT\+\_\+\+FALLING\+\_\+\+EDGE}~2
+\item 
+\mbox{\Hypertarget{_____i_n_t__0__1_____8h_ab47caa7256e26a6c5f531c20efe1c883}\label{_____i_n_t__0__1_____8h_ab47caa7256e26a6c5f531c20efe1c883}} 
+\#define {\bfseries \+\_\+\+INT\+\_\+\+RISING\+\_\+\+EDGE}~3
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_____i_n_t__0__1_____8h_adf8820d00238bff8edcec983f9019935}{\+\_\+interrupt0\+\_\+enable}} (uint8\+\_\+t trigger)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for {\bfseries{INT\+\_\+0\+\_\+1}}.c. 
+
+
+\begin{DoxyItemize}
+\item File\+: {\bfseries{INT\+\_\+0\+\_\+1}}.h
+\item Compiler\+: GCC-\/\+AVR
+\item Supported devices\+: Tested on 328p
+\item App\+Note\+: external interrupt driver
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Swarm robot graduation project workgroub ~\newline
+ Mechatronics Program for the Distinguished ~\newline
+ \$\+Name\$ 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Revision}
+1 
+\end{DoxyParagraph}
+\$\+RCSfile\$ \begin{DoxyParagraph}{Date}
+/11/2021 9\+:18\+:06 AM
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_____i_n_t__0__1_____8h_adf8820d00238bff8edcec983f9019935}\label{_____i_n_t__0__1_____8h_adf8820d00238bff8edcec983f9019935}} 
+\index{\_\_INT\_0\_1\_\_.h@{\_\_INT\_0\_1\_\_.h}!\_interrupt0\_enable@{\_interrupt0\_enable}}
+\index{\_interrupt0\_enable@{\_interrupt0\_enable}!\_\_INT\_0\_1\_\_.h@{\_\_INT\_0\_1\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_interrupt0\_enable()}{\_interrupt0\_enable()}}
+{\footnotesize\ttfamily void \+\_\+interrupt0\+\_\+enable (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{trigger }\end{DoxyParamCaption})}
+
+Enable interrupt of pin INT0 (see \+\_\+pin\+\_\+map.\+h) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em trigger} & trigger mode, see file \mbox{\hyperlink{_____i_n_t__0__1_____8h}{\+\_\+\+\_\+\+INT\+\_\+0\+\_\+1\+\_\+\+\_\+.\+h}} \\
+\hline
+\end{DoxyParams}

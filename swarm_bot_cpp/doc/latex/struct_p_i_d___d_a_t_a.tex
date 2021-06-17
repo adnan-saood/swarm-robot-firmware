@@ -1,0 +1,45 @@
+\hypertarget{struct_p_i_d___d_a_t_a}{}\doxysection{PID\+\_\+\+DATA Struct Reference}
+\label{struct_p_i_d___d_a_t_a}\index{PID\_DATA@{PID\_DATA}}
+
+
+PID Status.  
+
+
+
+
+{\ttfamily \#include $<$\+\_\+pid\+\_\+.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_p_i_d___d_a_t_a_abfb07b8efb17bb0101ba461d8a9302f1}\label{struct_p_i_d___d_a_t_a_abfb07b8efb17bb0101ba461d8a9302f1}} 
+int16\+\_\+t \mbox{\hyperlink{struct_p_i_d___d_a_t_a_abfb07b8efb17bb0101ba461d8a9302f1}{last\+Process\+Value}}
+\begin{DoxyCompactList}\small\item\em Last process value, used to find derivative of process value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_p_i_d___d_a_t_a_a9a15e70f2e089d19604b05bdedfc4f81}\label{struct_p_i_d___d_a_t_a_a9a15e70f2e089d19604b05bdedfc4f81}} 
+int32\+\_\+t \mbox{\hyperlink{struct_p_i_d___d_a_t_a_a9a15e70f2e089d19604b05bdedfc4f81}{sum\+Error}}
+\begin{DoxyCompactList}\small\item\em Summation of errors, used for integrate calculations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_p_i_d___d_a_t_a_a22c3cbc2ef78517e2adceb8a96264674}\label{struct_p_i_d___d_a_t_a_a22c3cbc2ef78517e2adceb8a96264674}} 
+int16\+\_\+t \mbox{\hyperlink{struct_p_i_d___d_a_t_a_a22c3cbc2ef78517e2adceb8a96264674}{P\+\_\+\+Factor}}
+\begin{DoxyCompactList}\small\item\em The Proportional tuning constant, multiplied with SCALING\+\_\+\+FACTOR. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_p_i_d___d_a_t_a_a338fc64ccceaf6669e2a9290536b492d}\label{struct_p_i_d___d_a_t_a_a338fc64ccceaf6669e2a9290536b492d}} 
+int16\+\_\+t \mbox{\hyperlink{struct_p_i_d___d_a_t_a_a338fc64ccceaf6669e2a9290536b492d}{I\+\_\+\+Factor}}
+\begin{DoxyCompactList}\small\item\em The Integral tuning constant, multiplied with SCALING\+\_\+\+FACTOR. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_p_i_d___d_a_t_a_a1a90165f56a0ca893efecbac9f989178}\label{struct_p_i_d___d_a_t_a_a1a90165f56a0ca893efecbac9f989178}} 
+int16\+\_\+t \mbox{\hyperlink{struct_p_i_d___d_a_t_a_a1a90165f56a0ca893efecbac9f989178}{D\+\_\+\+Factor}}
+\begin{DoxyCompactList}\small\item\em The Derivative tuning constant, multiplied with SCALING\+\_\+\+FACTOR. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_p_i_d___d_a_t_a_abc0df1fd5606b1d182ba271c813dfd8e}\label{struct_p_i_d___d_a_t_a_abc0df1fd5606b1d182ba271c813dfd8e}} 
+int16\+\_\+t \mbox{\hyperlink{struct_p_i_d___d_a_t_a_abc0df1fd5606b1d182ba271c813dfd8e}{max\+Error}}
+\begin{DoxyCompactList}\small\item\em Maximum allowed error, avoid overflow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_p_i_d___d_a_t_a_a4c337276f8b8dc3ae72afb2b371f1e48}\label{struct_p_i_d___d_a_t_a_a4c337276f8b8dc3ae72afb2b371f1e48}} 
+int32\+\_\+t \mbox{\hyperlink{struct_p_i_d___d_a_t_a_a4c337276f8b8dc3ae72afb2b371f1e48}{max\+Sum\+Error}}
+\begin{DoxyCompactList}\small\item\em Maximum allowed sumerror, avoid overflow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+PID Status. 
+
+Setpoints and data used by the PID control algorithm 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{__pid___8h}{\+\_\+pid\+\_\+.\+h}}\end{DoxyCompactItemize}

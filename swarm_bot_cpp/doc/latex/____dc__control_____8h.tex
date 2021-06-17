@@ -1,0 +1,184 @@
+\hypertarget{____dc__control_____8h}{}\doxysection{src/\+\_\+\+\_\+dc\+\_\+control\+\_\+\+\_\+.h File Reference}
+\label{____dc__control_____8h}\index{src/\_\_dc\_control\_\_.h@{src/\_\_dc\_control\_\_.h}}
+
+
+Header file for {\bfseries{dc\+\_\+control}}.c.  
+
+
+{\ttfamily \#include $<$\+\_\+\+\_\+swarm\+\_\+wold\+\_\+\+\_\+.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{____dc__control_____8h_a11702dcb3f3ec928229185eb96686127}\label{____dc__control_____8h_a11702dcb3f3ec928229185eb96686127}} 
+\#define {\bfseries MA}~1
+\item 
+\mbox{\Hypertarget{____dc__control_____8h_aa6b38d492364d98453284934ed7caee9}\label{____dc__control_____8h_aa6b38d492364d98453284934ed7caee9}} 
+\#define {\bfseries MB}~2
+\item 
+\mbox{\Hypertarget{____dc__control_____8h_a62d5c8530dbb596275056970aead6e82}\label{____dc__control_____8h_a62d5c8530dbb596275056970aead6e82}} 
+\#define {\bfseries DEBUG\+\_\+\+CONTROLLER}~0
+\item 
+\mbox{\Hypertarget{____dc__control_____8h_acfc98b8c69707c30ac9a96bb12f2a0ab}\label{____dc__control_____8h_acfc98b8c69707c30ac9a96bb12f2a0ab}} 
+\#define {\bfseries K\+\_\+P}~4.\+0
+\item 
+\mbox{\Hypertarget{____dc__control_____8h_a5e606c8dc6de900bea3cd7740ac1bd4d}\label{____dc__control_____8h_a5e606c8dc6de900bea3cd7740ac1bd4d}} 
+\#define {\bfseries K\+\_\+I}~0.\+3
+\item 
+\mbox{\Hypertarget{____dc__control_____8h_a0b9e481775b5a7ecdd0dbb43cacc1a09}\label{____dc__control_____8h_a0b9e481775b5a7ecdd0dbb43cacc1a09}} 
+\#define {\bfseries K\+\_\+D}~0.\+5
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int16\+\_\+t \mbox{\hyperlink{____dc__control_____8h_a0ae90f3c596a38b03cb3716df94f3db7}{\+\_\+ref}} (uint8\+\_\+t motor)
+\item 
+void \mbox{\hyperlink{____dc__control_____8h_a13f873456fcdf18ef1c6282fbff7dfc2}{\+\_\+command}} (uint8\+\_\+t motor, int16\+\_\+t input\+Value)
+\item 
+float \mbox{\hyperlink{____dc__control_____8h_a1dcb64142631620c587c39e0dfa676b6}{\+\_\+sens}} (uint8\+\_\+t motor)
+\item 
+int \mbox{\hyperlink{____dc__control_____8h_a6317610eb48a4586349d0060799432ad}{\+\_\+set\+\_\+speed}} (uint8\+\_\+t motor, int value)
+\item 
+void \mbox{\hyperlink{____dc__control_____8h_a8a6ded446a3142782b3a11f1ee754275}{\+\_\+break\+\_\+motor}} (uint8\+\_\+t motor)
+\item 
+void \mbox{\hyperlink{____dc__control_____8h_ac0d7790de939f90a6059209fd42ad659}{\+\_\+init\+\_\+dc\+\_\+control}} (void)
+\item 
+int16\+\_\+t \mbox{\hyperlink{____dc__control_____8h_a0fa725445e05f78ebaab8542a7404f0b}{\+\_\+update\+\_\+controller}} (uint8\+\_\+t motor)
+\item 
+int16\+\_\+t \mbox{\hyperlink{____dc__control_____8h_a5890819a1330f7664a9ef5dae0ca0b34}{\+\_\+dc\+\_\+controller\+\_\+loop}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for {\bfseries{dc\+\_\+control}}.c. 
+
+
+\begin{DoxyItemize}
+\item File\+: {\bfseries{dc\+\_\+control}}.h
+\item Compiler\+: GCC-\/\+AVR
+\item Supported devices\+: Tested on 328p
+\item App\+Note\+: PID for DC motor control
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Swarm robot graduation project workgroub ~\newline
+ Mechatronics Program for the Distinguished ~\newline
+ \$\+Name\$ 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Revision}
+1 
+\end{DoxyParagraph}
+\$\+RCSfile\$ \begin{DoxyParagraph}{Date}
+/26/2021 9\+:18\+:13 PM
+\end{DoxyParagraph}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{____dc__control_____8h_a8a6ded446a3142782b3a11f1ee754275}\label{____dc__control_____8h_a8a6ded446a3142782b3a11f1ee754275}} 
+\index{\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}!\_break\_motor@{\_break\_motor}}
+\index{\_break\_motor@{\_break\_motor}!\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_break\_motor()}{\_break\_motor()}}
+{\footnotesize\ttfamily void \+\_\+break\+\_\+motor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{motor }\end{DoxyParamCaption})}
+
+breaks the
+\begin{DoxyParams}{Parameters}
+{\em motor} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor} & motor MA or MB. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____dc__control_____8h_a13f873456fcdf18ef1c6282fbff7dfc2}\label{____dc__control_____8h_a13f873456fcdf18ef1c6282fbff7dfc2}} 
+\index{\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}!\_command@{\_command}}
+\index{\_command@{\_command}!\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_command()}{\_command()}}
+{\footnotesize\ttfamily void \+\_\+command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{motor,  }\item[{int16\+\_\+t}]{input\+Value }\end{DoxyParamCaption})}
+
+Output command module for
+\begin{DoxyParams}{Parameters}
+{\em motor} & of value\\
+\hline
+{\em input\+Value} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor} & motor MA or MB. \\
+\hline
+\mbox{\texttt{ in}}  & {\em input\+Value} & input value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____dc__control_____8h_a5890819a1330f7664a9ef5dae0ca0b34}\label{____dc__control_____8h_a5890819a1330f7664a9ef5dae0ca0b34}} 
+\index{\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}!\_dc\_controller\_loop@{\_dc\_controller\_loop}}
+\index{\_dc\_controller\_loop@{\_dc\_controller\_loop}!\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_dc\_controller\_loop()}{\_dc\_controller\_loop()}}
+{\footnotesize\ttfamily int16\+\_\+t \+\_\+dc\+\_\+controller\+\_\+loop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+PID DC controller loop \mbox{\Hypertarget{____dc__control_____8h_ac0d7790de939f90a6059209fd42ad659}\label{____dc__control_____8h_ac0d7790de939f90a6059209fd42ad659}} 
+\index{\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}!\_init\_dc\_control@{\_init\_dc\_control}}
+\index{\_init\_dc\_control@{\_init\_dc\_control}!\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_init\_dc\_control()}{\_init\_dc\_control()}}
+{\footnotesize\ttfamily void \+\_\+init\+\_\+dc\+\_\+control (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize the DC PID control module \mbox{\Hypertarget{____dc__control_____8h_a0ae90f3c596a38b03cb3716df94f3db7}\label{____dc__control_____8h_a0ae90f3c596a38b03cb3716df94f3db7}} 
+\index{\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}!\_ref@{\_ref}}
+\index{\_ref@{\_ref}!\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_ref()}{\_ref()}}
+{\footnotesize\ttfamily int16\+\_\+t \+\_\+ref (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{motor }\end{DoxyParamCaption})}
+
+Reference for
+\begin{DoxyParams}{Parameters}
+{\em motor} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor} & motor MA or MB. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____dc__control_____8h_a1dcb64142631620c587c39e0dfa676b6}\label{____dc__control_____8h_a1dcb64142631620c587c39e0dfa676b6}} 
+\index{\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}!\_sens@{\_sens}}
+\index{\_sens@{\_sens}!\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_sens()}{\_sens()}}
+{\footnotesize\ttfamily float \+\_\+sens (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{motor }\end{DoxyParamCaption})}
+
+sensor module for
+\begin{DoxyParams}{Parameters}
+{\em motor} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor} & motor MA or MB. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____dc__control_____8h_a6317610eb48a4586349d0060799432ad}\label{____dc__control_____8h_a6317610eb48a4586349d0060799432ad}} 
+\index{\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}!\_set\_speed@{\_set\_speed}}
+\index{\_set\_speed@{\_set\_speed}!\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_set\_speed()}{\_set\_speed()}}
+{\footnotesize\ttfamily int \+\_\+set\+\_\+speed (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{motor,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+L298 driver module using PWM signals and motor orientation 
+\begin{DoxyParams}{Parameters}
+{\em value} & can be negative or positive for direction \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor} & motor MA or MB. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & speed value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{____dc__control_____8h_a0fa725445e05f78ebaab8542a7404f0b}\label{____dc__control_____8h_a0fa725445e05f78ebaab8542a7404f0b}} 
+\index{\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}!\_update\_controller@{\_update\_controller}}
+\index{\_update\_controller@{\_update\_controller}!\_\_dc\_control\_\_.h@{\_\_dc\_control\_\_.h}}
+\doxysubsubsection{\texorpdfstring{\_update\_controller()}{\_update\_controller()}}
+{\footnotesize\ttfamily int16\+\_\+t \+\_\+update\+\_\+controller (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{motor }\end{DoxyParamCaption})}
+
+Update a control iteration for a discrete PID controller for the DC motor 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em motor} & motor MA or MB. \\
+\hline
+\end{DoxyParams}
