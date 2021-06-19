@@ -1,10 +1,4 @@
-/*
- * __odometry__.c
- *
- * Created: 5/19/2021 9:44:12 AM
- *  Author: adnan
- */ 
-
+ 
 #include <__odometry__.h>
 
 // amount if time in a tick
@@ -15,11 +9,13 @@ volatile static uint64_t _tick_timeB = 0;
 volatile static uint64_t _prev_tick_timeA = 0;
 volatile static uint64_t _prev_tick_timeB = 0;
 
+volatile static float _omega_enc_a = 0.0f;
+
 
 volatile static int32_t _enca_count = 0;
 volatile static int32_t _encb_count = 0;
-volatile static int8_t _dir_a = 1;
-volatile static int8_t _dir_b = 1;
+
+volatile static float _omega_enca_prev = 0.0f;
 
 
 volatile static uint16_t _pmA_prev = -1;
@@ -33,29 +29,20 @@ volatile static float _omega_pmB = 0.0f;
 
 ISR(INT0_vect)
 {
+	__led_toggle(D4);
 	if(_enca_count == 0)
 	{
 		_prev_tick_timeA = _micros0();
+		_omega_enc_a = 0;
 	}
 	else
 	{
 		uint64_t t = _micros0();
 		_tick_timeA = t - _prev_tick_timeA;
 		_prev_tick_timeA = t;
+		_omega_enc_a = (__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeA);
 	}
-	
-	if(__read_secodary_enc(ENCA2))
-	{
-		_enca_count++;
-		_dir_a=FORWARD;
-	}
-	else
-	{
-		_enca_count--;
-		_dir_a=BACKWARD;
-		
-	}
-	
+	_enca_count++;
 }
 
 ISR(INT1_vect)
@@ -70,17 +57,8 @@ ISR(INT1_vect)
 		_tick_timeB = t - _prev_tick_timeB;
 		_prev_tick_timeB = t;
 	}
-	
-	if(__read_secodary_enc(ENCB2))
-	{
 		_encb_count++;
-		_dir_b = FORWARD;
-	}
-	else
-	{
-		_encb_count--;
-		_dir_b = BACKWARD;
-	}
+
 }
 
 float _thetaA(void)
@@ -103,12 +81,20 @@ int32_t _ticksB()
 
 float _omega_from_encA(void)
 {
-	return _dir_a*(__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeA);
+	if(_omega_enc_a > 20)
+	{
+		 return _omega_enca_prev;
+	}
+	 else
+	{
+		_omega_enca_prev = _omega_enc_a;
+		 return _omega_enc_a;
+	}
 	//return _tick_timeA;
 }
 float _omega_from_encB(void)
 {
-	return _dir_b*(__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeB);
+	return (__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeB);
 }
 
 float _omega_from_PMA(void)
@@ -131,67 +117,15 @@ float _omega_comp_B(void)
 
 ISR(TIMER2_OVF_vect)
 {
-	uint16_t snap = __read_PM(PMA);
-	if ( (snap < __PM_lower_bound) || (snap > __PM_upper_bound) )
+	if(_micros0() - _prev_tick_timeA > 100000)
 	{
-		_pmA_current = -1;
-		// _omega_pmA = _omega_from_encA();
+		_omega_enc_a = 0.0;
 	}
-	else
-	{
-		if ( _pmA_prev == -1 )
-		{
-			_omega_pmA = _omega_from_encA();
-		}
-		else
-		{
-			// make 5 successive reads
-			uint16_t *reads = (uint16_t*) malloc(__PM_SAMPLE_COUNT * sizeof(uint16_t));
-	
-			for (uint8_t i = 0 ; i < __PM_SAMPLE_COUNT ; i ++)
-			{
-				reads[i] = __read_PM(PMA);
-			}
-			// Sort outcome
-			_insertion_sort(reads, __PM_SAMPLE_COUNT);
-			_pmA_current = reads[(__PM_SAMPLE_COUNT >> 1)];
-			_omega_pmA = __PM_SLOPE * (float)(_pmA_current - _pmA_prev);
-		}
-	}
-	_pmA_prev = _pmA_current;
 }
 
 
 ISR(TIMER2_COMPA_vect)
 {
-	uint16_t snap = __read_PM(PMB);
-	if ( (snap < __PM_lower_bound) || (snap > __PM_upper_bound) )
-	{
-		_pmB_current = -1;
-		_omega_pmB = _omega_from_encA();
-	}
-	else
-	{
-		if ( _pmA_prev == -1 )
-		{
-			_omega_pmB = _omega_from_encB();
-		}
-		else
-		{
-			// make 5 successive reads
-			uint16_t *reads = (uint16_t*) malloc(__PM_SAMPLE_COUNT * sizeof(uint16_t));
-			
-			for (uint8_t i = 0 ; i < __PM_SAMPLE_COUNT ; i ++)
-			{
-				reads[i] = __read_PM(PMB);
-			}
-			// Sort outcome
-			_insertion_sort(reads, __PM_SAMPLE_COUNT);
-			_pmB_current = reads[(__PM_SAMPLE_COUNT >> 1)];
-			_omega_pmB = __PM_SLOPE * (float)(_pmB_current - _pmB_prev);
-		}
-	}
-	_pmB_prev = _pmB_current;
 }
 void _insertion_sort(uint16_t arr[], int n)
 {

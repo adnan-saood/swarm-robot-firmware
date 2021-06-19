@@ -28,7 +28,7 @@
 #define __PM_upper_bound 800
 
 #define __PM_SAMPLE_COUNT 5
-#define __PM_SLOPE 1 // rad per volt / time of one overflow
+#define __PM_SLOPE 100.0 // rad per volt / time of one overflow
 
 #define FORWARD  1
 #define BACKWARD  -1

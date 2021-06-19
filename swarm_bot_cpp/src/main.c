@@ -21,36 +21,26 @@ int main (void)
 	w.wr = 0;
 	uint16_t DT = 100;
 	uint32_t t_prev = 0;
+	_init_dc_control();
 	sei();
+	uint16_t t = _millis0();
 	while (1)
 	{
-		/*_set_speed(MA, 200);
-		_set_speed(MB, 200);
-		_update_omega(&w);
-		_i_p = _omega_to_intertial(&w);
-		printf("(%f , ", _i_p.v);
-		printf(" %f)\n", _i_p.w);
-		_delay_ms(100);*/
-		//_set_speed(MA, 80);
-		//while(1)
-		//{
-		//	printf("+(%d,", (int)(_omega_from_encA()*57.29577));
-		//	printf(" %d )\n",(int)( _omega_from_encB()*57.29577));
-		//	_delay_ms(100);
-		//	if(_ticksA() < 0)
-		//	{
-		//		break;
-		//	}
-		//}
-		_set_speed(MA,-75);
-		while(_ticksA() < 33);
-		_set_speed(MA,0);
-		_delay_ms(1000);
-		_set_speed(MA,75);
-		while(_ticksA() > 0);
-		_set_speed(MA,0);
-		_delay_ms(1000);
+		_update_controller(MA);
+		if(_millis0() - t > 500)
+		{
+			printf("OCR0A : %d, sens : %1.3f \n", 255-OCR1AH, _omega_from_encA());
+			t = _millis0();
+		}
+		_delay_ms(25);
 	}
+//	_set_speed(MA,240);
+//	uint16_t t = _millis0();
+//	while(_millis0() - t < 4000)
+//	{
+//		printf("240 : %1.3f : %d \n", _omega_from_encA(), _ticksA());
+//		_delay_ms(250);
+//	}
 	return 0;
 }
 

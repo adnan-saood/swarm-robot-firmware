@@ -1,10 +1,4 @@
-/*
- * __dc_control__.c
- *
- * Created: 5/26/2021 9:17:59 PM
- *  Author: adnan
- */ 
-
+ 
 
 
 #include <__dc_control__.h>
@@ -16,11 +10,11 @@ int16_t _ref(uint8_t motor)
 {
 	if(motor == MA)
 	{
-		return 20;
+		return 9;
 	}
 	else if (motor == MB)
 	{
-		return 30;
+		return 0;
 	}
 	return 0;
 }
@@ -34,17 +28,18 @@ float _sens(uint8_t motor)
 {
 	if(motor == MA)
 	{
-		return (_omega_from_encA()*9.55);
+		return (_omega_from_encA());
 	}
 	else if (motor == MB)
 	{
 		
-		return (_omega_from_encB()*9.55);
+		return (_omega_from_encB());
 	}
 	else
 	{
 		return -1;
 	}
+}
 int _set_speed(uint8_t motor, int value)
 {
 	if(value == 0)
@@ -125,7 +120,7 @@ int16_t _dc_controller_loop(void)
 	}
 	if(_controler_flag_B)
 	{
-		_update_controller(MB);
+		//_update_controller(MB);
 		_controler_flag_B = 0;
 	}
 	return 0;

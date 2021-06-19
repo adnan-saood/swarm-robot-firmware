@@ -26,9 +26,9 @@
 
 #define DEBUG_CONTROLLER 0
 
-#define K_P     4.0
-#define K_I     0.3
-#define K_D     0.5
+#define K_P     20.0
+#define K_I     2
+#define K_D     1
 
 
 /**
