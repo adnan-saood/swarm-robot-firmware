@@ -19,12 +19,12 @@
  * $Date: 5/29/2021 8:04:54 PM$
  *****************************************************************************/
 
+	
 
-
-#define L 0.06
-#define r 0.02
-#define R_over_L 0.333
-#define R_over_2 0.01
+#define L 0.07
+#define r 0.0195
+#define R_over_L 0.27857
+#define R_over_2 0.00975
 
 
 #include <__swarm_wold__.h>

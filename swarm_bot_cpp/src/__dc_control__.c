@@ -3,18 +3,32 @@
 
 #include <__dc_control__.h>
 
-static struct PID_DATA pidData;
+static struct PID_DATA pidDataA;
+static struct PID_DATA pidDataB;
 
+volatile static float _dc_ref_A = 0.0f;
+volatile static float _dc_ref_B = 0.0f;
 
-int16_t _ref(uint8_t motor)
+void _set_ref(uint8_t motor, float ref)
 {
 	if(motor == MA)
 	{
-		return 9;
+		_dc_ref_A = ref;
+	}
+	if(motor == MB)
+	{
+		_dc_ref_B = ref;
+	}
+}
+float _ref(uint8_t motor)
+{
+	if(motor == MA)
+	{
+		return _dc_ref_A;
 	}
 	else if (motor == MB)
 	{
-		return 0;
+		return _dc_ref_B;
 	}
 	return 0;
 }
@@ -93,34 +107,44 @@ void _break_motor(uint8_t motor)
 
 void _init_dc_control(void)
 {
-	pid_Init(K_P * SCALING_FACTOR, K_I * SCALING_FACTOR , K_D * SCALING_FACTOR , &pidData);
+	pid_Init(K_P * SCALING_FACTOR, K_I * SCALING_FACTOR , K_D * SCALING_FACTOR , &pidDataA);
+	pid_Init(K_P * SCALING_FACTOR, K_I * SCALING_FACTOR , K_D * SCALING_FACTOR , &pidDataB);
+	
 	sei();
 }
 
 int16_t _update_controller(uint8_t motor)
 {
-	int16_t ref, sen,u;
+	float ref, sen;
+	float u;
 	ref = _ref(motor);
-	sen =   (int16_t) _sens(motor);
-	u = pid_Controller(ref,sen, &pidData);
-	_command(motor, u);
+	sen =    _sens(motor); // major bug here
+	if(motor == MA)
+	{
+		u = pid_Controller(ref,sen, &pidDataA);
+	}
+	else if(motor == MB)
+	{
+		u = pid_Controller(ref,sen, &pidDataB);
+	}
+	_command(motor, (int)u);
 	if (DEBUG_CONTROLLER)
 	{
-		printf("%d - %d - %d\n",ref, sen, u);
+		printf("%1.2f - %1.2f - %1.2f\n",ref, sen, u);
 	}
-	return u;
+	return 0;
 }
 
 int16_t _dc_controller_loop(void)
 {
 	if(_controler_flag_A)
 	{
-		 _update_controller(MA);
+		_update_controller(MA);
 		 _controler_flag_A = 0;
 	}
 	if(_controler_flag_B)
 	{
-		//_update_controller(MB);
+		_update_controller(MB);
 		_controler_flag_B = 0;
 	}
 	return 0;

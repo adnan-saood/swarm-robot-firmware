@@ -7,6 +7,13 @@
 
 #include <__kinematics__.h>
 
+
+void _update_omega(struct _omega * input)
+{
+	input->wl = _omega_from_encA();
+	input->wr = _omega_from_encB();
+}
+
 struct _i_pos _omega_to_intertial(struct _omega * input)
 {
 	float wl = input->wl;
@@ -35,17 +42,13 @@ struct pos_dot _inertial_to_pos_dot(struct _i_pos * inertial, struct pos * _pos)
 uint16_t _dead_reckon(struct pos * _pos, struct pos_dot * _pos_dot)
 {
 	static uint64_t t_prev = 0;
-	uint16_t dt = _micros0() - t_prev;
+	uint32_t dt = _micros0() - t_prev;
 	t_prev = _micros0();
+
 	
-	float vx = _pos_dot->x_dot;
-	float vy = _pos_dot->y_dot;
-	float w = _pos_dot->th_dot;
-	
-	struct pos out;
-	out.x += vx * dt;
-	out.y += vy * dt;
-	out.th += w * dt;
+	_pos->x += _pos_dot->x_dot * dt / 1000000.0;
+	_pos->y += _pos_dot->y_dot * dt / 1000000.0;
+	_pos->th += _pos_dot->th_dot * dt / 1000000.0;
 
 	return dt;
 }
@@ -67,8 +70,3 @@ void _update_thetaLR(struct _theta * input)
 	input->right = -1.0 * _thetaB();
 }
 
-void _update_omega(struct _omega * input)
-{
-	input->wl = _omega_from_encA();
-	input->wr = -1.0 * _omega_from_encB();
-}

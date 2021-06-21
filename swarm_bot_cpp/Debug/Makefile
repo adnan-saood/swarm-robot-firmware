@@ -57,6 +57,7 @@ C_SRCS +=  \
 ../src/__INT_0_1__.c \
 ../src/__kinematics__.c \
 ../src/__odometry__.c \
+../src/__path_follow__.c \
 ../src/__pwm__.c \
 ../src/__timer0__.c \
 ../src/__timer1__.c \
@@ -80,6 +81,7 @@ src/__format__.o \
 src/__INT_0_1__.o \
 src/__kinematics__.o \
 src/__odometry__.o \
+src/__path_follow__.o \
 src/__pwm__.o \
 src/__timer0__.o \
 src/__timer1__.o \
@@ -96,6 +98,7 @@ src/__format__.o \
 src/__INT_0_1__.o \
 src/__kinematics__.o \
 src/__odometry__.o \
+src/__path_follow__.o \
 src/__pwm__.o \
 src/__timer0__.o \
 src/__timer1__.o \
@@ -112,6 +115,7 @@ src/__format__.d \
 src/__INT_0_1__.d \
 src/__kinematics__.d \
 src/__odometry__.d \
+src/__path_follow__.d \
 src/__pwm__.d \
 src/__timer0__.d \
 src/__timer1__.d \
@@ -128,6 +132,7 @@ src/__format__.d \
 src/__INT_0_1__.d \
 src/__kinematics__.d \
 src/__odometry__.d \
+src/__path_follow__.d \
 src/__pwm__.d \
 src/__timer0__.d \
 src/__timer1__.d \
@@ -193,6 +198,13 @@ src/__kinematics__.o: ../src/__kinematics__.c
 	
 
 src/__odometry__.o: ../src/__odometry__.c
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -DDEBUG -DBOARD=USER_BOARD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.6.364\include" -I"../src/ASF/common/boards/user_board" -I"../src/ASF/common/boards" -I"../src/ASF/mega/utils/preprocessor" -I"../src/ASF/mega/utils" -I"../src/ASF/common/utils" -I"../src" -I"../src/config"  -O1 -fdata-sections -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g3 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.6.364\gcc\dev\atmega328p" -c -std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/__path_follow__.o: ../src/__path_follow__.c
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -DDEBUG -DBOARD=USER_BOARD  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.6.364\include" -I"../src/ASF/common/boards/user_board" -I"../src/ASF/common/boards" -I"../src/ASF/mega/utils/preprocessor" -I"../src/ASF/mega/utils" -I"../src/ASF/common/utils" -I"../src" -I"../src/config"  -O1 -fdata-sections -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g3 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\Atmel\ATmega_DFP\1.6.364\gcc\dev\atmega328p" -c -std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -24,17 +24,17 @@
 #define MA 1
 #define MB 2
 
-#define DEBUG_CONTROLLER 0
+#define DEBUG_CONTROLLER 1
 
-#define K_P     20.0
-#define K_I     2
-#define K_D     1
+#define K_P     40.0
+#define K_I     0
+#define K_D     12.5
 
 
 /**
        * Reference for @param motor
        */
-int16_t _ref(uint8_t motor /**< [in] motor MA or MB. */);
+float _ref(uint8_t motor /**< [in] motor MA or MB. */);
 
 /**
        * Output command module for @param motor of value @param inputValue
@@ -66,5 +66,8 @@ int16_t _update_controller(uint8_t motor/**< [in] motor MA or MB. */);
        * PID DC controller loop
        */
 int16_t _dc_controller_loop(void);
+
+
+void _set_ref(uint8_t motor, float ref);
 
 #endif /* __DC_CONTROL___H_ */

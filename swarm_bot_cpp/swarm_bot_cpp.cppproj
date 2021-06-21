@@ -308,6 +308,12 @@
     <Compile Include="src\__odometry__.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\__path_follow__.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\__path_follow__.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\__pin_map.h">
       <SubType>compile</SubType>
     </Compile>

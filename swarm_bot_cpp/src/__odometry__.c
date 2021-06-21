@@ -10,22 +10,14 @@ volatile static uint64_t _prev_tick_timeA = 0;
 volatile static uint64_t _prev_tick_timeB = 0;
 
 volatile static float _omega_enc_a = 0.0f;
-
+volatile static float _omega_enc_b = 0.0f;
 
 volatile static int32_t _enca_count = 0;
 volatile static int32_t _encb_count = 0;
 
 volatile static float _omega_enca_prev = 0.0f;
+volatile static float _omega_encb_prev = 0.0f;
 
-
-volatile static uint16_t _pmA_prev = -1;
-volatile static uint16_t _pmA_current = 0;
-
-volatile static uint16_t _pmB_prev = -1;
-volatile static uint16_t _pmB_current = 0;
-
-volatile static float _omega_pmA = 0.0f;
-volatile static float _omega_pmB = 0.0f;
 
 ISR(INT0_vect)
 {
@@ -40,7 +32,6 @@ ISR(INT0_vect)
 		uint64_t t = _micros0();
 		_tick_timeA = t - _prev_tick_timeA;
 		_prev_tick_timeA = t;
-		_omega_enc_a = (__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeA);
 	}
 	_enca_count++;
 }
@@ -50,6 +41,7 @@ ISR(INT1_vect)
 	if(_encb_count == 0)
 	{
 		_prev_tick_timeB = _micros0();
+		_omega_enc_b = 0;
 	}
 	else
 	{
@@ -57,8 +49,7 @@ ISR(INT1_vect)
 		_tick_timeB = t - _prev_tick_timeB;
 		_prev_tick_timeB = t;
 	}
-		_encb_count++;
-
+	_encb_count++;
 }
 
 float _thetaA(void)
@@ -81,11 +72,17 @@ int32_t _ticksB()
 
 float _omega_from_encA(void)
 {
-	if(_omega_enc_a > 20)
+	if(_micros0() - _prev_tick_timeA > 500000)
+	{
+		_omega_enc_a = 0.0;
+		return _omega_enc_a;
+	}
+		_omega_enc_a = (__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeA);
+	if(_omega_enc_a > 10)
 	{
 		 return _omega_enca_prev;
 	}
-	 else
+	else
 	{
 		_omega_enca_prev = _omega_enc_a;
 		 return _omega_enc_a;
@@ -94,53 +91,30 @@ float _omega_from_encA(void)
 }
 float _omega_from_encB(void)
 {
-	return (__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeB);
-}
-
-float _omega_from_PMA(void)
-{
-	return _omega_pmA;
-}
-float _omega_from_PMB(void)
-{
-	return _omega_pmB;
-}
-
-float _omega_comp_A(void)
-{
-	return _omega_from_PMA() * 0.3f + _omega_from_encA() * 0.7f;
-}
-float _omega_comp_B(void)
-{
-	return _omega_from_PMB() * 0.3f + _omega_from_encB() * 0.7f;
+	if(_micros0() - _prev_tick_timeB > 500000)
+	{
+		_omega_enc_b = 0.0;
+		return _omega_enc_b;
+	}
+	_omega_enc_b = (__ENC_TICK_THETA_FOR_OMEGA / (float)_tick_timeB);
+	if(_omega_enc_b > 10)
+	{
+		return _omega_encb_prev;
+	}
+	else
+	{
+		_omega_encb_prev = _omega_enc_b;
+		return _omega_enc_b;
+	}
+	//return _tick_timeA;
 }
 
 ISR(TIMER2_OVF_vect)
 {
-	if(_micros0() - _prev_tick_timeA > 100000)
-	{
-		_omega_enc_a = 0.0;
-	}
+// ewmmber to turn it on if you wanna use it
 }
-
 
 ISR(TIMER2_COMPA_vect)
 {
-}
-void _insertion_sort(uint16_t arr[], int n)
-{
-    int i, key, j;
-    for (i = 1; i < n; i++) {
-        key = arr[i];
-        j = i - 1;
- 
-        /* Move elements of arr[0..i-1], that are
-          greater than key, to one position ahead
-          of their current position */
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
-            j = j - 1;
-        }
-        arr[j + 1] = key;
-    }
+	// ewmmber to turn it on if you wanna use it
 }

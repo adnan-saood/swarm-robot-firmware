@@ -72,9 +72,11 @@ uint64_t _millis1(void)
 ISR(TIMER1_OVF_vect)
 {
 	_tmr_overflow_count++;
-	
-	_controler_flag_A = 1;
-	_controler_flag_B = 1;
+	if(_tmr_overflow_count % 6 == 0)
+	{
+		_controler_flag_A = 1;
+		_controler_flag_B = 1;
+	}
 	if (_tmr_overflow_count%2440 == 0 )
 	{
 		printf("<btr>%d</btr>\n", __read_btr__);

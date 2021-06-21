@@ -16,6 +16,8 @@ src\__kinematics__.c
 
 src\__odometry__.c
 
+src\__path_follow__.c
+
 src\__pwm__.c
 
 src\__timer0__.c

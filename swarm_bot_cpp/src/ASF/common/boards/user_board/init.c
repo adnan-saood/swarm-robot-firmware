@@ -23,6 +23,12 @@ void board_init(void)
 	 * specific board configuration, found in conf_board.h.
 	 */
 	
+	// IO init
+	
+	DDRB = 0xFF;
+	DDRD = 0b01100010;
+	
+	
 	usart_init();
 	_adc_init();
 	_timer1_init();

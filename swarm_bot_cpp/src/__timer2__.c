@@ -12,5 +12,5 @@ void _timer2_init(void)
 	TCCR2A = 0;
 	OCR2A = 128;
 	TCCR2B |=(1 << CS22) | (1 << CS21) | (1 << CS20);
-	TIMSK2 |= (1 << OCIE2A) | (1 << TOIE2);
+	TIMSK2 |= (0 << OCIE2A) | (0 << TOIE2);
 }

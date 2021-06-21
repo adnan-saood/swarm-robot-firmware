@@ -22,16 +22,16 @@
 
 #include <_pid_.h>
 
-/*! \brief Initialisation of PID controller parameters.
+/*! \brief Initialization of PID controller parameters.
  *
- *  Initialise the variables used by the PID algorithm.
+ *  Initialize the variables used by the PID algorithm.
  *
  *  \param p_factor  Proportional term.
  *  \param i_factor  Integral term.
  *  \param d_factor  Derivate term.
  *  \param pid  Struct with PID status.
  */
-void pid_Init(int16_t p_factor, int16_t i_factor, int16_t d_factor, struct PID_DATA *pid)
+void pid_Init(float p_factor, float i_factor, float d_factor, struct PID_DATA *pid)
 // Set up PID controller parameters
 {
   // Start values for PID controller
@@ -55,10 +55,10 @@ void pid_Init(int16_t p_factor, int16_t i_factor, int16_t d_factor, struct PID_D
  *  \param processValue  Measured value.
  *  \param pid_st  PID status struct.
  */
-int16_t pid_Controller(int16_t setPoint, int16_t processValue, struct PID_DATA *pid_st)
+float pid_Controller(float setPoint, float processValue, struct PID_DATA *pid_st)
 {
-  int16_t error, p_term, d_term;
-  int32_t i_term, ret, temp;
+  float error, p_term, d_term;
+  float i_term, ret, temp;
 
   error = setPoint - processValue;
 
@@ -101,7 +101,7 @@ int16_t pid_Controller(int16_t setPoint, int16_t processValue, struct PID_DATA *
     ret = -MAX_INT;
   }
 
-  return((int16_t)ret);
+  return (ret);
 }
 
 /*! \brief Resets the integrator.
