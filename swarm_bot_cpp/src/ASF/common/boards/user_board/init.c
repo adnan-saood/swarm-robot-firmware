@@ -16,6 +16,7 @@
 #include <__swarm_wold__.h>
 
 
+
 void board_init(void)
 {
 	/* This function is meant to contain board-specific initialization code
@@ -28,13 +29,20 @@ void board_init(void)
 	DDRB = 0xFF;
 	DDRD = 0b01100010;
 	
+	__led_low(D4);
+	_delay_ms(100);
+	__led_high(D4);
+	
 	
 	usart_init();
 	_adc_init();
 	_timer1_init();
 	_timer0_init();
 	_timer2_init();
-	_interrupt0_enable(_INT_RISING_EDGE);
-	_interrupt1_enable(_INT_RISING_EDGE);
+	_interrupt0_enable(_INT_CHANGE_LEVEL);
+	_interrupt1_enable(_INT_CHANGE_LEVEL);
+	printf("---BOARD-INITIALIZED---");
+	
+	
 }
 

@@ -65,26 +65,26 @@ int _set_speed(uint8_t motor, int value)
 	{
 		if (motor == MA)
 		{
-			_set_pwm_0A(255);
-			_set_pwm_1A(255);
+			_set_pwm_0A(-value);
+			_set_pwm_1A(0);
 		}
 		else if (motor == MB)
 		{
-			_set_pwm_0B(255);
-			_set_pwm_1B(255);
+			_set_pwm_0B(0);
+			_set_pwm_1B(-value);
 		}
 	}
 	else if(value > 0)
 	{
 		if (motor == MA)
 		{
-			_set_pwm_0A(255);
-			_set_pwm_1A(255-value);
+			_set_pwm_0A(0);
+			_set_pwm_1A(value);
 		}
 		else if (motor == MB)
 		{
-			_set_pwm_0B(255-value);
-			_set_pwm_1B(255);
+			_set_pwm_0B(value);
+			_set_pwm_1B(0);
 		}
 	}
 	return value;
@@ -132,7 +132,7 @@ int16_t _update_controller(uint8_t motor)
 	{
 		printf("%1.2f - %1.2f - %1.2f\n",ref, sen, u);
 	}
-	return 0;
+	return (int16_t)u;
 }
 
 int16_t _dc_controller_loop(void)

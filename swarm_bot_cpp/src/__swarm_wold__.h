@@ -44,6 +44,7 @@
 #include <_pid_.h>
 #include <__format__.h>
 #include <__path_follow__.h>
-
+#include <__moves__.h>
+#include <__kinematics__.h>
 
 #endif /* __SWARM_WOLD___H_ */

@@ -14,6 +14,8 @@ src\__INT_0_1__.c
 
 src\__kinematics__.c
 
+src\__moves__.c
+
 src\__odometry__.c
 
 src\__path_follow__.c

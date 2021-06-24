@@ -34,7 +34,7 @@ src/ASF/common/boards/user_board/init.d \
  ../src/__timer1__.h ../src/__timer0__.h ../src/__timer2__.h \
  ../src/__usart__.h ../src/__dc_control__.h ../src/__odometry__.h \
  ../src/__pwm__.h ../src/_pid_.h ../src/__format__.h \
- ../src/__path_follow__.h
+ ../src/__path_follow__.h ../src/__moves__.h ../src/__kinematics__.h
 
 ../src/asf.h:
 
@@ -125,3 +125,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/__format__.h:
 
 ../src/__path_follow__.h:
+
+../src/__moves__.h:
+
+../src/__kinematics__.h:

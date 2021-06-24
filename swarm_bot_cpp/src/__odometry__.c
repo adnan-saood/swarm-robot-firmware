@@ -13,7 +13,9 @@ volatile static float _omega_enc_a = 0.0f;
 volatile static float _omega_enc_b = 0.0f;
 
 volatile static int32_t _enca_count = 0;
+volatile static int16_t _dira;
 volatile static int32_t _encb_count = 0;
+volatile static int16_t _dirb;
 
 volatile static float _omega_enca_prev = 0.0f;
 volatile static float _omega_encb_prev = 0.0f;
@@ -21,7 +23,7 @@ volatile static float _omega_encb_prev = 0.0f;
 
 ISR(INT0_vect)
 {
-	__led_toggle(D4);
+	//__led_toggle(D4);
 	if(_enca_count == 0)
 	{
 		_prev_tick_timeA = _micros0();
@@ -33,7 +35,9 @@ ISR(INT0_vect)
 		_tick_timeA = t - _prev_tick_timeA;
 		_prev_tick_timeA = t;
 	}
+
 	_enca_count++;
+
 }
 
 ISR(INT1_vect)
@@ -50,6 +54,7 @@ ISR(INT1_vect)
 		_prev_tick_timeB = t;
 	}
 	_encb_count++;
+
 }
 
 float _thetaA(void)
@@ -72,7 +77,7 @@ int32_t _ticksB()
 
 float _omega_from_encA(void)
 {
-	if(_micros0() - _prev_tick_timeA > 500000)
+	if(_micros0() - _prev_tick_timeA > 100000)
 	{
 		_omega_enc_a = 0.0;
 		return _omega_enc_a;
@@ -85,13 +90,13 @@ float _omega_from_encA(void)
 	else
 	{
 		_omega_enca_prev = _omega_enc_a;
-		 return _omega_enc_a;
+		 return _dira * _omega_enc_a;
 	}
 	//return _tick_timeA;
 }
 float _omega_from_encB(void)
 {
-	if(_micros0() - _prev_tick_timeB > 500000)
+	if(_micros0() - _prev_tick_timeB > 100000)
 	{
 		_omega_enc_b = 0.0;
 		return _omega_enc_b;
@@ -104,7 +109,7 @@ float _omega_from_encB(void)
 	else
 	{
 		_omega_encb_prev = _omega_enc_b;
-		return _omega_enc_b;
+		return _dirb * _omega_enc_b;
 	}
 	//return _tick_timeA;
 }

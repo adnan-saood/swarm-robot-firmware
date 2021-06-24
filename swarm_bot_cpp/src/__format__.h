@@ -26,5 +26,5 @@
        */
 char * _float_to_printable(float input /**< [in]input value of float to convert to string */);
 
-
+char * _read_path_segment();
 #endif /* __FORMAT___H_ */

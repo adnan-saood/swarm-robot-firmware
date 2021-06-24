@@ -1,4 +1,4 @@
-src/__adc__.d src/__adc__.o: ../src/__adc__.c ../src/__adc__.h \
+src/__moves__.d src/__moves__.o: ../src/__moves__.c ../src/__moves__.h \
  ../src/__swarm_wold__.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
@@ -28,13 +28,13 @@ src/__adc__.d src/__adc__.o: ../src/__adc__.c ../src/__adc__.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay_basic.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
- ../src/__INT_0_1__.h ../src/__pin_map.h ../src/__timer1__.h \
- ../src/__timer0__.h ../src/__timer2__.h ../src/__usart__.h \
- ../src/__dc_control__.h ../src/__odometry__.h ../src/__pwm__.h \
- ../src/_pid_.h ../src/__format__.h ../src/__path_follow__.h \
- ../src/__moves__.h ../src/__kinematics__.h
+ ../src/__adc__.h ../src/__INT_0_1__.h ../src/__pin_map.h \
+ ../src/__timer1__.h ../src/__timer0__.h ../src/__timer2__.h \
+ ../src/__usart__.h ../src/__dc_control__.h ../src/__odometry__.h \
+ ../src/__pwm__.h ../src/_pid_.h ../src/__format__.h \
+ ../src/__path_follow__.h ../src/__kinematics__.h
 
-../src/__adc__.h:
+../src/__moves__.h:
 
 ../src/__swarm_wold__.h:
 
@@ -100,6 +100,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h:
 
+../src/__adc__.h:
+
 ../src/__INT_0_1__.h:
 
 ../src/__pin_map.h:
@@ -123,7 +125,5 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../src/__format__.h:
 
 ../src/__path_follow__.h:
-
-../src/__moves__.h:
 
 ../src/__kinematics__.h:

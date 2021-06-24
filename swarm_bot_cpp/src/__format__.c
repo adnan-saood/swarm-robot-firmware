@@ -19,3 +19,17 @@ char * _float_to_printable(float input)
 	return out;
 }
 
+
+
+char * _read_path_segment()
+{
+	char in[40];
+	for (int i = 0; i < 40 ; i++)
+	{
+		in[i] = '\0';
+	}
+	scanf("%s", in);
+	int x,y;
+	sscanf("<path>%d,%d</path>",&x,&y);
+	
+}

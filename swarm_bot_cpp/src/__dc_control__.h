@@ -24,11 +24,11 @@
 #define MA 1
 #define MB 2
 
-#define DEBUG_CONTROLLER 1
+#define DEBUG_CONTROLLER 0
 
-#define K_P     40.0
-#define K_I     0
-#define K_D     12.5
+#define K_P     100.0
+#define K_I     50.0
+#define K_D     0.0
 
 
 /**

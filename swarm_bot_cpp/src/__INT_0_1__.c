@@ -9,13 +9,43 @@
 
 void _interrupt0_enable(uint8_t trigger)
 {
-	EIMSK |= (1 << INT0);
-	EICRA |= (1 << ISC00) | (1 << ISC01);
+	if(trigger == _INT_RISING_EDGE)
+	{
+		EIMSK |= (1 << INT0);
+		EICRA |= (1 << ISC00) | (1 << ISC01);
+	}
+	else if(trigger == _INT_FALLING_EDGE)
+	{
+		
+		EIMSK |= (1 << INT0);
+		EICRA |= (0 << ISC00) | (1 << ISC01);
+	}
+	else if(trigger == _INT_CHANGE_LEVEL)
+	{
+		
+		EIMSK |= (1 << INT0);
+		EICRA |= (1 << ISC00) | (0 << ISC01);
+	}
 	sei();
 }
 void _interrupt1_enable(uint8_t trigger)
 {
-	EIMSK |= (1 << INT1);
-	EICRA |= (1 << ISC10) | (1 << ISC11);
+	if(trigger == _INT_RISING_EDGE)
+	{
+		EIMSK |= (1 << INT1);
+		EICRA |= (1 << ISC10) | (1 << ISC11);
+	}
+	else if(trigger == _INT_FALLING_EDGE)
+	{
+		
+		EIMSK |= (1 << INT1);
+		EICRA |= (0 << ISC10) | (1 << ISC11);
+	}
+	else if(trigger == _INT_CHANGE_LEVEL)
+	{
+		
+		EIMSK |= (1 << INT1);
+		EICRA |= (1 << ISC10) | (0 << ISC11);
+	}
 	sei();
 }

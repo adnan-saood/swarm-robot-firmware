@@ -73,7 +73,7 @@ float pid_Controller(float setPoint, float processValue, struct PID_DATA *pid_st
     p_term = pid_st->P_Factor * error;
   }
 
-  // Calculate Iterm and limit integral runaway
+  // Calculate I term and limit integral runaway
   temp = pid_st->sumError + error;
   if(temp > pid_st->maxSumError){
     i_term = MAX_I_TERM;

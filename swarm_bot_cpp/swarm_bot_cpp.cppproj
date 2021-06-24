@@ -302,6 +302,12 @@
     <Compile Include="src\__kinematics__.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\__moves__.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\__moves__.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\__odometry__.c">
       <SubType>compile</SubType>
     </Compile>
