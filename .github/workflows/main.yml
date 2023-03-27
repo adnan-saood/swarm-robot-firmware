@@ -1,0 +1,23 @@
+name: CI - Generate Doxygen Documentation
+
+on: push # Run this workflow on every push to the repository
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Use the latest Ubuntu environment
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2 # Check out the repository code
+
+    - name: Install Doxygen
+      run: sudo apt-get update && sudo apt-get install -y doxygen graphviz # Install Doxygen and Graphviz
+
+    - name: Generate Doxygen Documentation
+      run: doxygen swarm_bot_cpp/doxyfile # Generate Doxygen documentation using your Doxyfile configuration
+
+    - name: Deploy Documentation
+      uses: peaceiris/actions-gh-pages@v3 # Deploy documentation to GitHub Pages
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/html # Publish the generated documentation from this directory
