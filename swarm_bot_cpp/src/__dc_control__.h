@@ -1,5 +1,3 @@
-#include <__swarm_wold__.h>
-
 /*! \file *********************************************************************
  *
  * \brief Header file for __dc_control__.c
@@ -17,6 +15,8 @@
  * $RCSfile$
  * $Date:5/26/2021 9:18:13 PM$
  *****************************************************************************/
+
+#include <__swarm_wold__.h>
 
 #ifndef __DC_CONTROL___H_
 #define __DC_CONTROL___H_

@@ -1,10 +1,3 @@
-#ifndef __ADC___H_
-#define __ADC___H_
-
-//#define __ADC_RES_8_BIT
-#define __ADC_RES_10_BIT
-
-#include <__swarm_wold__.h>
 /*! \file *********************************************************************
  *
  * \brief Header file for __adc__.c
@@ -23,6 +16,13 @@
  * $Date:5/19/2021 9:30:13 AM$
  *****************************************************************************/
 
+#ifndef __ADC___H_
+#define __ADC___H_
+
+//#define __ADC_RES_8_BIT
+#define __ADC_RES_10_BIT
+
+#include <__swarm_wold__.h>
 
 
 

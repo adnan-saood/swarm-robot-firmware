@@ -1,12 +1,20 @@
-/*
- * __dc_control__.c
+/*! \file *********************************************************************
  *
- * Created: 5/26/2021 9:17:59 PM
- *  Author: adnan
- */ 
-
-
-
+ * \brief Header file for __dc_control__.c
+ *
+ * - File:               __dc_control__.h
+ * - Compiler:           GCC-AVR
+ * - Supported devices:  Tested on 328p
+ * - AppNote:            ADC module driver
+ *
+ * \author               Swarm robot graduation project workgroub \n
+ *						 Mechatronics Program for the Distinguished \n
+ *
+ * $Name$
+ * $Revision: 1 $
+ * $RCSfile$
+ * $Date:5/19/2021 9:30:13 AM$
+ *****************************************************************************/
 #include <__dc_control__.h>
 
 static struct PID_DATA pidData;
