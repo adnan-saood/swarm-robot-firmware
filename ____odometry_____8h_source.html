@@ -69,62 +69,73 @@ $(function() {
 <div class="title">__odometry__.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#ifndef ODOMETRY_H_</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define ODOMETRY_H_</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="____swarm__wold_____8h.html">__swarm_wold__.h</a>&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define __ENC_TICK_THETA_FOR_OMEGA 190399</span></div>
+<a href="____odometry_____8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef ODOMETRY_H_</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define ODOMETRY_H_</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="____swarm__wold_____8h.html">__swarm_wold__.h</a>&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define __ENC_TICK_THETA 0.1904</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a285e3bd31f6ba0bef24be8b0dc8c192c">   25</a></span>&#160;<span class="preprocessor">#define __ENC_TICK_THETA_FOR_OMEGA 190399</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define __PM_lower_bound 200</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a214f3a6d875fe2b37df7e64377e883d8">   28</a></span>&#160;<span class="preprocessor">#define __ENC_TICK_THETA 0.1904</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define __PM_upper_bound 800</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#ab999acc77aa01b84cb9589eafb1f8e1a">   31</a></span>&#160;<span class="preprocessor">#define __PM_lower_bound 200</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define __PM_SAMPLE_COUNT 5</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a9ab37b5a95936f75825638a64fad3cdd">   34</a></span>&#160;<span class="preprocessor">#define __PM_upper_bound 800</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define __PM_SLOPE 1</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#aace7b790a52635612f406b6ce9a71248">   37</a></span>&#160;<span class="preprocessor">#define __PM_SAMPLE_COUNT 5</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define FORWARD  1</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#acf1f4b25429cd6aedb3deb7605d0678c">   40</a></span>&#160;<span class="preprocessor">#define __PM_SLOPE 1</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define BACKWARD -1</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a6ddfdda7a062d10cff4a72b76b44aeb8">   43</a></span>&#160;<span class="preprocessor">#define FORWARD  1</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">float</span> _theta_A(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">float</span> _theta_B(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">float</span> _omega_from_enc_A(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordtype">float</span> _omega_from_enc_B(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">float</span> _omega_from_PM_A(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">float</span> _omega_from_PM_B(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keywordtype">float</span> _omega_comp_A(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">float</span> omega_comp_B(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;int32_t _ticksA();</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;int32_t _ticksB();</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keywordtype">void</span> _insertion_sort(uint16_t arr[] , <span class="keywordtype">int</span> n );</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __ODOMETRY___H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#adf445abfe1b77fa63f89e315ccc2f7f2">   46</a></span>&#160;<span class="preprocessor">#define BACKWARD -1</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a5c1467277c32d328c23a76e81644a15f">   53</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="____odometry_____8h.html#a5c1467277c32d328c23a76e81644a15f">_theta_A</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a211bad1c0b7de7745049e04f9c6b652c">   60</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="____odometry_____8h.html#a211bad1c0b7de7745049e04f9c6b652c">_theta_B</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a4c4a3a44b429ed63c8acac9c8286fdbe">   70</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="____odometry_____8h.html#a4c4a3a44b429ed63c8acac9c8286fdbe">_omega_from_enc_A</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#aa08f62ef249866034c801927e6773140">   80</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="____odometry_____8h.html#aa08f62ef249866034c801927e6773140">_omega_from_enc_B</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a7b88655a9c65e239f1737d9885bc1dcb">   89</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="____odometry_____8h.html#a7b88655a9c65e239f1737d9885bc1dcb">_omega_from_PM_A</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#aa8ad8897c599df0dcd67926da81b4880">   98</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="____odometry_____8h.html#aa8ad8897c599df0dcd67926da81b4880">_omega_from_PM_B</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">float</span> <a class="code" href="____odometry_____8h.html#ac3c01373b69ca7a9909651033024e0e2">_omega_comp_A</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="____odometry_____8h.html#a528ec5901f0a0e3299da8d0807d53496">  118</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="____odometry_____8h.html#a528ec5901f0a0e3299da8d0807d53496">omega_comp_B</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;int32_t <a class="code" href="____odometry_____8h.html#a41a0ae28dd67f9dc457c8a8944f97ec4">_ticksA</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;int32_t <a class="code" href="____odometry_____8h.html#a2e0c140e05a10523f0887b927efc3eac">_ticksB</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">void</span> <a class="code" href="____odometry_____8h.html#afc5cb0b9f8cc2aa3efe0606aa98e7345">_insertion_sort</a>(uint16_t arr[] , <span class="keywordtype">int</span> n );</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __ODOMETRY___H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a____odometry_____8h_html_a211bad1c0b7de7745049e04f9c6b652c"><div class="ttname"><a href="____odometry_____8h.html#a211bad1c0b7de7745049e04f9c6b652c">_theta_B</a></div><div class="ttdeci">float _theta_B(void)</div><div class="ttdoc">Returns the absolute rotation angle of motor B.</div></div>
+<div class="ttc" id="a____odometry_____8h_html_a2e0c140e05a10523f0887b927efc3eac"><div class="ttname"><a href="____odometry_____8h.html#a2e0c140e05a10523f0887b927efc3eac">_ticksB</a></div><div class="ttdeci">int32_t _ticksB()</div><div class="ttdoc">Returns the number of encoder ticks for motor A since boot.</div><div class="ttdef"><b>Definition:</b> __odometry__.c:99</div></div>
+<div class="ttc" id="a____odometry_____8h_html_a41a0ae28dd67f9dc457c8a8944f97ec4"><div class="ttname"><a href="____odometry_____8h.html#a41a0ae28dd67f9dc457c8a8944f97ec4">_ticksA</a></div><div class="ttdeci">int32_t _ticksA()</div><div class="ttdoc">Returns the number of encoder ticks for motor A since boot.</div><div class="ttdef"><b>Definition:</b> __odometry__.c:95</div></div>
+<div class="ttc" id="a____odometry_____8h_html_a4c4a3a44b429ed63c8acac9c8286fdbe"><div class="ttname"><a href="____odometry_____8h.html#a4c4a3a44b429ed63c8acac9c8286fdbe">_omega_from_enc_A</a></div><div class="ttdeci">float _omega_from_enc_A(void)</div><div class="ttdoc">Returns the angular velocity of motor A based on encoder readings.</div></div>
+<div class="ttc" id="a____odometry_____8h_html_a528ec5901f0a0e3299da8d0807d53496"><div class="ttname"><a href="____odometry_____8h.html#a528ec5901f0a0e3299da8d0807d53496">omega_comp_B</a></div><div class="ttdeci">float omega_comp_B(void)</div><div class="ttdoc">Returns the complementary filter for the angular velocity of motor B.</div></div>
+<div class="ttc" id="a____odometry_____8h_html_a5c1467277c32d328c23a76e81644a15f"><div class="ttname"><a href="____odometry_____8h.html#a5c1467277c32d328c23a76e81644a15f">_theta_A</a></div><div class="ttdeci">float _theta_A(void)</div><div class="ttdoc">Returns the absolute rotation angle of motor A.</div></div>
+<div class="ttc" id="a____odometry_____8h_html_a7b88655a9c65e239f1737d9885bc1dcb"><div class="ttname"><a href="____odometry_____8h.html#a7b88655a9c65e239f1737d9885bc1dcb">_omega_from_PM_A</a></div><div class="ttdeci">float _omega_from_PM_A(void)</div><div class="ttdoc">Returns the angular velocity of motor A based on potentiometer readings.</div></div>
+<div class="ttc" id="a____odometry_____8h_html_aa08f62ef249866034c801927e6773140"><div class="ttname"><a href="____odometry_____8h.html#aa08f62ef249866034c801927e6773140">_omega_from_enc_B</a></div><div class="ttdeci">float _omega_from_enc_B(void)</div><div class="ttdoc">Returns the angular velocity of motor B based on encoder readings.</div></div>
+<div class="ttc" id="a____odometry_____8h_html_aa8ad8897c599df0dcd67926da81b4880"><div class="ttname"><a href="____odometry_____8h.html#aa8ad8897c599df0dcd67926da81b4880">_omega_from_PM_B</a></div><div class="ttdeci">float _omega_from_PM_B(void)</div><div class="ttdoc">Returns the angular velocity of motor B based on potentiometer readings.</div></div>
+<div class="ttc" id="a____odometry_____8h_html_ac3c01373b69ca7a9909651033024e0e2"><div class="ttname"><a href="____odometry_____8h.html#ac3c01373b69ca7a9909651033024e0e2">_omega_comp_A</a></div><div class="ttdeci">float _omega_comp_A(void)</div><div class="ttdoc">Returns the complementary filter for the angular velocity of motor A.</div><div class="ttdef"><b>Definition:</b> __odometry__.c:123</div></div>
+<div class="ttc" id="a____odometry_____8h_html_afc5cb0b9f8cc2aa3efe0606aa98e7345"><div class="ttname"><a href="____odometry_____8h.html#afc5cb0b9f8cc2aa3efe0606aa98e7345">_insertion_sort</a></div><div class="ttdeci">void _insertion_sort(uint16_t arr[], int n)</div><div class="ttdoc">Indertio sort algorithm. Faster for small array sizes.</div><div class="ttdef"><b>Definition:</b> __odometry__.c:196</div></div>
 <div class="ttc" id="a____swarm__wold_____8h_html"><div class="ttname"><a href="____swarm__wold_____8h.html">__swarm_wold__.h</a></div><div class="ttdoc">Header file for dummy purposes.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
