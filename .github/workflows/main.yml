@@ -26,4 +26,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3 # Deploy documentation to GitHub Pages
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./doxygen/html # Publish the generated documentation from this directory
+        publish_dir: ../doc/doxygen/html # Publish the generated documentation from this directory
