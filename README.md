@@ -10,4 +10,4 @@ A robot operating system for a swarm-bot
 
 ## File Structure
 
-<img src="./swarm_bot_cpp/doxygen/html/____swarm__wold_____8h__dep__incl_org.svg">
+<img src="./doc/visuals/swarm_world.svg">
