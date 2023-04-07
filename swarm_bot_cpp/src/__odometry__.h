@@ -16,25 +16,25 @@
 #ifndef ODOMETRY_H_
 #define ODOMETRY_H_
 
-#include <swarm_world.h>
+#include "__swarm_wold__.h"
 
 /** \brief Threshold value for encoder ticks used to calculate angular velocity */
-#define ENC_TICK_THETA_FOR_OMEGA 190399
+#define __ENC_TICK_THETA_FOR_OMEGA 190399
 
 /** \brief Conversion factor from encoder ticks to radians */
-#define ENC_TICK_THETA 0.1904
+#define __ENC_TICK_THETA 0.1904
 
 /** \brief Lower bound for potentiometer readings */
-#define PM_LOWER_BOUND 200
+#define __PM_lower_bound 200
 
 /** \brief Upper bound for potentiometer readings */
-#define PM_UPPER_BOUND 800
+#define __PM_upper_bound 800
 
 /** \brief Number of samples taken for potentiometer readings */
-#define PM_SAMPLE_COUNT 5
+#define __PM_SAMPLE_COUNT 5
 
 /** \brief Slope for potentiometer readings, in radians per volt per overflow */
-#define PM_SLOPE 1
+#define __PM_SLOPE 1
 
 /** \brief Constant used to indicate forward motion */
 #define FORWARD  1
@@ -47,14 +47,14 @@
  * \brief Returns the absolute rotation angle of motor A.
  * \return The absolute rotation angle of motor A in radians.
  */
-float theta_A(void);
+float _theta_A(void);
 
 
 /**
  * \brief Returns the absolute rotation angle of motor B.
  * \return The absolute rotation angle of motor B in radians.
  */
-float theta_B(void);
+float _theta_B(void);
 
 
 /**
@@ -64,7 +64,7 @@ float theta_B(void);
  * This function measures the time between consecutive encoder ticks to determine
  * the angular velocity of motor A.
  */
-float omega_from_enc_A(void);
+float _omega_from_enc_A(void);
 
 
 /**
@@ -74,7 +74,7 @@ float omega_from_enc_A(void);
  * This function measures the time between consecutive encoder ticks to determine
  * the angular velocity of motor B.
  */
-float omega_from_enc_B(void);
+float _omega_from_enc_B(void);
 
 
 /**
@@ -83,7 +83,7 @@ float omega_from_enc_B(void);
  *
  * This function uses the potentiometer readings of motor A to determine its angular velocity.
  */
-float omega_from_PM_A(void);
+float _omega_from_PM_A(void);
 
 
 /**
@@ -92,7 +92,7 @@ float omega_from_PM_A(void);
  *
  * This function uses the potentiometer readings of motor B to determine its angular velocity.
  */
-float omega_from_PM_B(void);
+float _omega_from_PM_B(void);
 
 
 /**
@@ -102,7 +102,7 @@ float omega_from_PM_B(void);
  * This function uses both encoder and potentiometer readings to calculate a more
  * accurate estimate of the angular velocity of motor A.
  */
-float omega_comp_A(void);
+float _omega_comp_A(void);
 
 
 /**
