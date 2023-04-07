@@ -1,0 +1,8 @@
+<map id="board_init" name="board_init">
+<area shape="rect" id="node1" title="This function initializes the board target resources." alt="" coords="5,107,92,133"/>
+<area shape="rect" id="node2" href="$____adc_____8h.html#a82219102879b9b9281fda7a9c6f81f72" title=" " alt="" coords="172,5,252,32"/>
+<area shape="rect" id="node3" href="$_____i_n_t__0__1_____8h.html#adf8820d00238bff8edcec983f9019935" title=" " alt="" coords="140,56,284,83"/>
+<area shape="rect" id="node4" href="$____timer0_____8h.html#a05471fe7588ff4146c1b52bbbb17fc8c" title=" " alt="" coords="162,107,262,133"/>
+<area shape="rect" id="node5" href="$____timer1_____8h.html#ab50c41f94cdcb3558e9ebcc885552ab6" title=" " alt="" coords="162,157,262,184"/>
+<area shape="rect" id="node6" href="$____usart_____8h.html#a6aa3b4e2a5362cd032ed6b218afe58f6" title=" " alt="" coords="171,208,253,235"/>
+</map>
