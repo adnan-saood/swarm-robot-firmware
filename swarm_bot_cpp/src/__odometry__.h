@@ -1,17 +1,20 @@
-/**
- * \file odometry.h
- * \brief Header file for odometry.c
+/*! \file *********************************************************************
  *
- * \author Swarm robot graduation project workgroup
- * \author Mechatronics Program for the Distinguished
+ * \brief Header file for __odometry__.c
  *
- * \date 5/19/2021
+ * - File:               __odometry__h
+ * - Compiler:           GCC-AVR
+ * - Supported devices:  Tested on 328p
+ * - AppNote:            Odometry calculations for the mobile robot
  *
- * \details This header file contains function declarations and preprocessor definitions
- *          used for odometry calculations for a mobile robot.
+ * \author               Swarm robot graduation project workgroub \n
+ *						 Mechatronics Program for the Distinguished \n
  *
- * \note Tested on ATmega328P microcontroller
- */
+ * $Name$
+ * $Revision: 1 $
+ * $RCSfile$
+ * $Date:5/19/2021 9:43:59 AM$
+ *****************************************************************************/
 
 #ifndef ODOMETRY_H_
 #define ODOMETRY_H_
