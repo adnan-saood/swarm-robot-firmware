@@ -12,6 +12,12 @@ jobs:
 
     - name: Install Doxygen
       run: sudo apt-get update && sudo apt-get install -y doxygen graphviz # Install Doxygen and Graphviz
+    
+    - name: Install doxygen-awesome-css
+      run: git submodule add https://github.com/jothepro/doxygen-awesome-css.git\
+            cd doxygen-awesome-css \
+            git checkout v2.2.0 \
+            cd ..
 
     - name: Generate Doxygen Documentation
       run: ls && doxygen swarm_bot_cpp/doxyfile # Generate Doxygen documentation using your Doxyfile configuration
