@@ -1,99 +1,135 @@
-#ifndef __ODOMETRY___H_
-#define __ODOMETRY___H_
-
-/*! \file *********************************************************************
+/**
+ * \file odometry.h
+ * \brief Header file for odometry.c
  *
- * \brief Header file for __odometry__.c
+ * \author Swarm robot graduation project workgroup
+ * \author Mechatronics Program for the Distinguished
  *
- * - File:               __odometry__h
- * - Compiler:           GCC-AVR
- * - Supported devices:  Tested on 328p
- * - AppNote:            Odometry calculations for the mobile robot
+ * \date 5/19/2021
  *
- * \author               Swarm robot graduation project workgroub \n
- *						 Mechatronics Program for the Distinguished \n
+ * \details This header file contains function declarations and preprocessor definitions
+ *          used for odometry calculations for a mobile robot.
  *
- * $Name$
- * $Revision: 1 $
- * $RCSfile$
- * $Date:5/19/2021 9:43:59 AM$
- *****************************************************************************/
+ * \note Tested on ATmega328P microcontroller
+ */
 
+#ifndef ODOMETRY_H_
+#define ODOMETRY_H_
 
-#include <__swarm_wold__.h>
+#include <swarm_world.h>
 
-#define __ENC_TICK_THETA_FOR_OMEGA 190399
-#define __ENC_TICK_THETA 0.1904
-#define __PM_lower_bound 200
-#define __PM_upper_bound 800
+/** \brief Threshold value for encoder ticks used to calculate angular velocity */
+#define ENC_TICK_THETA_FOR_OMEGA 190399
 
-#define __PM_SAMPLE_COUNT 5
-#define __PM_SLOPE 1 // rad per volt / time of one overflow
+/** \brief Conversion factor from encoder ticks to radians */
+#define ENC_TICK_THETA 0.1904
 
+/** \brief Lower bound for potentiometer readings */
+#define PM_LOWER_BOUND 200
+
+/** \brief Upper bound for potentiometer readings */
+#define PM_UPPER_BOUND 800
+
+/** \brief Number of samples taken for potentiometer readings */
+#define PM_SAMPLE_COUNT 5
+
+/** \brief Slope for potentiometer readings, in radians per volt per overflow */
+#define PM_SLOPE 1
+
+/** \brief Constant used to indicate forward motion */
 #define FORWARD  1
-#define BACKWARD  -1
 
-
-///////////////////////////////////////////
-///////////////////////////////////////////
-///////////////////////////////////////////
-///////////////////////////////////////////
-///////////////////////////////////////////
-///////////////////////////////////////////
-
+/** \brief Constant used to indicate backward motion */
+#define BACKWARD -1
 
 
 /**
-       * Returns the absolute rotation angle of motor A
-       */
-float _thetaA(void);
-/**
-       * Returns the absolute rotation angle of motor B
-       */
-float _thetaB(void);
+ * \brief Returns the absolute rotation angle of motor A.
+ * \return The absolute rotation angle of motor A in radians.
+ */
+float theta_A(void);
+
 
 /**
-       * Returns the A wheel's angular velocity from encoder readings by measuring he time between consecutive encoder ticks
-       */
-float _omega_from_encA(void);
+ * \brief Returns the absolute rotation angle of motor B.
+ * \return The absolute rotation angle of motor B in radians.
+ */
+float theta_B(void);
+
 
 /**
-       * Returns the B wheel's angular velocity from encoder readings by measuring he time between consecutive encoder ticks
-       */
-float _omega_from_encB(void);
+ * \brief Returns the angular velocity of motor A based on encoder readings.
+ * \return The angular velocity of motor A in radians per second.
+ *
+ * This function measures the time between consecutive encoder ticks to determine
+ * the angular velocity of motor A.
+ */
+float omega_from_enc_A(void);
+
 
 /**
-       * Returns the A wheel's angular velocity using the potentiometer readings
-       */
-float _omega_from_PMA(void);
-/**
-       * Returns the B wheel's angular velocity using the potentiometer readings
-       */
-float _omega_from_PMB(void);
+ * \brief Returns the angular velocity of motor B based on encoder readings.
+ * \return The angular velocity of motor B in radians per second.
+ *
+ * This function measures the time between consecutive encoder ticks to determine
+ * the angular velocity of motor B.
+ */
+float omega_from_enc_B(void);
+
 
 /**
-       * Complementary filter for wheel A angular velocity (encoder ticks and internal potentiometer)
-       */
-float _omega_comp_A(void);
+ * \brief Returns the angular velocity of motor A based on potentiometer readings.
+ * \return The angular velocity of motor A in radians per second.
+ *
+ * This function uses the potentiometer readings of motor A to determine its angular velocity.
+ */
+float omega_from_PM_A(void);
+
 
 /**
-       * Complementary filter for wheel B angular velocity (encoder ticks and internal potentiometer)
-       */
-float _omega_comp_B(void);
+ * \brief Returns the angular velocity of motor B based on potentiometer readings.
+ * \return The angular velocity of motor B in radians per second.
+ *
+ * This function uses the potentiometer readings of motor B to determine its angular velocity.
+ */
+float omega_from_PM_B(void);
+
 
 /**
-       * returns the number of ticks happened since boot to wheel A
-       */
+ * \brief Returns the complementary filter for the angular velocity of motor A.
+ * \return The complementary filter for the angular velocity of motor A in radians per second.
+ *
+ * This function uses both encoder and potentiometer readings to calculate a more
+ * accurate estimate of the angular velocity of motor A.
+ */
+float omega_comp_A(void);
+
+
+/**
+ * \brief Returns the complementary filter for the angular velocity of motor B.
+ * \return The complementary filter for the angular velocity of motor B in radians per second.
+ *
+ * This function uses both encoder and potentiometer readings to calculate a more
+ * accurate estimate of the angular velocity of motor B.
+ */
+float omega_comp_B(void);
+
+
+/**
+ * \brief Returns the number of encoder ticks for motor A since boot.
+ * \return The number of encoder ticks for motor A since boot.
+ */
 int32_t _ticksA();
 
 /**
-       * returns the number of ticks happened since boot to wheel B
-       */
+ * \brief Returns the number of encoder ticks for motor A since boot.
+ * \return The number of encoder ticks for motor A since boot.
+ */
 int32_t _ticksB();
 
 /**
-		* Insertion sort algorithm (fastest for small array sizes)
-		*/
+ * \brief Indertio sort algorithm. Faster for small array sizes.
+ */
 void _insertion_sort(uint16_t arr[] /**< [in] pointer to start of sorting */, int n /**< [in] offset from @param arr[]*/);
 
 
