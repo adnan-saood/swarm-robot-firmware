@@ -24,7 +24,9 @@
 */
 var NAVTREE =
 [
-  [ "swarm_bot_cpp", "index.html", [
+  [ "SWARM-Bot Firmware", "index.html", [
+    [ "Introduction", "index.html#Introduction", null ],
+    [ "Files Structure", "index.html#Source", null ],
     [ "License", "_license.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
