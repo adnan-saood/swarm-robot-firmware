@@ -22,7 +22,7 @@ Each file in this graph has a certain harware utility to it. Files are separated
 
 File Structure:
 	- \b General:
-		- Swarm world file \ref "__swarm_wold__.h"
+		- Swarm world file \ref __swarm_wold__.h
 		- Pin definitions \ref __pin_map.h
 	- \b Control: 
 		- Odometry calculations: \ref __odometry__.h
