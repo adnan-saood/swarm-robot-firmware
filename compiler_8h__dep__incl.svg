@@ -70,7 +70,39 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="init_8c.html" target="_top" xlink:title="User board initialization template.">
+<g id="a_node3"><a xlink:href=".html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="197.62,-145.5 197.62,-175.5 310.62,-175.5 310.62,-145.5 197.62,-145.5"/>
+<text text-anchor="start" x="205.62" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">swarm_bot_cpp/src/</text>
+<text text-anchor="middle" x="254.12" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">__pin_map.h</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge">
+<title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M199.42,-264.76C206.84,-249.65 216.87,-229.56 226.12,-212 232.66,-199.58 240.42,-185.64 246.11,-175.56"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="196.2,-263.38 194.94,-273.9 202.48,-266.46 196.2,-263.38"/>
+</g>
+<!-- Node4 -->
+<g id="node4" class="node">
+<title>Node4</title>
+<g id="a_node4"><a xlink:href="____swarm__wold_____8h.html" target="_top" xlink:title="Header file for dummy purposes.">
+<polygon fill="white" stroke="red" points="177.62,-78.5 177.62,-108.5 290.62,-108.5 290.62,-78.5 177.62,-78.5"/>
+<text text-anchor="start" x="185.62" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">swarm_bot_cpp/src/</text>
+<text text-anchor="middle" x="234.12" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">__swarm_wold__.h</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node4 -->
+<g id="edge5" class="edge">
+<title>Node2&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M182.98,-263.88C177.89,-234.65 172.86,-184.42 188.12,-145 193.68,-130.62 205.46,-117.82 215.7,-108.71"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="179.59,-264.81 184.89,-273.99 186.47,-263.51 179.59,-264.81"/>
+</g>
+<!-- Node26 -->
+<g id="node5" class="node">
+<title>Node26</title>
+<g id="a_node5"><a xlink:href="init_8c.html" target="_top" xlink:title="User board initialization template.">
 <polygon fill="white" stroke="black" points="156.62,-0.5 156.62,-41.5 311.62,-41.5 311.62,-0.5 156.62,-0.5"/>
 <text text-anchor="start" x="164.62" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">swarm_bot_cpp/src/ASF</text>
 <text text-anchor="start" x="164.62" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">/common/boards/user_board</text>
@@ -78,43 +110,11 @@
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node3 -->
-<g id="edge2" class="edge">
-<title>Node2&#45;&gt;Node3</title>
+<!-- Node2&#45;&gt;Node26 -->
+<g id="edge9" class="edge">
+<title>Node2&#45;&gt;Node26</title>
 <path fill="none" stroke="midnightblue" d="M136.98,-269.97C96.62,-252.72 43.1,-222.38 18.12,-176 -2.54,-137.65 -8.54,-112.45 18.12,-78 35.22,-55.9 101.63,-40.93 156.35,-32.06"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="135.83,-273.29 146.41,-273.87 138.5,-266.82 135.83,-273.29"/>
-</g>
-<!-- Node4 -->
-<g id="node4" class="node">
-<title>Node4</title>
-<g id="a_node4"><a xlink:href=".html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="197.62,-145.5 197.62,-175.5 310.62,-175.5 310.62,-145.5 197.62,-145.5"/>
-<text text-anchor="start" x="205.62" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">swarm_bot_cpp/src/</text>
-<text text-anchor="middle" x="254.12" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">__pin_map.h</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
-<title>Node2&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M199.42,-264.76C206.84,-249.65 216.87,-229.56 226.12,-212 232.66,-199.58 240.42,-185.64 246.11,-175.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="196.2,-263.38 194.94,-273.9 202.48,-266.46 196.2,-263.38"/>
-</g>
-<!-- Node5 -->
-<g id="node5" class="node">
-<title>Node5</title>
-<g id="a_node5"><a xlink:href="____swarm__wold_____8h.html" target="_top" xlink:title="Header file for dummy purposes.">
-<polygon fill="white" stroke="red" points="177.62,-78.5 177.62,-108.5 290.62,-108.5 290.62,-78.5 177.62,-78.5"/>
-<text text-anchor="start" x="185.62" y="-96.5" font-family="Helvetica,sans-Serif" font-size="10.00">swarm_bot_cpp/src/</text>
-<text text-anchor="middle" x="234.12" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">__swarm_wold__.h</text>
-</a>
-</g>
-</g>
-<!-- Node2&#45;&gt;Node5 -->
-<g id="edge6" class="edge">
-<title>Node2&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M182.98,-263.88C177.89,-234.65 172.86,-184.42 188.12,-145 193.68,-130.62 205.46,-117.82 215.7,-108.71"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="179.59,-264.81 184.89,-273.99 186.47,-263.51 179.59,-264.81"/>
 </g>
 <!-- Node27 -->
 <g id="node6" class="node">
@@ -127,7 +127,7 @@
 </g>
 </g>
 <!-- Node2&#45;&gt;Node27 -->
-<g id="edge7" class="edge">
+<g id="edge6" class="edge">
 <title>Node2&#45;&gt;Node27</title>
 <path fill="none" stroke="midnightblue" d="M170.17,-266.18C148.81,-240.19 113.77,-197.56 95.7,-175.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="167.54,-268.48 176.59,-273.98 172.94,-264.03 167.54,-268.48"/>
@@ -138,21 +138,21 @@
 <path fill="none" stroke="midnightblue" d="M222.07,-268.97C244.22,-256.56 272.04,-240.97 288.94,-231.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="220.3,-265.95 213.29,-273.9 223.72,-272.06 220.3,-265.95"/>
 </g>
-<!-- Node4&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node5</title>
+<!-- Node3&#45;&gt;Node4 -->
+<g id="edge3" class="edge">
+<title>Node3&#45;&gt;Node4</title>
 <path fill="none" stroke="midnightblue" d="M246.79,-135.7C243.99,-126.59 240.88,-116.49 238.45,-108.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="243.49,-136.87 249.78,-145.4 250.18,-134.81 243.49,-136.87"/>
 </g>
-<!-- Node5&#45;&gt;Node3 -->
-<g id="edge5" class="edge">
-<title>Node5&#45;&gt;Node3</title>
+<!-- Node4&#45;&gt;Node26 -->
+<g id="edge4" class="edge">
+<title>Node4&#45;&gt;Node26</title>
 <path fill="none" stroke="midnightblue" d="M234.12,-67.98C234.12,-59.35 234.12,-49.76 234.12,-41.59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="230.62,-68.23 234.12,-78.23 237.62,-68.23 230.62,-68.23"/>
 </g>
-<!-- Node27&#45;&gt;Node5 -->
-<g id="edge8" class="edge">
-<title>Node27&#45;&gt;Node5</title>
+<!-- Node27&#45;&gt;Node4 -->
+<g id="edge7" class="edge">
+<title>Node27&#45;&gt;Node4</title>
 <path fill="none" stroke="midnightblue" d="M125.87,-141.41C149.82,-131.03 179.44,-118.2 201.63,-108.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="124.45,-138.21 116.66,-145.4 127.23,-144.63 124.45,-138.21"/>
 </g>
@@ -167,7 +167,7 @@
 </g>
 </g>
 <!-- Node27&#45;&gt;Node28 -->
-<g id="edge9" class="edge">
+<g id="edge8" class="edge">
 <title>Node27&#45;&gt;Node28</title>
 <path fill="none" stroke="midnightblue" d="M84.12,-135.11C84.12,-126.15 84.12,-116.32 84.12,-108.58"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="80.62,-135.4 84.12,-145.4 87.62,-135.4 80.62,-135.4"/>
@@ -175,23 +175,23 @@
 <!-- Node29&#45;&gt;Node3 -->
 <g id="edge11" class="edge">
 <title>Node29&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M319.57,-204.55C326.02,-196.57 332.78,-186.46 336.12,-176 340.31,-162.88 339.48,-158.36 336.12,-145 327.87,-112.22 321.38,-104.28 300.12,-78 289.06,-64.33 274.32,-51.46 261.58,-41.51"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="316.77,-202.44 312.87,-212.29 322.06,-207.02 316.77,-202.44"/>
+<path fill="none" stroke="midnightblue" d="M290.51,-204.81C282.81,-195.65 273.28,-184.3 265.9,-175.52"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="287.84,-207.07 296.95,-212.48 293.2,-202.57 287.84,-207.07"/>
 </g>
 <!-- Node29&#45;&gt;Node4 -->
 <g id="edge12" class="edge">
 <title>Node29&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M290.51,-204.81C282.81,-195.65 273.28,-184.3 265.9,-175.52"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="287.84,-207.07 296.95,-212.48 293.2,-202.57 287.84,-207.07"/>
-</g>
-<!-- Node29&#45;&gt;Node5 -->
-<g id="edge13" class="edge">
-<title>Node29&#45;&gt;Node5</title>
 <path fill="none" stroke="midnightblue" d="M314.37,-203.53C322.37,-187.39 330.55,-163.22 320.12,-145 310.57,-128.32 293.13,-116.61 276.44,-108.7"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="311.24,-201.96 309.57,-212.42 317.4,-205.28 311.24,-201.96"/>
 </g>
-<!-- Node29&#45;&gt;Node27 -->
+<!-- Node29&#45;&gt;Node26 -->
 <g id="edge14" class="edge">
+<title>Node29&#45;&gt;Node26</title>
+<path fill="none" stroke="midnightblue" d="M319.57,-204.55C326.02,-196.57 332.78,-186.46 336.12,-176 340.31,-162.88 339.48,-158.36 336.12,-145 327.87,-112.22 321.38,-104.28 300.12,-78 289.06,-64.33 274.32,-51.46 261.58,-41.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="316.77,-202.44 312.87,-212.29 322.06,-207.02 316.77,-202.44"/>
+</g>
+<!-- Node29&#45;&gt;Node27 -->
+<g id="edge13" class="edge">
 <title>Node29&#45;&gt;Node27</title>
 <path fill="none" stroke="midnightblue" d="M262.92,-209.86C227,-200.14 174.73,-186.01 135.97,-175.52"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="262.03,-213.24 272.6,-212.48 263.86,-206.49 262.03,-213.24"/>

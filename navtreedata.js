@@ -54,9 +54,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_____i_n_t__0__1_____8h.html",
-"group__group__common__boards.html#ga00921a34b346ce468cedc9a09b58a881",
-"group__group__mega__utils__mrepeat.html#ga1e33b119c4bd161e0262399c67ccc6c8",
-"group__group__mega__utils__tpaste.html#ga80b7594516326045fbcaec54d7759c20",
+"group__group__common__boards.html#ga05f802b13754324622c34537b0c7a607",
+"group__group__mega__utils__mrepeat.html#ga1f3c1ef60a18b07755f237d441952d34",
+"group__group__mega__utils__tpaste.html#gabecc8ad964051f6f877f14dd13919b18",
 "group__sam__part__macros__group.html#gae396c6bd5babec94cd8a290c1ae60a9f"
 ];
 
