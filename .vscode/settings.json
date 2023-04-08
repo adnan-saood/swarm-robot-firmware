@@ -1,2 +1,6 @@
 {
+    "files.associations": {
+        "__kinematics__.h": "c",
+        "__swarm_wold__.h": "c"
+    }
 }

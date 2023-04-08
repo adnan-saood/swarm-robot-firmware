@@ -1,3 +1,61 @@
+/**
+\mainpage
+
+\b Swarm \b Bot \b Firmware:
+
+A robot operating system for a swarm-bot. Embedded C firmware for a mobile robot. 8-bit AVR microcontroller. Part of a graduation project.
+
+Built using atmel studio but can be moved to makefile at will.
+
+The firmware for the swarm-bot, it is written in C++ and is compiled using the AVR-GCC compiler.
+
+\image html robot.png "Swarm Bot" width=30%
+
+\section Introduction
+A robot operating system for a swarm-bot. Embedded C firmware for a mobile robot. 8-bit AVR microcontroller. Part of a graduation project.
+
+Build using atmel studio but can be moved to makefile at will.
+
+\section Source Files Structure
+
+Each file in this graph has a certain harware utility to it. Files are separated into 4 main categories:
+
+File Structure:
+	- \b General:
+		- Swarm world file \ref __swarm_wold__.h
+		- Pin definitions \ref __pin_map.h
+	- \b Control: 
+		- Odometry calculations: \ref __odometry__.h
+		- PID controller \ref __pid__.h
+		- Kinematics \ref __kinematics__.h \ref __kinematics__.c
+		- Control loop:
+			- \ref __dc_control__.h
+			- \ref __dc_control__.c
+	- \b Communication: 
+		- USART \ref __usart__.h \ref __usart__.c
+		- Format \ref __format__.h \n
+
+	- <b>Internal AVR Hardware Interface</b>:
+		- ADC \ref __adc__.h \ref __adc__.c
+		- PWM \ref __pwm__.h \ref __pwm__.c
+		- Timers 
+			- Timer 0 (Program Flow): \ref __timer0__.h \ref __timer0__.c
+			- Timer 1 (Control Loop): \ref __timer1__.h \ref __timer1__.c
+			- Timer 2 (Comminication): \ref __timer2__.h \ref __timer2__.c
+		- USART \ref __usart__.h
+		- Interrupts 0 and 1 \ref __INT_0_1__.h \ref __INT_0_1__.c
+
+
+In addition to these files the project is compiled with stdio.h support for printf and scanf functions. This makes it more convinient to debug the code and to communicate with the robot using a terminal emulator. The stdio.h library is not included in the project files but is included in the atmel studio project.
+This is advantagious for unfamiliar AVR users to comminicate with the robot using a terminal emulator without having to learn the AVR USART structure.
+
+\image html swarm_world.svg "Files Structure"
+
+
+Go to files in the tree view in the side bar to see the contents of each fole with dependency graphs and contents.
+
+*/
+
 #include <__swarm_wold__.h>
 
 #include <__kinematics__.h>

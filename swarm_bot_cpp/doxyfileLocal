@@ -42,7 +42,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = swarm_bot_cpp
+PROJECT_NAME           = "SWARM-Bot Firmware"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -54,14 +54,14 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          =
+PROJECT_BRIEF          = "Mobile robot OS - Embedded C/C++"
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           =
+PROJECT_LOGO           = C:/Users/adnan/source/repos/swarm-robot-firmware/doc/visuals/robot.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -157,7 +157,7 @@ ABBREVIATE_BRIEF       = "The $name class" \
 # description.
 # The default value is: NO.
 
-ALWAYS_DETAILED_SEC    = NO
+ALWAYS_DETAILED_SEC    = YES
 
 # If the INLINE_INHERITED_MEMB tag is set to YES, doxygen will show all
 # inherited members of a class in the documentation of that class as if those
@@ -833,7 +833,7 @@ WARNINGS               = YES
 # will automatically be disabled.
 # The default value is: YES.
 
-WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_UNDOCUMENTED   = NO
 
 # If the WARN_IF_DOC_ERROR tag is set to YES, doxygen will generate warnings for
 # potential errors in the documentation, such as documenting some parameters in
@@ -917,51 +917,9 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = ./swarm_bot_cpp/src/ASF/common/boards/user_board/init.c \
-                         ./swarm_bot_cpp/src/ASF/common/boards/user_board/user_board.h \
-                         ./swarm_bot_cpp/src/ASF/common/boards/board.h \
-                         ./swarm_bot_cpp/src/ASF/common/utils/interrupt/interrupt_avr8.h \
-                         ./swarm_bot_cpp/src/ASF/common/utils/make/Makefile.avr.in \
-                         ./swarm_bot_cpp/src/ASF/common/utils/interrupt.h \
-                         ./swarm_bot_cpp/src/ASF/common/utils/parts.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/assembler/gas.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/preprocessor/mrepeat.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/preprocessor/preprocessor.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/preprocessor/stringz.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/preprocessor/tpaste.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/assembler.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/compiler.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/progmem.h \
-                         ./swarm_bot_cpp/src/ASF/mega/utils/status_codes.h \
-                         ./swarm_bot_cpp/src/config/conf_board.h \
-                         ./swarm_bot_cpp/src/__adc__.c \
-                         ./swarm_bot_cpp/src/__adc__.h \
-                         ./swarm_bot_cpp/src/__dc_control__.c \
-                         ./swarm_bot_cpp/src/__dc_control__.h \
-                         ./swarm_bot_cpp/src/__format__.c \
-                         ./swarm_bot_cpp/src/__format__.h \
-                         ./swarm_bot_cpp/src/__INT_0_1__.c \
-                         ./swarm_bot_cpp/src/__INT_0_1__.h \
-                         ./swarm_bot_cpp/src/__kinematics__.c \
-                         ./swarm_bot_cpp/src/__kinematics__.h \
-                         ./swarm_bot_cpp/src/__odometry__.c \
-                         ./swarm_bot_cpp/src/__odometry__.h \
-                         ./swarm_bot_cpp/src/__pin_map.h \
-                         ./swarm_bot_cpp/src/__pwm__.c \
-                         ./swarm_bot_cpp/src/__pwm__.h \
-                         ./swarm_bot_cpp/src/__swarm_wold__.h \
-                         ./swarm_bot_cpp/src/__timer0__.c \
-                         ./swarm_bot_cpp/src/__timer0__.h \
-                         ./swarm_bot_cpp/src/__timer1__.c \
-                         ./swarm_bot_cpp/src/__timer1__.h \
-                         ./swarm_bot_cpp/src/__timer2__.c \
-                         ./swarm_bot_cpp/src/__timer2__.h \
-                         ./swarm_bot_cpp/src/__usart__.c \
-                         ./swarm_bot_cpp/src/__usart__.h \
-                         ./swarm_bot_cpp/src/_pid_.c \
-                         ./swarm_bot_cpp/src/_pid_.h \
-                         ./swarm_bot_cpp/src/asf.h \
-                         ./swarm_bot_cpp/src/main.c
+INPUT                  = ./swarm_bot_cpp/src/ \
+                         ../doc/visuals/robot.png \
+                         ./doc/visuals/robot.png
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1045,13 +1003,14 @@ FILE_PATTERNS          = *.c \
                          *.vhdl \
                          *.ucf \
                          *.qsf \
-                         *.ice
+                         *.ice \
+                         *.png
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.
 # The default value is: NO.
 
-RECURSIVE              = NO
+RECURSIVE              = YES
 
 # The EXCLUDE tag can be used to specify files and/or directories that should be
 # excluded from the INPUT source files. This way you can easily exclude a
@@ -1113,7 +1072,7 @@ EXAMPLE_RECURSIVE      = NO
 # that contain images that are to be included in the documentation (see the
 # \image command).
 
-IMAGE_PATH             =
+IMAGE_PATH             = ./doc/visuals/
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should
 # invoke to filter for each input file. Doxygen will invoke the filter program
@@ -1215,7 +1174,7 @@ STRIP_CODE_COMMENTS    = YES
 # entity all documented functions referencing it will be listed.
 # The default value is: NO.
 
-REFERENCED_BY_RELATION = NO
+REFERENCED_BY_RELATION = YES
 
 # If the REFERENCES_RELATION tag is set to YES then for each documented function
 # all documented entities called/used by that function will be listed.
@@ -1373,7 +1332,7 @@ HTML_FILE_EXTENSION    = .html
 # of the possible markers and block names see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_HEADER            =
+HTML_HEADER            = ./doc/doxygen_theme/header-theme.html
 
 # The HTML_FOOTER tag can be used to specify a user-defined HTML footer for each
 # generated HTML page. If the tag is left blank doxygen will generate a standard
@@ -1413,7 +1372,10 @@ HTML_STYLESHEET        =
 # documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_EXTRA_STYLESHEET  = ./swarm_bot_cpp/doxygen-awesome-css/doxygen-awesome.css
+HTML_EXTRA_STYLESHEET  = ./swarm_bot_cpp/doxygen-awesome-css/doxygen-awesome.css \
+                         ./swarm_bot_cpp/doxygen-awesome-css/doxygen-awesome-sidebar-only.css \
+                         ./swarm_bot_cpp/doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css \
+                         ./doc/doxygen_theme/custom-theme.css
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
@@ -1436,7 +1398,7 @@ HTML_EXTRA_FILES       =
 # The default value is: AUTO_LIGHT.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_COLORSTYLE        = LIGHT
+HTML_COLORSTYLE        = TOGGLE
 
 # The HTML_COLORSTYLE_HUE tag controls the color of the HTML output. Doxygen
 # will adjust the colors in the style sheet and background images according to
@@ -1494,7 +1456,7 @@ HTML_DYNAMIC_MENUS     = YES
 # The default value is: NO.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_DYNAMIC_SECTIONS  = YES
+HTML_DYNAMIC_SECTIONS  = NO
 
 # With HTML_INDEX_NUM_ENTRIES one can control the preferred number of entries
 # shown in the various tree structured indices initially; the user can expand
@@ -1912,7 +1874,7 @@ SEARCHENGINE           = YES
 # The default value is: NO.
 # This tag requires that the tag SEARCHENGINE is set to YES.
 
-SERVER_BASED_SEARCH    = YES
+SERVER_BASED_SEARCH    = NO
 
 # When EXTERNAL_SEARCH tag is enabled doxygen will no longer generate the PHP
 # script for searching. Instead the search results are written to an XML file
